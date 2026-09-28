@@ -58,7 +58,6 @@ Texto:
 - Resumen en tiempo futuro (formato anteproyecto) y sin palabras clave.
 - Nota de la Tabla 4.1 mezcla regiones del brazo agudo con neurogénesis.
 - Encuadre metodológico de §3.2 (sec:bases) abierto.
-- Erratas: "isóceles" → "isósceles"; falta punto en "nivel de azar 0 En ambos casos" (4_materiales_y_metodos.tex).
 - Carátula: fecha de entrega; docentes de cátedra comentados.
 
 Datos/figuras:
