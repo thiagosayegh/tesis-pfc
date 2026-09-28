@@ -1,0 +1,166 @@
+% =====================================================================
+\chapter{Materiales y métodos}\label{cap:metodos}
+% =====================================================================
+
+% ---------------------------------------------------------------------
+\section{Diseño experimental y animales}\label{sec:diseno}
+
+\textbf{Tipo de estudio y panorama general.} Se trata de un estudio experimental controlado, realizado \textit{in vivo} sobre un modelo de roedor, cuyo diseño responde a una estructura factorial: dos ventanas etarias de exposición cruzadas con tres condiciones dietarias. Cada animal recibió, durante una ventana crítica del desarrollo, una de tres soluciones ---stevia, sacarosa o agua---; tras un período de lavado se lo sometió a una batería de pruebas conductuales y, al sacrificio, a la cuantificación histológica de la neurogénesis hipocampal. De forma paralela, un brazo independiente de tiempos agudos evaluó el efecto del consumo temprano sobre marcadores moleculares del sistema dopaminérgico. Dado que el trabajo integra datos de varias cohortes corridas en años sucesivos bajo un protocolo idéntico, esta sección describe el diseño común a todas ellas.
+
+\textbf{Lógica del diseño factorial.} Los dos factores no son independientes del objetivo, sino que operacionalizan la pregunta central. El primer factor, la \textbf{ventana etaria} ---juvenil (inicio en PD25) frente a adulta (inicio en PD75)---, permite contrastar los efectos de una misma exposición sobre un hipocampo en plena maduración frente a uno ya maduro, según la lógica de los orígenes del desarrollo de la salud y la enfermedad expuesta en \S\ref{sec:ventanas}. El segundo factor, la \textbf{condición dietaria}, provee el anclaje experimental descrito en \S\ref{sec:bases}: la sacarosa al 10\,\% p/v actúa como control positivo ---una perturbación de efecto adverso conocido sobre memoria y neurogénesis---, el agua como línea de base, y la stevia al 4\,\% p/v como la condición en estudio, cuya ubicación entre lo inocuo y lo perjudicial es precisamente lo que se busca determinar. El cruce de ambos factores genera los grupos experimentales resumidos en la Tabla~\ref{tab:diseno}.
+
+\textbf{Línea temporal de un animal (estudio de largo plazo).} La secuencia experimental para cada animal fue la siguiente: tras el destete, en el día de inicio correspondiente a su ventana etaria (PD25 para el grupo juvenil, PD75 para el adulto) comenzó la exposición, con acceso libre a dos botellas ---una con agua y otra con la solución endulzada, o dos de agua en los controles--- durante 25 días. Concluida la exposición, siguió un período de lavado con acceso exclusivo a agua, cuyo propósito ---aislar la programación persistente de los efectos agudos del consumo--- se fundamentó en \S\ref{sec:ventanas}. Recién superado el lavado se administró la batería conductual, en el orden campo abierto $\rightarrow$ reconocimiento de objeto novedoso $\rightarrow$ reconocimiento espontáneo de posición $\rightarrow$ prueba de preferencia, de menor a mayor demanda cognitiva y dejando para el final la prueba consumatoria para no interferir con las de memoria. Finalmente, los animales fueron sacrificados para el procesamiento histológico. Durante todo el período se registró el consumo y el peso corporal (\S\ref{sec:registro}).
+
+\textbf{Brazo de tiempos agudos.} Una cohorte independiente se destinó a evaluar los efectos agudos sobre el sistema dopaminérgico. Estos animales recibieron stevia al 4\,\% p/v o agua entre PD25 y PD60 y, al sacrificio, se microdiseccionaron regiones de interés (corteza prefrontal medial, estriado dorsal, núcleo accumbens y sustancia negra/área tegmental ventral) para el análisis molecular de marcadores del sistema dopaminérgico, sin realizar en ellos la batería conductual completa \confirmar{participación del grupo adulto en este brazo}.
+
+\textbf{Integración de cohortes.} El estudio reúne datos conductuales (OF, NOR y SLR) obtenidos en cohortes independientes corridas en años sucesivos (2024--2026) bajo idéntico diseño, protocolo e instrumental. Esta integración ---una práctica habitual en la experimentación animal para alcanzar la potencia estadística preservando el principio de reducción del número de animales--- es válida precisamente por la constancia del protocolo, y se explicita en el análisis (\S\ref{sec:estadistico}). Los tamaños muestrales se estimaron a partir de estudios previos del laboratorio (95\,\% de confianza, 10\,\% de error, 80\,\% de potencia) \cite{charan2013sample}. La Tabla~\ref{tab:cohortes} detalla el estado de consolidación de las cohortes conductuales.
+
+\begin{table}[htbp]
+\centering
+\caption[Estructura del diseño experimental]{Estructura del diseño experimental. Todas las exposiciones de largo plazo duraron 25 días y fueron seguidas de un lavado con agua.}
+\label{tab:diseno}
+\footnotesize
+\begin{tabularx}{\linewidth}{@{}l l c c c C@{}}
+\toprule
+\textbf{Estudio} & \textbf{Grupo} & \textbf{Inicio} & \textbf{Exposición} & \textbf{Lavado} & \textbf{Lecturas principales} \\
+\midrule
+Largo plazo & Juvenil -- Stevia 4\,\%   & PD25 & PD25--PD50  & agua ($\rightarrow$PD75)  & Conductual + neurogénesis \\
+Largo plazo & Juvenil -- Sacarosa 10\,\% & PD25 & PD25--PD50  & agua ($\rightarrow$PD75)  & Conductual + neurogénesis \\
+Largo plazo & Juvenil -- Control        & PD25 & agua        & ---                      & Conductual + neurogénesis \\
+Largo plazo & Adulto -- Stevia 4\,\%    & PD75 & PD75--PD100 & agua ($\rightarrow$PD125) & Conductual + neurogénesis \\
+Largo plazo & Adulto -- Sacarosa 10\,\% & PD75 & PD75--PD100 & agua ($\rightarrow$PD125) & Conductual + neurogénesis \\
+Largo plazo & Adulto -- Control         & PD75 & agua        & ---                      & Conductual + neurogénesis \\
+\bottomrule
+\end{tabularx}
+
+\vspace{0.4em}
+\begin{minipage}{\linewidth}
+\footnotesize\textit{Conductual: OF, NOR (T1--T4), SLR (d-SLR y s-SLR) y prueba de preferencia. Neurogénesis: NeuN, DCX y PCNA por inmunocitoquímica confocal, estriado dorsal, nAcc y SN/VTA.}
+\revisar{la nota mezcla las regiones del brazo agudo (estriado, nAcc, SN/VTA) con la lectura de neurogénesis.}
+\end{minipage}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption[Inventario de cohortes conductuales (SLR)]{Inventario de cohortes conductuales (SLR) y estado de consolidación. Los tamaños muestrales son provisorios y están sujetos a confirmación y a la depuración de registros con fallas de seguimiento.}
+\label{tab:cohortes}
+\footnotesize
+\begin{tabularx}{\linewidth}{@{}l l C C l@{}}
+\toprule
+\textbf{Cohorte} & \textbf{Ventana} & \textbf{Condiciones} & \textbf{n por configuración} & \textbf{Estado} \\
+\midrule
+2024--2025 & Juvenil + Adulto & Stevia, Sacarosa, Control & \confirmar{n} & Integrada \\
+2025 & Adulto  & Stevia & 10 (5 d-SLR + 5 s-SLR) & Analizada \\
+2025 & Adulto  & Control + Sacarosa & $\sim$9 + $\sim$9 (jornadas D1+D2) & Analizada \\
+2025 & Adulto  & Control \ding{173} (diciembre) & 5 & Analizada \\
+2025 & Juvenil & Control/Stevia, Sacarosa, Control \ding{173} & 8 (SLR1 n\,=\,4) \confirmar{n} & Pendiente \\
+2026 & Juvenil & Stevia + Sacarosa & 5 & Pendiente \\
+2026 & Adulto  & Stevia + Sacarosa & 5 & Pendiente \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\textbf{Animales.} Se emplearon ratas macho de la cepa Sprague-Dawley, provenientes del bioterio de la Facultad de Ciencias Veterinarias de la UBA y mantenidas en el bioterio del IByME bajo condiciones controladas de luz (ciclo luz/oscuridad), temperatura y humedad, con acceso \textit{ad libitum} a agua y alimento salvo lo indicado por el protocolo de exposición. Todos los procedimientos se realizaron conforme a las normas de cuidado y uso de animales de laboratorio y con la aprobación del comité de ética institucional \confirmar{comité y número de protocolo, p.\,ej.\ CICUAL}.
+
+% ---------------------------------------------------------------------
+\section{Preparación y administración de las soluciones}\label{sec:soluciones}
+
+Las soluciones de sacarosa se prepararon disolviendo azúcar comercial (Ledesma, Buenos Aires, Argentina) al 10\,\% p/v en agua potable filtrada. La solución de stevia al 4\,\% p/v se obtuvo por decocción de hojas secas de \Srebaudiana{} comercial (20\,g de hoja en 1\,L de agua potable filtrada, a \SI{100}{\celsius} durante 10\,min), seguida de filtrado y reducción por ebullición a \SI{100}{\celsius} durante 90\,min; el concentrado se almacenó a \SI{-20}{\celsius} hasta su uso, con dilución previa a la concentración requerida (40\,mL/L de agua). El procedimiento se adaptó del método de Sharma et~al.\ \cite{sharma2009stevia}, elegido por su alto rendimiento de glucósidos de esteviol. Todas las soluciones se renovaron cada 2 días.
+
+% ---------------------------------------------------------------------
+\section{Registro del consumo, el peso corporal y la preferencia}\label{sec:registro}
+
+Durante todo el período experimental se registró diariamente el consumo de líquidos y de alimento, expresado como gramos de peso total por caja, y se controló el peso corporal semanalmente. La curva de consumo de sacarosa se incorpora como parámetro de referencia para contextualizar la de stevia respecto de los estudios previos.
+
+Al finalizar el tratamiento se realizó, además, una prueba de preferencia por la sacarosa, con el objeto de validar los resultados de consumo previos. En un ensayo de dos botellas ---una con agua y otra con la solución endulzada--- se determinó el consumo de cada una durante el período correspondiente a cada grupo \confirmar{duración exacta y esquema horario}. La preferencia se expresó como el cociente entre el volumen de solución endulzada consumido y el volumen total de líquido ingerido.
+
+% ---------------------------------------------------------------------
+\section{Evaluación conductual}\label{sec:conductual}
+
+\subsection{Principio de la preferencia por la novedad y sistema de registro}\label{sec:principio}
+
+Toda la batería conductual se apoya en una conducta espontánea, no entrenada y no recompensada: los roedores exploran preferentemente lo novedoso por sobre lo familiar. Esta preferencia natural es, en sí misma, la lectura de la memoria de reconocimiento: si un animal, ante un objeto ya visto y otro nuevo, dedica más tiempo al nuevo, es porque reconoció al primero como familiar; es decir, lo recordó. No hace falta enseñarle nada ni premiarlo ---la memoria se infiere directamente del reparto de la exploración---. En consecuencia, la magnitud medida de forma central en las pruebas NOR y SLR es el tiempo de exploración activa dirigido a cada objeto, a partir del cual se construyen índices normalizados con un nivel de azar bien definido.
+
+El registro se realizó con el software de videoseguimiento \anymaze{} (Stoelting Co., EE.\,UU.), que opera sobre el video cenital de cada sesión. El programa segmenta al animal del fondo por contraste y sigue su posición cuadro a cuadro, reconstruyendo la trayectoria del centroide. De esa trayectoria deriva de manera \textbf{automática} un conjunto de variables cinemáticas y de ocupación: la distancia total recorrida, la velocidad media, los cruces de línea (\textit{line crossings}) sobre una grilla virtual y, mediante zonas definidas por el usuario ---regiones de interés trazadas alrededor de cada objeto o sector de la arena---, el número de entradas y el tiempo de permanencia en cada zona.
+
+Ahora bien, permanecer dentro de la zona de un objeto no equivale a explorarlo: el seguimiento detecta \textit{posición}, no \textit{atención}. Un animal que se sienta sobre un objeto, se acicala a su lado o descansa dentro de la zona acumularía \enquote{tiempo en zona} sin exploración real. Por eso la exploración activa ---definida como dirigir la nariz hacia el objeto a $\leq$\,2\,cm u olfatearlo, excluyendo treparlo o posarse--- se cuantificó de forma \textbf{manual} mediante la función de marcación por tecla de \anymaze: revisando el video, un único experimentador ciego al tratamiento mantiene presionada una tecla mientras el animal ejecuta conducta exploratoria genuina hacia un objeto dado, y el software integra ese tiempo por objeto. Esta es la razón por la cual el registro de cada prueba contiene dos familias de variables: la exploración activa, de origen manual, que alimenta los índices de memoria; y las variables cinemáticas y de ocupación, de origen automático, que se emplean como control locomotor, como lectura de conducta tipo ansiosa en el OF y como parte del vector de métricas que sustenta el análisis multivariado (\S\ref{sec:multivariado} y \S\ref{sec:ml}). Todas las sesiones se grabaron y se cuantificaron de forma diferida, no en vivo, para asegurar la consistencia del criterio.
+
+\subsection{Campo abierto (OF)}\label{sec:of}
+
+La prueba de campo abierto persigue dos objetivos. El primero es caracterizar la actividad locomotora general: dado que todas las pruebas posteriores dependen de que el animal se desplace y explore, es imprescindible verificar que los tratamientos no alteraron \textit{cuánto} se mueve un animal, ya que una diferencia locomotora contaminaría la interpretación de cualquier índice de exploración. El segundo es evaluar la conducta tipo ansiosa a través de la tigmotaxis: enfrentado a un espacio abierto e iluminado, el animal experimenta un conflicto entre el impulso a explorar y la aversión a las zonas centrales, expuestas; un animal más ansioso permanece cerca de las paredes y evita el centro.
+
+% OJO: la cita a Pian et al. (2009) para el aparato de OF podría ser un error de mapeo;
+% candidatos probables: kruse2019sucrose o rey2024metformin (confirmar con Sol).
+El dispositivo es un cajón de base y paredes oscuras ($75 \times 55 \times 30$\,cm) \cite{pian2009milk}\revisar{verificar cita del aparato}, que mediante \anymaze{} se dividió digitalmente en tres zonas concéntricas. En una única sesión, el animal se colocó en la arena y se lo dejó explorar libremente durante un tiempo fijo \confirmar{duración de la sesión}. A diferencia del NOR y el SLR, el OF no requiere marcación manual: todas sus variables son automáticas. Se registraron la distancia total y la velocidad media como índices de locomoción, y el tiempo y la distancia recorridos en la zona central frente a la periferia como índices de conducta tipo ansiosa; una menor permanencia en el centro indica un mayor nivel de ansiedad. Los parámetros locomotores obtenidos aquí sirven, además, como referencia para interpretar la exploración en las pruebas de memoria subsiguientes.
+
+\subsection{Reconocimiento de objeto novedoso (NOR)}\label{sec:nor}
+
+El NOR evalúa la memoria de reconocimiento de objetos ---el componente \enquote{qué} de la memoria episódica---, con participación de la corteza perirrinal y, en las demoras más largas, del hipocampo \cite{leger2013nor}. Lo que se busca determinar es si el animal recuerda un objeto visto previamente y, mediante la evaluación a demoras crecientes, si esa memoria persiste en el tiempo.
+
+La arquitectura temporal de la prueba responde a esa lógica. Durante 3 días previos los animales fueron manipulados diariamente para habituarlos al experimentador y reducir el estrés que distorsionaría la exploración. A continuación se habituaron al dispositivo vacío durante varios días, de modo que en las pruebas la arena resultara familiar y la novedad quedara circunscripta a los objetos y no al recinto. En el ensayo de adquisición (T1) se presentaron dos objetos idénticos, que el animal codifica; la exploración total en T1 funciona además como control de codificación y como criterio de inclusión. Los ensayos de prueba se realizaron a demoras crecientes que interrogan fases distintas de la memoria: T2 a las 2\,h (memoria a corto plazo), T3 a las 24\,h (memoria a largo plazo) y T4 a los 7 días (memoria remota o consolidada). Esta serie no es redundante: un tratamiento podría preservar la memoria a corto plazo y comprometer la de largo plazo, o a la inversa, de modo que la comparación entre demoras es diagnóstica del proceso afectado. En cada prueba se reexpuso al animal a una copia del objeto familiar (F) y a un objeto novedoso (N), contrabalanceando las posiciones y la identidad del objeto novedoso entre animales para evitar sesgos de lugar o de preferencia intrínseca por un objeto.
+
+Los objetos difieren en forma, color, textura y material, con un peso que impide su desplazamiento. El desempeño se cuantificó, sobre los tiempos de exploración activa del objeto novedoso ($t_N$) y del familiar ($t_F$), mediante la tasa de exploración,
+\begin{equation}
+  \text{tasa de exploración} = \frac{t_N}{t_N + t_F}, \qquad \text{acotada en } [0,\,1],
+  \label{eq:tasa}
+\end{equation}
+y el índice de discriminación,
+\begin{equation}
+  \text{índice de discriminación} = \frac{t_N - t_F}{t_N + t_F}, \qquad \text{acotado en } [-1,\,1].
+  \label{eq:di}
+\end{equation}
+Un valor por encima del azar indica reconocimiento intacto ---el animal prefiere la novedad, luego recuerda lo familiar---, mientras que un valor en torno al azar indica ausencia de memoria: el animal no distingue lo nuevo de lo conocido. Cada índice se contrasta estadísticamente tanto contra su nivel de azar (prueba de una muestra) como entre grupos.
+
+\subsection{Reconocimiento espontáneo de posición (SLR: d-SLR y s-SLR)}\label{sec:slr}
+
+El SLR evalúa la memoria de la \textit{ubicación} de los objetos ---el componente \enquote{dónde}--- y, con ella, la separación de patrones espaciales, la operación hipocampal (del giro dentado) que permite discriminar entre representaciones espaciales solapadas (\S\ref{sec:cascada}). Tras codificar tres objetos idénticos en posiciones fijas, se desplaza uno de ellos; un animal con memoria espacial y separación de patrones intactas detecta el cambio y explora preferentemente el objeto en la posición novedosa.
+
+La particularidad del diseño reside en el uso de dos configuraciones geométricas que gradúan la demanda de separación de patrones. En la configuración \textbf{d-SLR (equilátero)}, los tres objetos se disponen equidistantes (a 120° y $\sim$49\,cm entre sí): las tres representaciones espaciales están bien separadas y la demanda es baja. En la configuración \textbf{s-SLR (isóceles)}, dos de los objetos se colocan próximos entre sí (a $\sim$50° y $\sim$20,5\,cm), de modo que sus representaciones espaciales se solapan fuertemente y detectar el desplazamiento exige resolver patrones casi superpuestos ---precisamente la operación que se atribuye a la neurogénesis del giro dentado---. La s-SLR es, por ello, la sonda sensible: al gravar selectivamente el proceso dependiente de neurogénesis, es donde primero debería manifestarse un déficit (por ejemplo, el inducido por sacarosa). Este diseño graduado permite disociar un déficit espacial general ---que afectaría ambas configuraciones--- de un déficit específico de separación de patrones ---que afectaría la s-SLR y respetaría la d-SLR---.
+
+\begin{figure}[htbp]
+  \centering
+  \incluirfigura[width=0.9\linewidth]{Fig4_esquema_SLR.png}
+  \caption[Esquema de la prueba de reconocimiento espontáneo de posición (SLR)]{Esquema de la prueba de reconocimiento espontáneo de posición (SLR). Durante el día 1 (muestreo, 600\,s) el animal explora tres objetos idénticos (A1, A2 y A3) dispuestos en configuración equilátera (d-SLR, fila superior) o isósceles (s-SLR, fila inferior). En el día 2 (prueba, 24\,h después, 300\,s) se presentan dos objetos: uno en la posición familiar de A1 y otro en una posición novedosa (N), ubicada entre las posiciones que antes ocupaban A2 y A3 (círculos punteados). Los símbolos oscuros alrededor de la arena representan las señales espaciales. Adaptado de \cite{reichelt2021slr}.}
+  \label{fig:esquema-slr}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \incluirfigura[width=0.7\linewidth]{Fig4_objetos_SLR.jpg}
+  \caption{Objetos utilizados en la prueba SLR: tazas con dibujos y ranas de juguete.}
+  \label{fig:objetos-slr}
+\end{figure}
+
+El aparato es un campo abierto circular de plástico gris y base opaca (100\,cm de diámetro $\times$ 45\,cm de alto), rodeado de tres señales espaciales distintivas equidistantes más las señales distales de la sala; los objetos fueron tazas con dibujos o ranas de juguete representados en la Figura~\ref{fig:objetos-slr}. El procedimiento se realizó según el protocolo de Reichelt et~al.\ \cite{reichelt2021slr}, sobre el paradigma de reconocimiento de localización novedosa con separación de patrones descrito previamente \cite{perezgarcia2016malnutrition}. Tras 5 días de manipulación y 3 sesiones de habituación de 10\,min al dispositivo, la prueba se desarrolló en dos días:
+
+En el \textbf{día 1 (fase de muestreo, 600\,s)} se expuso al animal a tres objetos idénticos (A1, A2, A3) en la geometría asignada, equilátera o isóceles; aquí el animal codifica la configuración espacial. Los datos del muestreo no constituyen un desenlace, sino un control: por un lado, verifican que todos los grupos exploraron los tres objetos de forma comparable, de manera que una eventual diferencia en el día 2 no pueda atribuirse a una codificación desigual; por otro, la exploración total durante el muestreo define el criterio de inclusión, descartando a los animales que no exploraron lo suficiente como para haber codificado la configuración ---criterio que también permite excluir los registros con fallas de seguimiento---.
+
+En el \textbf{día 2 (fase de prueba, 300\,s)}, 24\,h después, se reexpuso al animal a solo dos objetos: uno en una posición familiar (A1) y otro en una posición novedosa (N), ubicado en el punto medio entre las posiciones que antes ocupaban los dos objetos próximos. Esta demora de 24\,h define una prueba de memoria espacial a largo plazo, y es la que porta el desenlace. Los animales se asignaron a una o ambas configuraciones, con contrabalanceo de posiciones. El desempeño se cuantificó, sobre la exploración activa del objeto en posición novedosa, mediante la tasa de exploración y el índice de discriminación definidos en \S\ref{sec:nor}, interpretados frente al mismo nivel de azar. Las variables automáticas de la prueba ---tiempo en zona, distancia y cruces de línea--- se conservaron como covariables de control y como insumo del análisis multivariado.
+
+Durante la fase de prueba se registró manualmente el tiempo de exploración activa de cada objeto. A partir de estos tiempos se calcularon dos índices. La tasa de exploración se definió como $t_{\mathrm{nov}}/(t_{\mathrm{nov}} + t_{\mathrm{fam}})$, con nivel de azar 0,5. El índice de discriminación (DI) se definió como $(t_{\mathrm{nov}} - t_{\mathrm{fam}})/(t_{\mathrm{nov}} + t_{\mathrm{fam}})$, con nivel de azar 0 En ambos casos, $t_{\mathrm{nov}}$ corresponde al tiempo de exploración del objeto ubicado en la posición novedosa y $t_{\mathrm{fam}}$ al del objeto en la posición familiar. Ambos índices son transformaciones lineales entre sí ($\mathrm{DI} = 2\cdot\text{tasa} - 1$), por lo que producen resultados estadísticos idénticos; en consecuencia, los resultados se reportan en términos de DI. Valores positivos de DI indican preferencia por la posición novedosa, valores cercanos a cero indican ausencia de discriminación y valores negativos indican preferencia por la posición familiar. Los valores negativos se consideraron resultados válidos y no fueron corregidos ni excluidos.
+
+La prueba se realizó con dos conjuntos de objetos: tazas con dibujos y ranas de juguete, ambos utilizados en todas las cohortes experimentales. Dentro de cada sesión, los objetos de la fase de muestreo y de la fase de prueba eran copias idénticas, de modo que el DI compara la exploración de un mismo tipo de objeto en dos ubicaciones y la identidad del objeto no interviene en la comparación. Por este motivo, los datos obtenidos con ambos conjuntos se agruparon para el análisis. Del mismo modo, dentro de cada grupo experimental se agruparon los animales de las distintas cohortes, cada una de las cuales incluyó animales de ambas edades de exposición. Los grupos control provinieron exclusivamente de las cohortes 2025, por lo que no fueron contemporáneos de los grupos tratados de 2026, lo cual se considera una limitación del diseño. Algunos animales realizaron ambas configuraciones en días distintos (diseño cruzado). Dado que cada configuración se analizó por separado, ningún animal aparece más de una vez dentro de un mismo análisis. El número de animales por grupo fue de 9 a 10 según el grupo y la configuración.
+
+\subsection{Consideraciones de rigor y control}\label{sec:rigor}
+
+Para asegurar la validez de las mediciones se adoptaron los siguientes recaudos, transversales a las tres pruebas: la cuantificación de la exploración activa se realizó de forma diferida y ciega al tratamiento por un único observador, garantizando un criterio uniforme; se contrabalancearon la identidad de los objetos, sus posiciones y el lado de la novedad para neutralizar sesgos de preferencia y de lugar; los dispositivos y objetos se limpiaron con etanol al 70\,\% entre animales para eliminar pistas olfativas; la habituación previa aseguró que la novedad se restringiera a los objetos y no a la arena; y se establecieron criterios de inclusión basados en la exploración mínima durante la codificación, que permiten además descartar los registros con fallas de seguimiento identificadas en los datos crudos.
+
+% ---------------------------------------------------------------------
+\section{Procesamiento histológico e inmunocitoquímica confocal (NeuN, DCX, PCNA)}\label{sec:histologia}
+
+La inmunocitoquímica permite visualizar y cuantificar proteínas específicas dentro del tejido: un anticuerpo primario reconoce y se une a la proteína de interés, y un anticuerpo secundario conjugado a un fluorocromo la vuelve detectable por fluorescencia. Cada marcador funciona así como una etiqueta molecular de un tipo o estado celular. Como se fundamentó en \S\ref{sec:cascada}, los tres marcadores empleados indexan etapas sucesivas de la cascada neurogénica ---PCNA la proliferación, DCX las neuronas inmaduras en migración y NeuN las neuronas maduras---, de modo que su cuantificación conjunta localiza en qué punto del proceso incide una eventual perturbación.
+
+Tras el sacrificio se obtuvieron secciones de \SI{50}{\micro\metre} mediante vibrátomo. La inmunocitoquímica se realizó según lo descrito previamente \cite{kruse2012lxr}: las secciones se bloquearon en PBS con 0,1\,\% Tween~20 y 10\,\% de suero de cabra durante 1\,h a temperatura ambiente y se incubaron durante toda la noche a \SI{4}{\celsius} con los anticuerpos primarios anti-NeuN (MAB377, Sigma-Aldrich), anti-PCNA (MAB424, Sigma-Aldrich) y anti-DCX (sc-8066, Santa Cruz Biotechnology). Luego de los lavados, se incubaron 2\,h a temperatura ambiente con los anticuerpos secundarios conjugados (cabra anti-conejo AlexaFluor~488 y cabra anti-ratón AlexaFluor~546; 1:200) y se montaron con Vectashield.
+
+La señal se adquirió en el microscopio confocal Nikon C1 del IByME. La microscopía confocal es la técnica adecuada para esta cuantificación porque, mediante un diafragma (\textit{pinhole}) que rechaza la luz fuera de foco, genera secciones ópticas delgadas dentro del corte de \SI{50}{\micro\metre}; esto evita la superposición de señal de planos vecinos y permite un recuento celular preciso en una estructura densa como el giro dentado. Los parámetros de adquisición se mantuvieron constantes dentro de cada experimento para hacer comparables las intensidades entre muestras procesadas el mismo día, y se incluyeron controles de omisión del anticuerpo primario para definir la señal de fondo y verificar la especificidad. Se cuantificó el número de células NeuN$^{+}$, DCX$^{+}$ y PCNA$^{+}$ en el giro dentado.
+
+% ---------------------------------------------------------------------
+\section{Análisis de datos}\label{sec:analisis}
+
+\subsection{Análisis estadístico}\label{sec:estadistico}
+
+La normalidad y la homogeneidad de varianzas se evaluaron mediante las pruebas de Shapiro-Wilk y Brown-Forsythe, respectivamente. El consumo de soluciones, alimento y el peso corporal a lo largo del tiempo se analizaron mediante ANOVA de una vía con medidas repetidas; la exploración de objetos en T1 y la actividad locomotora entre T1 y T4, mediante ANOVA de dos vías. Las variables de la prueba SLR se analizaron por separado para cada configuración (d-SLR y s-SLR) mediante ANOVA de dos vías, con la edad de exposición (juvenil, adulto) y el tratamiento (control, sacarosa, stevia) como factores. En este caso, las comparaciones \textit{post hoc} de Tukey se realizaron comparando la media de cada grupo con las de su misma edad y las de su mismo tratamiento. Además, el índice de discriminación de cada grupo se comparó contra el nivel de azar ($\mathrm{DI} = 0$) mediante una prueba $t$ de una muestra. Cuando los residuos del modelo se apartaron de la normalidad, las diferencias significativas se contrastaron mediante la prueba no paramétrica de Mann-Whitney. Las restantes variables conductuales (OF y NOR) y la expresión de marcadores se analizaron mediante ANOVA de una vía. Ante efectos principales significativos se aplicó la prueba \textit{post hoc} de Tukey. Las correlaciones se evaluaron con el coeficiente de Pearson, previa verificación de normalidad, aplicándose regresión lineal en los casos significativos para obtener el coeficiente de determinación ($r^2$) y la ecuación de la recta. La significancia se estableció en $p < 0{,}05$ y los datos se expresan como media $\pm$ SEM. Los resultados provienen de cohortes independientes realizadas en distintos momentos bajo idéntico diseño y protocolo, cuyos datos se combinan para el análisis. Los análisis se realizaron con GraphPad Prism 11.1.0.
+
+\subsection{Análisis multivariado y aprendizaje automático}\label{sec:ml}
+
+De manera complementaria al análisis univariado, y por las razones formales expuestas en \S\ref{sec:multivariado}, el conjunto de métricas conductuales extraídas con \anymaze{} se sometió a un análisis multivariado. Se aplicó análisis de componentes principales (PCA) sobre las variables estandarizadas para reducir la dimensionalidad y mitigar la colinealidad, seguido de clustering jerárquico con criterio de Ward sobre las puntuaciones retenidas, a fin de examinar la emergencia de perfiles conductuales sin supervisión (objetivo M1). Para el objetivo M2 se entrenó un clasificador de Random Forest con las métricas conductuales como predictores del grupo de exposición, estimando el error de generalización por validación \textit{out-of-bag} y la importancia relativa de cada variable por disminución media de impureza y por permutación. El \textit{pipeline} se implementó en Python con la biblioteca scikit-learn.

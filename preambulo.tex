@@ -1,0 +1,111 @@
+% =====================================================================
+%  preambulo.tex — Configuración general del PFC
+%  Compilar con: latexmk  (pdflatex + biber; ver .latexmkrc)
+% =====================================================================
+
+% ---------- Idioma y codificación ----------
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,spanish,es-tabla,es-noshorthands,es-nodecimaldot]{babel} % español = idioma principal (último)
+\usepackage{csquotes}
+
+% ---------- Tipografía (la plantilla ITBA usa Noto Serif) ----------
+\usepackage{microtype}
+\usepackage{newunicodechar}
+% Red de seguridad por si se pega texto con caracteres Unicode sueltos
+\newunicodechar{µ}{\textmu}
+\newunicodechar{−}{\ensuremath{-}}
+\newunicodechar{≤}{\ensuremath{\leq}}
+\newunicodechar{≥}{\ensuremath{\geq}}
+\newunicodechar{⁺}{\ensuremath{^{+}}}
+\newunicodechar{→}{\ensuremath{\rightarrow}}
+\newunicodechar{η}{\ensuremath{\eta}}
+\newunicodechar{λ}{\ensuremath{\lambda}}
+
+% ---------- Página ----------
+\usepackage[a4paper,top=2.5cm,bottom=2.5cm,left=2.5cm,right=2.5cm]{geometry}
+\usepackage{setspace}
+\onehalfspacing
+\setlength{\parskip}{0.5em}
+\setlength{\parindent}{0pt}
+\setlength{\emergencystretch}{2em}  % evita renglones desbordados
+
+% ---------- Matemática, unidades, tablas, figuras ----------
+\usepackage{amsmath}
+\usepackage{notomath}   % Noto Serif para texto y matemática (coherente con la plantilla)  % cargar después de amsmath; ya provee los símbolos de amssymb
+\usepackage[locale=DE,per-mode=symbol]{siunitx} % DE → coma decimal
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{pifont}          % \ding{173} = ②
+\usepackage[font=small,labelfont=bf,labelsep=period]{caption}
+\usepackage{enumitem}
+\usepackage[dvipsnames]{xcolor}
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+\graphicspath{{figuras/}{logos/}}
+
+% ---------- Títulos: "1. Introducción", "1.1. ..." (sin "Capítulo") ----------
+\usepackage{titlesec}
+\titleformat{\chapter}[hang]{\normalfont\LARGE\bfseries}{\thechapter.}{0.5em}{}
+\titlespacing*{\chapter}{0pt}{0pt}{1.2em}
+\titleformat{\section}{\normalfont\Large\bfseries}{\thesection.}{0.5em}{}
+\titleformat{\subsection}{\normalfont\large\bfseries}{\thesubsection.}{0.5em}{}
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{2}
+
+% ---------- Encabezados y pie ----------
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\fancypagestyle{plain}{\fancyhf{}\fancyfoot[C]{\thepage}\renewcommand{\headrulewidth}{0pt}}
+
+% ---------- Bibliografía IEEE ----------
+% language=english: las referencias siguen la convención IEEE en inglés
+% ("vol.", "no.", "pp.", "Accessed:", "[Online]. Available:"), como en la versión GDocs.
+\usepackage[backend=biber,style=ieee,sorting=none,dashed=false,urldate=long,language=english,autolang=other]{biblatex}
+\addbibresource{referencias.bib}
+\DeclareSourcemap{\maps[datatype=bibtex]{\map[overwrite=false]{\step[fieldset=langid, fieldvalue=english]}}}
+% @online sin fecha: evitar el "()" vacío
+\usepackage{xpatch}
+\xpatchbibdriver{online}{\printtext[parens]{\usebibmacro{date}}}{\iffieldundef{year}{}{\printtext[parens]{\usebibmacro{date}}}}{}{}
+\DeclareFieldFormat{sentencecase}{#1}   % respetar mayúsculas de los títulos tal como están en el .bib
+\renewcommand*{\bibfont}{\small}
+\appto{\bibsetup}{\raggedright}    % evita URLs "estiradas" en líneas justificadas
+\setcounter{biburlnumpenalty}{9000}   % permite cortar URLs largas
+\setcounter{biburllcpenalty}{7000}
+\setcounter{biburlucpenalty}{8000}
+
+% ---------- Hipervínculos (siempre al final) ----------
+\usepackage[hidelinks,unicode]{hyperref}
+
+% =====================================================================
+%  Macros del proyecto
+% =====================================================================
+% Marcadores de trabajo pendiente — se ven en rojo/naranja en el PDF y se
+% buscan fácil con:  grep -rn "pendiente\|confirmar\|revisar" capitulos/
+% Para la versión final: \renewcommand{\pendiente}[1]{} etc. (o resolverlos).
+\newcommand{\pendiente}[1]{\textcolor{red}{\textbf{[PENDIENTE:} #1\textbf{]}}}
+\newcommand{\confirmar}[1]{\textcolor{orange!85!black}{\textbf{[CONFIRMAR:} #1\textbf{]}}}
+\newcommand{\revisar}[1]{\textcolor{Purple}{\textbf{[REVISAR:} #1\textbf{]}}}
+
+% Figura con respaldo: si el archivo no está, dibuja un recuadro con el nombre.
+% Uso: \incluirfigura[width=0.8\linewidth]{Fig4_esquema_SLR.png}
+\newcommand{\incluirfigura}[2][width=\linewidth]{%
+  \IfFileExists{figuras/#2}%
+    {\includegraphics[#1]{#2}}%
+    {\fbox{\parbox[c][4cm][c]{0.8\linewidth}{\centering\small\ttfamily
+      FALTA ARCHIVO: figuras/\detokenize{#2}}}}}
+
+% Espacio extra en el índice para "Anexo A." (se llama desde 9_anexos.tex)
+\makeatletter
+\newcommand{\anexotocspacing}{\renewcommand*\l@section{\@dottedtocline{1}{1.5em}{5.2em}}}
+\makeatother
+
+% Abreviaturas de uso frecuente
+\newcommand{\stevia}{\textit{Stevia rebaudiana} Bertoni}
+\newcommand{\Srebaudiana}{\textit{S.~rebaudiana}}
+\newcommand{\anymaze}{AnyMaze\textsuperscript{\textcopyright}}

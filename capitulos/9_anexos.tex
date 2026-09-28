@@ -1,0 +1,33 @@
+% =====================================================================
+%  Anexos (antes de las Referencias, según la plantilla ITBA)
+% =====================================================================
+\chapter*{Anexos}
+\addcontentsline{toc}{chapter}{Anexos}
+\addtocontents{toc}{\protect\anexotocspacing}
+\setcounter{section}{0}
+\renewcommand{\thesection}{Anexo \Alph{section}}
+\setcounter{table}{0}
+\renewcommand{\thetable}{\Alph{section}.\arabic{table}}
+\setcounter{figure}{0}
+\renewcommand{\thefigure}{\Alph{section}.\arabic{figure}}
+
+\section{Tasa de exploración en la prueba SLR}\label{anx:tasa}
+
+\begin{table}[htbp]
+\centering
+\caption[Tasa de exploración en la prueba SLR]{Tasa de exploración en la prueba SLR. Valores expresados como media $\pm$ SEM; entre paréntesis, número de animales.}
+\label{tab:anx-tasa}
+\small
+\begin{tabular}{@{}lcc@{}}
+\toprule
+\textbf{Grupo} & \textbf{d-SLR} & \textbf{s-SLR} \\
+\midrule
+Juvenil -- Control  & $0{,}621 \pm 0{,}025$ (9)  & $0{,}605 \pm 0{,}020$ (10) \\
+Juvenil -- Sacarosa & $0{,}459 \pm 0{,}024$ (9)  & $0{,}444 \pm 0{,}038$ (9) \\
+Juvenil -- Stevia   & $0{,}595 \pm 0{,}050$ (10) & $0{,}590 \pm 0{,}054$ (10) \\
+Adulto -- Control   & $0{,}609 \pm 0{,}027$ (10) & $0{,}622 \pm 0{,}035$ (10) \\
+Adulto -- Sacarosa  & $0{,}554 \pm 0{,}037$ (10) & $0{,}459 \pm 0{,}055$ (10) \\
+Adulto -- Stevia    & $0{,}553 \pm 0{,}039$ (10) & $0{,}527 \pm 0{,}053$ (10) \\
+\bottomrule
+\end{tabular}
+\end{table}

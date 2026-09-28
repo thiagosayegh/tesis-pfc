@@ -1,0 +1,46 @@
+% =====================================================================
+%  PFC — Bioingeniería, ITBA
+%  "Impacto de la nutrición temprana sobre el desarrollo neurobiológico
+%   y la conducta: efectos de Stevia rebaudiana Bertoni"
+%  Autor: Thiago Sayegh (62260) — Lugar: IByME-CONICET
+%  Orden de secciones según "Template para escritura PFC" (ITBA)
+% =====================================================================
+\documentclass[12pt,a4paper,oneside]{report}
+\input{preambulo}
+
+\begin{document}
+
+% ---------------- Preliminares (numeración romana) ----------------
+\pagenumbering{roman}
+\input{capitulos/00_caratula}
+% \input{capitulos/00_agradecimientos} % opcional, media carilla
+\input{capitulos/01_resumen}
+\input{capitulos/02_glosario}
+
+\tableofcontents
+\clearpage
+\listoffigures
+\listoftables
+
+% ---------------- Cuerpo (numeración arábiga) ----------------
+% Nota de la plantilla: hasta el Marco teórico inclusive no debe
+% superarse el 20 % del escrito total.
+\clearpage
+\pagenumbering{arabic}
+\input{capitulos/1_introduccion}
+\input{capitulos/2_estado_del_arte}
+\input{capitulos/3_marco_teorico}
+\input{capitulos/4_materiales_y_metodos}
+\input{capitulos/5_resultados}
+\input{capitulos/6_discusion}
+\input{capitulos/7_perspectivas_futuras}   % opcional, máx. 1 carilla
+\input{capitulos/8_conclusiones}           % máx. 2 carillas
+
+% ---------------- Anexos y referencias ----------------
+\input{capitulos/9_anexos}
+
+\chapter*{Referencias bibliográficas}
+\addcontentsline{toc}{chapter}{Referencias bibliográficas}
+\printbibliography[heading=none]
+
+\end{document}

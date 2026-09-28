@@ -1,0 +1,51 @@
+% =====================================================================
+\chapter{Introducción}\label{cap:introduccion}
+% Plantilla ITBA: máximo 3 carillas.
+% =====================================================================
+
+Las condiciones nutricionales experimentadas durante las primeras etapas de la vida dejan huellas duraderas sobre el sistema nervioso central en formación y, en consecuencia, sobre la conducta del individuo adulto. En este contexto, el creciente reemplazo del azúcar por edulcorantes no calóricos como la stevia plantea un interrogante aún poco explorado: si su consumo durante períodos críticos del desarrollo resulta efectivamente inocuo. El presente trabajo aborda esta pregunta evaluando los efectos neurobiológicos y conductuales a largo plazo del consumo temprano de \stevia{} en ratas macho Sprague-Dawley, e incorpora, como aporte propio de la bioingeniería, un abordaje de análisis multivariado y aprendizaje automático sobre las métricas conductuales.
+
+% ---------------------------------------------------------------------
+\section{Planteamiento del problema}\label{sec:planteamiento}
+
+El consumo de azúcar en Argentina constituye un problema de salud pública de primera magnitud: el argentino promedio ingiere el equivalente a 35 cucharaditas de azúcar por día \cite{fad2026bebidas}, los niños y adolescentes consumen en promedio 127 litros de bebidas azucaradas por año \cite{ennys2019}, y estas bebidas son responsables de más de 4.400 muertes anuales en el país, ubicándolo en el tercer lugar mundial en nuevos casos de diabetes tipo~2 atribuibles a su consumo \cite{laracastor2025ssb}. Frente a este panorama, el mercado de stevia creció hasta USD~840 millones en 2024 y se proyecta que superará los USD~1.360 millones en 2029 \cite{mordor2024stevia}, con Argentina posicionándose como uno de los principales mercados de América Latina \cite{ie2025latam,ie2025argentina}.
+
+Sin embargo, la percepción pública de que la stevia es una alternativa inocua al azúcar no está suficientemente respaldada por evidencia científica en etapas críticas del desarrollo. La literatura ha documentado que el consumo temprano de sacarosa induce efectos neurobiológicos persistentes en la adultez: déficits en la memoria dependiente del hipocampo, alteraciones en la neurogénesis del giro dentado y cambios conductuales relacionados con la ansiedad \cite{reichelt2021slr,coirini2022sucrose}. Trabajos del IByME-CONICET demostraron que la exposición temprana a stevia en ratas hembras induce alteraciones persistentes en la fertilidad, la descendencia y el comportamiento \cite{kruse2025stevia}. No obstante, los efectos sobre la conducta tipo ansiosa, la memoria de reconocimiento, la separación de patrones espaciales y los marcadores de neurogénesis en ratas macho aún no han sido caracterizados.
+
+La pregunta central que guía este trabajo es: ¿el consumo de stevia durante etapas tempranas del desarrollo induce alteraciones conductuales y neurobiológicas persistentes en la adultez, comparables a las producidas por la sacarosa, y en qué medida estos efectos dependen de la ventana etaria de exposición ---juvenil versus adulta? Los factores relevantes son: (1)~la ventana etaria, dado que el hipocampo atraviesa estadios diferenciados de maduración entre PD25 y PD75 \cite{coirini2022sucrose}; (2)~la naturaleza del edulcorante, que permite disociar efectos metabólicos de posibles acciones directas sobre el sistema nervioso central \cite{kruse2019sucrose}; (3)~los marcadores NeuN, DCX y PCNA como correlatos estructurales de las alteraciones funcionales \cite{reichelt2016sucrose,reichelt2021slr}; y (4)~el análisis multivariado de métricas conductuales como aporte desde la bioingeniería.
+
+% ---------------------------------------------------------------------
+\section{Justificación}\label{sec:justificacion}
+
+La elección de este tema surge de un interés genuino por comprender de qué manera las condiciones nutricionales imprimen huellas duraderas sobre el sistema nervioso central y, en consecuencia, sobre la conducta. La posibilidad de traducir experiencias tempranas ---en este caso, la composición de la dieta--- en cambios observables y cuantificables en el comportamiento adulto plantea preguntas con implicancias tanto básicas como clínicas de gran relevancia \cite{reichelt2021slr,coirini2022sucrose}. El proyecto impulsado por la Dra.~María Sol Kruse en el IByME-CONICET resultó particularmente atractivo porque aborda una pregunta con alta pertinencia para la salud pública: ¿es seguro el consumo de stevia durante etapas tempranas del desarrollo? La oportunidad de participar en una investigación activa y observar cómo se construye un estudio científico desde adentro ---desde el diseño experimental hasta el análisis de los datos--- resultó decisiva en la elección del tema.
+
+La pertinencia en el marco de la carrera de Bioingeniería es doble. Por un lado, el trabajo implica el dominio de técnicas experimentales complejas ---inmunocitoquímica confocal, pruebas conductuales estandarizadas--- que requieren precisión técnica y criterio científico \cite{kruse2019sucrose}. Por otro, los objetivos de máxima incorporan herramientas de ingeniería de datos y aprendizaje automático ---PCA, clustering jerárquico y Random Forest--- cuya aplicación sobre datos conductuales multivariados constituye un aporte metodológico diferencial que solo un perfil con formación en ingeniería puede ofrecer a un equipo de investigación biológica.
+
+% ---------------------------------------------------------------------
+\section{Objetivos}\label{sec:objetivos}
+
+\subsection{Objetivo general}
+
+Evaluar los efectos neurobiológicos y conductuales a largo plazo del consumo temprano de \stevia{} en ratas macho Sprague-Dawley, en comparación con el consumo de sacarosa y con un grupo control, analizando el impacto diferencial según la ventana etaria de exposición.
+
+\subsection{Objetivos de mínima}\label{sec:obj-minima}
+
+\begin{enumerate}[label=\arabic*.]
+  \item Registrar el consumo diario de stevia/sacarosa y el peso corporal semanal en los dos grupos etarios (PD25 y PD75) durante el tratamiento.
+  \item Evaluar la conducta tipo ansiosa mediante la prueba de Open Field (OF) al finalizar el tratamiento, contrastando los grupos juvenil y adulto y las condiciones stevia, sacarosa y control.
+  \item Cuantificar la memoria de reconocimiento de objetos a corto y largo plazo (NOR: T2, T3 y T4) mediante el índice de exploración de objeto novedoso.
+  \item Evaluar la separación de patrones espaciales hipocampales con la prueba SLR (configuraciones d-SLR y s-SLR) 24\,h después de la fase de muestreo.
+  \item Cuantificar por inmunocitoquímica confocal los marcadores de neurogénesis hipocampal NeuN, DCX y PCNA en secciones de \SI{50}{\micro\metre} al sacrificio.
+\end{enumerate}
+
+\subsection{Objetivos de máxima}\label{sec:obj-maxima}
+
+\begin{enumerate}[label=\arabic*.]
+  \item Aplicar análisis de componentes principales (PCA) y clustering jerárquico sobre el conjunto de métricas conductuales extraídas con \anymaze{} para identificar perfiles conductuales diferenciados entre grupos sin asumir separación a priori.
+  \item Desarrollar un modelo de clasificación supervisada (Random Forest) entrenado con las variables conductuales de \anymaze{} como predictores, con el objetivo de determinar la capacidad de dichas métricas para predecir el grupo de exposición de cada animal (stevia juvenil, stevia adulto, sacarosa, control) y cuantificar la importancia relativa de cada variable conductual.
+\end{enumerate}
+
+% ---------------------------------------------------------------------
+\section{Hipótesis}\label{sec:hipotesis}
+
+Se postula que el consumo de \stevia{} durante etapas tempranas del desarrollo no reproducirá los efectos adversos sobre el comportamiento y la neurogénesis hipocampal documentados para la sacarosa \cite{reichelt2021slr,coirini2022sucrose}. Por el contrario, en virtud de las propiedades hipoglucemiantes, antiinflamatorias y neuroprotectoras de los glucósidos de esteviol, se espera que la stevia actúe como un compuesto inocuo o eventualmente beneficioso sobre los parámetros conductuales y los marcadores de neurogénesis evaluados \cite{kruse2025stevia,kruse2019sucrose,sharma2009stevia}. En consecuencia, los animales expuestos a stevia ---tanto juveniles como adultos--- mostrarán un perfil conductual y neurobiológico comparable al de los controles, o incluso más favorable, en contraste con los déficits esperables en los grupos expuestos a sacarosa. El efecto diferencial según la ventana etaria permitirá determinar si la vulnerabilidad del sistema nervioso central en desarrollo modifica la respuesta a la stevia.
