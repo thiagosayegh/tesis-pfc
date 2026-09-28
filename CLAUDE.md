@@ -61,7 +61,8 @@ Texto:
 - Carátula: fecha de entrega; docentes de cátedra comentados.
 
 Datos/figuras:
-- Figuras faltantes: `Fig5_exploracion_SLR.pdf`, `Fig5_DI_SLR.pdf`.
+- Figuras faltantes: `Fig5_exploracion_SLR.pdf` (exploración total día 1 vs. día 2 por grupo, §5.4.1).
+- Sin auditar: tests de normalidad/homogeneidad (Shapiro-Wilk, Brown-Forsythe) y Mann-Whitney de s-SLR citados en §5.4.3 — no se subió el output de Prism correspondiente.
 - Falta la planilla SLR2 JUV CTROL STEV 250606: al subirla, re-correr el análisis y actualizar tablas del SLR.
 - Por redactar: Resultados de consumo/peso, OF, NOR, neurogénesis, ML; Discusión; Conclusiones.
 - Cronograma: redacción en octubre, entrega en noviembre de 2026.
