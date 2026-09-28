@@ -1,0 +1,50 @@
+﻿								
+Compare cell means with others in its row and its column								
+								
+Number of families	5							
+Number of comparisons per row family	3							
+Number of comparisons per column family	1							
+Alpha	0.05							
+								
+Tukey's multiple comparisons test	Predicted (LS) Mean diff.	95.00% CI of diff.	Below threshold?	Summary	Adjusted P Value			
+								
+  Adulto								
+    Control vs. Sacarosa	0.1088	-0.1310 to 0.3486	No	ns	0.5216			
+    Control vs. Stevia	0.1118	-0.1280 to 0.3516	No	ns	0.5033			
+    Sacarosa vs. Stevia	0.003000	-0.2368 to 0.2428	No	ns	0.9995			
+								
+  Juvenil								
+    Control vs. Sacarosa	0.3238	0.07102 to 0.5765	Yes	**	0.0089			
+    Control vs. Stevia	0.05140	-0.1950 to 0.2978	No	ns	0.8700			
+    Sacarosa vs. Stevia	-0.2724	-0.5187 to -0.02602	Yes	*	0.0270			
+								
+  Control								
+    Juvenil vs. Adulto	0.02420	-0.1807 to 0.2291	No	ns	0.8136			
+								
+  Sacarosa								
+    Juvenil vs. Adulto	-0.1908	-0.3957 to 0.01413	No	ns	0.0674			
+								
+  Stevia								
+    Juvenil vs. Adulto	0.08460	-0.1148 to 0.2840	No	ns	0.3986			
+								
+								
+Test details	Predicted (LS) Mean 1	Predicted (LS) Mean 2	Predicted (LS) Mean diff.	SE of diff.	N1	N2	q	DF
+								
+  Adulto								
+    Control vs. Sacarosa	0.2178	0.1090	0.1088	0.09939	10	10	1.548	52.00
+    Control vs. Stevia	0.2178	0.1060	0.1118	0.09939	10	10	1.591	52.00
+    Sacarosa vs. Stevia	0.1090	0.1060	0.003000	0.09939	10	10	0.04269	52.00
+								
+  Juvenil								
+    Control vs. Sacarosa	0.2420	-0.08178	0.3238	0.1048	9	9	4.371	52.00
+    Control vs. Stevia	0.2420	0.1906	0.05140	0.1021	9	10	0.7119	52.00
+    Sacarosa vs. Stevia	-0.08178	0.1906	-0.2724	0.1021	9	10	3.772	52.00
+								
+  Control								
+    Juvenil vs. Adulto	0.2420	0.2178	0.02420	0.1021	9	10	0.3352	52.00
+								
+  Sacarosa								
+    Juvenil vs. Adulto	-0.08178	0.1090	-0.1908	0.1021	9	10	2.642	52.00
+								
+  Stevia								
+    Juvenil vs. Adulto	0.1906	0.1060	0.08460	0.09939	10	10	1.204	52.00

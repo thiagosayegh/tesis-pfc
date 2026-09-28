@@ -1,0 +1,337 @@
+1
+“IMPACTO DE LA NUTRICIÓN TEMPRANA SOBRE EL DESARROLLO NEUROBIOLÓGICO Y
+LA CONDUCTA: EFECTOS DE STEVIA REBAUDIANA BERTONI”
+PROYECTO
+Los estudios que realizamos buscan comprender cómo las alteraciones metabólicas
+inducidas por la dieta, particularmente durante etapas críticas del desarrollo, impactan
+sobre el sistema nervioso central en formación y posteriormente en la conducta del
+individuo adulto. El objetivo central es generar conocimiento experimental que permita
+advertir sobre prácticas alimentarias de riesgo y, al mismo tiempo, identificar
+estrategias basadas en productos naturales que contribuyan a la prevención y mejora
+de la calidad de vida.
+En los últimos años, el laboratorio ha consolidado una línea de investigación centrada
+en el estudio de los efectos del consumo temprano de endulzantes, tanto calórico
+como no calórico, sobre parámetros neuroendocrinos, reproductivos y conductuales
+[1, 2]. En este marco, se ha demostrado que la exposición temprana a estos
+compuestos puede inducir alteraciones persistentes que se manifiestan en la adultez,
+particularmente en conductas relacionadas con la ansiedad y el procesamiento
+emocional y de memoria [3, 4].
+Dentro de esta línea, el estudio de la stevia (Stevia rebaudiana) se ha convertido en un
+eje central de investigación, dado su creciente uso global como sustituto del azúcar y la
+escasa información disponible sobre sus efectos a largo plazo cuando el consumo se
+inicia en etapas tempranas de la vida. Nuestros trabajos recientes han demostrado que
+la exposición temprana a stevia puede generar efectos duraderos sobre la fertilidad, la
+descendencia y distintos aspectos del comportamiento en modelos animales [1]. Estos
+resultados aportan evidencia relevante al debate actual sobre la seguridad del
+consumo de edulcorantes no calóricos durante etapas sensibles del desarrollo.
+Otra línea estratégica del laboratorio se centra en el estudio de plantas nativas de la
+región andina con potencial terapéutico. En colaboración con investigadores del
+Instituto de Biotecnología de la UNSJ, se evalúan decocciones y extractos vegetales
+tradicionalmente utilizados en la región de Cuyo, con el objetivo de caracterizar sus
+propiedades antioxidantes, hipoglucemiantes y sus efectos sobre la conducta. En
+particular, se han presentado resultados que describen los efectos de decocciones de
+
+2
+Oxalis erythrorhiza y Tessaria absinthioides sobre conductas tipo ansiosa en ratas
+juveniles, fortaleciendo el vínculo entre el conocimiento etnobotánico regional y la
+investigación experimental [5, 6].
+OBJETIVOS ESPECÍFICOS.
+El consumo excesivo de sacarosa durante etapas tempranas del desarrollo induce
+cambios estructurales, neurobiológicos y conductuales que pueden persistir en la edad
+adulta. En contraste, aún es limitada la información disponible sobre los posibles
+efectos adversos a largo plazo del consumo de edulcorantes no calóricos,
+particularmente cuando este se inicia en períodos críticos del desarrollo.
+En este proyecto se propone evaluar los efectos metabólicos y neurobiológicos a largo
+plazo asociados al consumo temprano de stevia, así como determinar su posible
+relación con alteraciones conductuales en distintos dominios cognitivos, incluyendo la
+conducta tipo ansiosa, el aprendizaje y la memoria.
+Para ello, se compararán los efectos del consumo de bebidas endulzadas con sacarosa y
+con stevia en ratas con historia de exposición durante la etapa juvenil en comparación
+con la adultez. Particularmente se medirán:
+1. La ansiedad a corto plazo.
+Entre las pruebas más empleadas para evaluar la ansiedad se encuentran la
+prueba de laberinto en cruz elevado (EPM, por su siglas en inglés elevated
+plus maze) y la prueba de campo abierto (OF, por su siglas en inglés open
+field). Los niveles de ansiedad se establecen mediante ciertas características
+de la actividad exploratoria del animal en cada dispositivo. Una mayor
+permanencia en los brazos cerrados del EPM y un menor recorrido en el OF
+son indicadores de mayores niveles de ansiedad.
+2. La memoria de reconocimiento.
+Se realizará la prueba de reconocimiento de un objeto novedoso (NOR, por su
+sigla en inglés novel object recognition). En estas actividades participan
+diferentes regiones cerebrales, como el HIP involucrado en la ubicación
+espacial de los objetos, la corteza perirrinal involucrada en la representación
+de los objetos y la mPFC que integra la información espacial con la del objeto.
+3. La memoria dependiente de la separación de patrones y proliferación
+neuronal hipocampal.
+Se evaluará si la memoria dependiente de la neurogénesis se halla también
+afectada y si existen cambios estructurales del HIP acompañando dichas
+alteraciones. Este proceso se analizará mediante la prueba de reconocimiento
+espontáneo de posición (SLR, por su sigla en inglés “spontaneous location
+recognition task”) que evalúa la capacidad de separación de patrones
+espaciales. La prueba SLR es muy sensible a los cambios en la
+
+3
+neuroplasticidad y los niveles de factor neurotrófico derivado del cerebro
+(BDNF) del HIP. En nuestro modelo se analizará también si hay cambios
+estructurales del HIP midiendo los marcadores para neuronas maduras
+(NeuN), inmaduras (DCX) y proliferativas (PCNA) por inmunocitoquímica.
+En nuestro laboratorio hemos demostrado que la exposición temprana y crónica a
+stevia induce alteraciones en conductas dependientes del sistema dopaminérgico,
+incluyendo déficits en la coordinación motora y un fenotipo de tipo anhedónico,
+acompañado por una disminución en la expresión del transportador de dopamina
+(DAT) en la corteza prefrontal medial (presentación Congreso SAB 2024). Estos
+hallazgos sugieren una disrupción en la regulación de la neurotransmisión
+dopaminérgica en circuitos mesolímbicos. Por ello, en el siguiente periodo se espera
+completar este estudio midiendo la expresión de enzimas responsables del tono
+dopaminérgico:
+TIPO DE DISEÑO DE INVESTIGACION Y MÉTODOS
+En este proyecto evaluaremos los efectos de la exposición ilimitada de bebidas
+endulzadas, sobre la ansiedad y la memoria, y se identificarán algunos de los factores 
+involucrados en estas modificaciones. Para ellos, se medirán niveles de distintas
+moléculas entre marcadores neuronales, y parámetros metabólicos. Todos estos
+factores se correlacionarán con los cambios conductuales a fin de caracterizar su
+implicancia en las alteraciones halladas. Los métodos propuestos son ampliamente
+utilizados por el grupo de trabajo. Todas estas técnicas serán complementarias para la
+obtención de las conclusiones finales.
+Grupos experimentales: Se emplearán ratas macho de la cepa Sprague-Dawley,
+provenientes del bioterio de la Facultad de Ciencias Veterinarias de la UBA y
+mantenidas en el bioterio del IByME bajo condiciones controladas de luz, temperatura
+y humedad.
+Para los estudios de largo plazo, se utilizarán animales juveniles (grupo juvenil, GJ;
+postnatal day 25, PD25) y adultos (grupo adulto, GA; PD75). Los animales tendrán
+acceso ad libitum a dos botellas: una con agua y otra con una solución de sacarosa al
+10% p/v, o bien una con agua y otra con una solución de stevia al 4% p/v, durante un
+período de 25 días (PD25–PD50 para el GJ y PD75–PD100 para el GA) (Fig. 1).
+Posteriormente, todos los animales recibirán únicamente agua durante un período
+adicional de 25 días.
+Para el estudio de los efectos agudos sobre el sistema dopaminérgico, los animales
+serán sometidos al mismo paradigma de dos botellas entre los días PD25 y PD60.
+Durante todo el período experimental, se registrará diariamente el consumo de
+líquidos y alimento, y se controlará semanalmente el peso corporal. Finalizados los
+tratamientos (PD75 y PD125 para los grupos GJ y GA, respectivamente: y PD60 para los
+estudios del sistema dopaminérgico), los animales serán evaluados mediante las
+pruebas conductuales previamente descritas. Finalmente, serán sacrificados para la
+obtención de muestras destinadas a los análisis moleculares correspondientes.
+
+4
+Fig. 1
+Preparación de bebidas endulzadas: Las soluciones de sacarosa se prepararán
+disolviendo azúcar comercial (Ledesma, Buenos Aires, Argentina) en una concentración
+10% P/V en agua potable y filtrada. Para la solución de stevia al 4% P/V se realizará una
+decocción de hojas de S. rebaudiana (20 g de hoja seca) comercial en 1L de agua
+potable filtrada a 100°C durante 10 min, que luego será filtrada y reducida hirviendo
+nuevamente a 100°C durante 90 min, y almacenada a -20°C hasta su uso previa
+dilución a la concentración requerida (40 mL/L de agua). El extracto de stevia se
+preparó de acuerdo con un método descrito previamente adaptado de Sharma et al. ,
+2009 [7], elegido por su alto rendimiento de glucósidos de esteviol y su similitud con
+los procedimientos de preparación orientados a la salud. El recambio de todas las
+soluciones se realizará cada 2 días.
+Parámetros séricos: Con un ayuno previo de 6h, se obtendrán muestras sanguíneas de
+la vena de la cola que serán centrifugadas a 3.500 g durante 15 minutos a temperatura
+ambiente. Los parámetros séricos (glucosa, fructosamina, triglicéridos y colesterol)
+serán determinados por espectrofotometría mediante kits comerciales específicos
+(Wiener Laboratorios SAIC, Rosario, Argentina)[8]. La GTT y la posterior obtención del
+valor del área bajo la curva (AUC por su sigla en inglés area under curve) se realizarán
+como fue descrito previamente [2].
+Preparación de tejidos: Luego del sacrificio de los animales se disecarán las regiones
+de interés que serán cortadas y procesadas en fresco (sin fijación). La disección de
+núcleos específicos se realizará mediante la técnica descripta por Palkovits [9]. Los
+tejidos se guardarán inmediatamente a -80C hasta su uso para estudios de actividad
+antioxidante o para análisis por Western blot.
+Inmunocitoquímica. La técnica será utilizada para estudiar donde se produce la
+expresión de distintos marcadores (es decir, las áreas cerebrales involucradas) y los
+cambios de dichos parámetros producidos por tratamiento. Estos estudios serán
+realizados como fue descripto anteriormente [10]. Los ensayos con los anticuerpos
+específicos serán realizados dentro de la semana de obtención de la muestra.
+Brevemente, secciones de 50 µm de cerebro conteniendo las regiones a estudiar serán
+obtenidas utilizando un vibrátomo. Las secciones se bloquearán en PBS conteniendo
+0.1% Tween 20 y 10% de suero de cabra por 1h a temperatura ambiente. Las muestras
+serán luego incubadas con los anticuerpos primarios según corresponda en PBS
+conteniendo 0.1% Tween 20 y 2% de suero de cabra durante toda la noche a 4 °C. La
+especificidad de los anticuerpos primarios será previamente confirmada por Western
+blot. Las muestras serán luego lavadas con PBS, y se incubarán con anticuerpos
+
+5
+secundarios unidos a fluorocromos, cabra anti-conejo 488 y cabra anti-ratón 546
+(1:200) por 2 h a temperatura ambiente. Finalmente, las muestras serán lavadas con
+PBS y montadas sobre portaobjetos usando Vectashield.
+Microscopio confocal y análisis de imágenes. La señal emitida por los anticuerpos
+secundarios unidos a fluorocromos será analizada con el microscopio confocal presente
+en el IByME Nikon C1 equipado con láseres de Argón y Neón. Las características de
+fluorescencia para los anticuerpos usados son AlexaFluor 488 (excitación/emisión
+máxima 495/519 nm) y 546 (excitación/emisión máxima 556/573 nm). Los parámetros
+del microscopio confocal serán mantenidos constantes a lo largo de cada experimento,
+así es posible comparar las intensidades entre muestras preparadas el mismo día.
+Como control de la técnica se omitirán los anticuerpos primarios en secciones control y
+la señal obtenida será considerada como blanco. 
+Western blot (WB): La preparación de las muestras y el análisis electroforético por WB
+serán realizados siguiendo el protocolo empleado en el laboratorio [11]. La
+concentración proteica de los homogenatos será determinada mediante la técnica de
+Bradford [12]. La electroforesis se realizará en condiciones desnaturalizantes en geles
+policramida-SDS utilizando una cuba Mini protein II (Biorad). Junto con las muestras se
+sembrará un marcador de peso molecular para posteriormente ubicar las bandas de
+interés en la membrana. Las bandas serán electrobloteadas a 1.5 mA/cm2sobre
+membranas de PDVF con un tamaño de poro de 0,45μm (Amersham Pharmacia
+Biotech). Las membranas obtenidas serán incubadas en agitación con los anticuerpos
+primarios durante toda la noche a 4°C. Al día siguiente, se realizarán lavados y serán
+incubadas con el anticuerpo secundario correspondiente por 1 h a temperatura
+ambiente. Luego serán reveladas con el kit ECL de quimioluminiscencia (Amersham,
+Pharmacia Biotech) empleándose película fotográfica sensible (GE Healthcare). Las
+bandas obtenidas serán escaneadas y analizadas por densitometría utilizando el
+programa NIH Scion Image (Scion Corp., Frederick, Maryland, USA).
+Anticuerpos: Varios de los anticuerpos propuestos ya han sido usados en el
+laboratorio, ellos son anti β-Actina de cabra (sc-1616). NeuN y PCNA (MAB377 y
+MAB424, Sigma-Aldrich, respectivamente) y DCX (sc-8066 c-18, Santa Cruz Biotech).
+Las diluciones serán puestas a punto en la mesada. Por lo general en nuestro
+laboratorio los anticuerpos primarios se usan dentro del rango de dilución 1:100-
+1:1000 y los secundarios 1:1000-1:5000.
+Pruebas conductuales
+Los dispositivos de prueba se iluminan con una luz de 42 W suspendida a
+aproximadamente 1 m de altura, dirigida hacia el techo. Los animales se aclimatan
+durante 20 minutos antes de las pruebas a la sala de comportamiento (habituación).
+Para evitar pistas olfativas, los dispositivos y/o todo objeto que se presente, se limpian
+con etanol al 70 % entre cada animal. Las sesiones de comportamiento se graban con
+una cámara de video, se codifican y se analizan utilizando el software para análisis de
+comportamiento Any-maze© (Stoelting Co., EE. UU.).
+
+6
+OF (Prueba de campo abierto): En esta prueba se evalúa la ansiedad y la locomoción
+de los animales. El dispositivo consiste en un cuadrado de madera (de 75 x 75 cm de
+lado x 30 cm de alto) de base y paredes oscuras [11]. Mediante el software
+ANY-maze© la arena se divide digitalmente en tres zonas concéntricas, y se miden la
+distancia total recorrida y el tiempo y distancia recorridas en cada zona.
+EPM (Prueba del laberinto en cruz elevado): Esta prueba también evalúa la ansiedad
+de los animales. El dispositivo consiste en cuatro brazos de madera de color negro
+mate de 50 cm de largo por 10 cm de ancho, dispuestos en forma de cruz, elevado a 50
+cm del suelo. Dos de los brazos son cerrados mediante paredes de 45 cm de alto, y dos
+son abiertos, sin paredes. El animal es colocado en el cuadrado central, con su cabeza
+apuntando siempre hacia el mismo brazo abierto. El recorrido del animal en el
+dispositivo dura 5 min. Se analizan la frecuencia de entradas y permanencia en el
+centro y en los brazos abiertos y cerrados [11].
+NOR (Prueba de reconocimiento de un objeto novedoso): El dispositivo consiste en un
+rectángulo de madera (de 75 cm de largo × 55 cm de ancho x 30 cm de alto) de base y
+paredes oscuras. Los objetos empleados para la tarea difieren en la forma, color y
+textura. Son de distinto material y presentan tres formas diferentes: cuboides de vidrio,
+cilindros metálicos, cubos de plástico y una taza de cerámica. En todos los casos
+presentan un peso tal que no pueden ser desplazados por las ratas. El NOR se realiza
+como se describió anteriormente [13, 14]. Durante la semana previa a la habituación,
+los animales son manipulados una vez al día durante 3 días consecutivos. Previo al día
+del primer ensayo se permite que cada animal explore el dispositivo durante 5 minutos
+durante 4 días consecutivos (habituación). En el primer ensayo (T1), se colocan dos
+objetos idénticos en dos esquinas opuestas del aparato a 10 cm de las paredes
+laterales. Se introduce al animal en el centro del dispositivo y se le permite explorar a
+los objetos durante 5 min. Después de T1, cada animal regresa a su jaula de origen y
+luego de un intervalo de 2h (memoria a corto plazo) se realiza una segunda prueba (T2)
+de igual forma y tiempo que en T1, pero uno de los objetos es reemplazado por otro
+con otra característica (forma, tamaño y textura). De forma similar a T2 pero
+cambiando nuevamente el objeto novedoso (con otra característica del empleado en
+T2) ser realiza la prueba a las 24h de T1 (memoria a largo plazo, T3). Finalmente, 7 días
+después de T1 se repite el estudio con otro objeto diferente (memoria consolidada,
+T4). En consecuencia, las ratas se vuelven a exponer a dos objetos: una copia del
+objeto familiar (F) y un objeto novedoso (N). Todos los objetos son cambiados de
+posición para reducir el sesgo potencial causado por la preferencia de lugares u objetos
+particulares. La exploración se define de la siguiente manera: Dirigir la nariz hacia el
+objeto a una distancia de 2 cm o menos y/o tocar el objeto con la nariz. Rodear al
+objeto o posarse sobre el mismo no se considera un comportamiento exploratorio. La
+actividad exploratoria de cada animal es grabada y los tiempos empleados para
+explorar cada objeto durante T1, T2, T3 y T4 se miden manualmente con un
+cronómetro, por dos experimentadores independientes que desconocen el tratamiento
+de los animales. Se informa la tasa de exploración, que es el tiempo dedicado a
+explorar el nuevo objeto (tN), dividido por el tiempo dedicado a explorar ambos objetos
+NOR= [tN / (tN + tF)].
+
+7
+Prueba de reconocimiento espontáneo de posición (SLR): Este procedimiento se
+realzará como fue descrito por Recihelt et al. [15, 16]. El aparato consiste en un campo
+abierto circular de plástico gris y base opaca de 100 cm de diámetro x 45 cm de alto sin
+techo. La arena estará rodeada de tres señales espaciales distintivas (pósteres negros y
+blancos con patrones únicos) de 35 cm de alto x 50 cm de ancho, ubicadas
+equidistantes alrededor de la arena, y señales distales proporcionadas por los muebles
+de la sala, incluidos los estantes, la puerta (ver figura debajo).
+Durante la semana previa a la habituación, los animales son manipulados una vez al día
+durante 5 días consecutivos. Previo al día del primer ensayo, se permite que cada
+animal explore el dispositivo durante 10 minutos durante 3 días consecutivos
+(habituación). Los objetos serán botellas de plástico de color amarillo opaco (22 cm de
+alto, 8 cm de ancho) sin etiquetas. En el primer ensayo se exponen a las ratas a tres
+objetos idénticos, A1, A2 y A3, durante 10 min (fase de muestreo). La disposición de los
+objetos depende de la configuración a testear: d-SLR o s-SLR. En ambas
+configuraciones, los objetos son siempre colocados a lo largo de una circunferencia, a
+10 cm de la pared, aproximadamente. En cada experimento, la mitad de los animales
+son asignados a la tarea d-SLR, y la otra mitad a s-SLR. Para el d-SLR, los objetos A1, A2
+y A3 se colocan equidistantes, a 120° y una distancia aproximada de 49 cm entre ellos.
+Para el s-SLR, los objetos A2 y A3 se colocan a 50° de distancia a 20,5 cm entre ellos,
+mientras que A1 se ubica a la misma distancia de A2 y A3. Veinticuatro horas después
+de la fase de muestreo, los animales regresan a la arena donde son expuestos sólo a
+dos objetos, uno familiar (A1) y otro novedoso (N), durante 5 minutos. El objeto N se
+ubica en la posición media, entre donde antes estaban ubicados los objetos A2 y A3 de
+la fase de muestreo.
+Análisis estadístico:
+El tamaño muestral se estima en base a estudios previos (95% de confianza, 10% de
+error, 80% de potencia) [17]. La normalidad y la homogeneidad de varianzas se evalúan
+mediante las pruebas de Shapiro–Wilk y Brown-Forsythe, respectivamente.
+Se utiliza ANOVA de una vía con medidas repetidas para analizar el consumo de
+soluciones, alimento y kilocalorías, así como el peso corporal a lo largo del tiempo, y
+
+8
+ANOVA de dos vías para la exploración de objetos (T1) y la actividad locomotora entre
+T1–T4. Todas las demás variables, incluyendo metabolitos séricos, área bajo la curva
+(AUC), expresión de marcadores y proteínas, y resultados conductuales de las pruebas
+de campo abierto (OF), laberinto en cruz elevado (EPM) y reconocimiento de un objeto
+novedoso (NOR), y de reconocimiento espontáneo de posición (SLR) se analizan
+mediante ANOVA de una vía.
+Cuando se detectan efectos principales significativos, se aplica la prueba post
+hoc de Tukey para ajustar comparaciones múltiples y controlar el error familiar. Los
+análisis de correlación se realizan mediante el coeficiente de Pearson, previa
+verificación de la normalidad mediante la prueba de Shapiro–Wilk. En los casos con
+significancia estadística, se aplica un análisis de regresión lineal para calcular el
+coeficiente de determinación (r²) y la ecuación de la recta.
+La significancia estadística se establece en p < 0,05, y los datos se expresan
+como media ± error estándar de la media (SEM) a partir de dos experimentos
+independientes, correspondientes a dos cohortes experimentales realizadas en
+distintos momentos con grupos independientes de animales, pero siguiendo el mismo
+diseño y protocolo experimental. Los datos de ambas cohortes se combinan para el
+análisis estadístico. Los análisis se realizan utilizando GraphPad Prism v9.01.
+Referencias
+1. Kruse, M.S., H. Coirini, and M. Rey, Early Consumption of Stevia rebaudiana Bertoni on
+Rat Females: Actions on Their Fertility, Progeny, and Behavior. J Nutr, 2025. 155(6): p.
+1839-1850.
+2. Rey, M., et al., Effects of metformin on behavioral alterations produced by chronic
+sucrose consumption in male rats. J Neuroendocrinol, 2024. 36(2): p. e13362.
+3. Coirini, H., et al., Long-Term Memory Function Impairments following Sucrose Exposure
+in Juvenile versus Adult Rats. Biomedicines, 2022. 10(11).
+4. Kruse, M.S., et al., Sucrose exposure in juvenile rats produces long-term changes in fear
+memory and anxiety-like behavior. Psychoneuroendocrinology, 2019. 104: p. 300-307.
+5. Gomez, J., et al., Oxalis erythrorhiza Gillies ex Hooker et Arnott (Oxalidaceae): Chemical
+Analysis, Biological In Vitro and In Vivo Properties and Behavioral Effects. Antioxidants
+(Basel), 2024. 13(12).
+6. Rey, M., et al., Tessaria absinthioides (Hook. & Arn.) DC. (Asteraceae) Decoction
+Improves the Hypercholesterolemia and Alters the Expression of LXRs in Rat Liver and
+Hypothalamus. Metabolites, 2021. 11(9).
+7. Sharma, M. R, and U. B, Effect of Stevia Extract Intervention on Lipid Profile. Studies on
+Ethno-Medicine., 2009. 3(2): p. 137-140.
+8. Rey, M., et al., High-Fat Diets and LXRs Expression in Rat Liver and Hypothalamus. Cell
+Mol Neurobiol, 2019. 39(7): p. 963-974.
+9. M.J., P.M.B., Maps and guide to microdissection of the rat brain. Elsevier NY., 1988.
+10. Kruse, M.S., et al., Alterations of LXRalpha and LXRbeta expression in the hypothalamus
+of glucose-intolerant rats. J Endocrinol, 2012. 215(1): p. 51-8.
+11. Pian, J.P., et al., Milk consumption during adolescence decreases alcohol drinking in
+adulthood. Pharmacol Biochem Behav, 2009. 94(1): p. 179-85.
+12. Bradford, M.M., A rapid and sensitive method for the quantitation of microgram
+quantities of protein utilizing the principle of protein-dye binding. Anal Biochem, 1976.
+72: p. 248-54.
+13. Leger, M., et al., Object recognition test in mice. Nat Protoc, 2013. 8(12): p. 2531-7.
+
+9
+14. Perez-Garcia, G., et al., Early malnutrition results in long-lasting impairments in
+pattern-separation for overlapping novel object and novel location memories and
+reduced hippocampal neurogenesis. Sci Rep, 2016. 6: p. 21275.
+15. Reichelt, A.C., et al., The spontaneous location recognition task for assessing spatial
+pattern separation and memory across a delay in rats and mice. Nat Protoc, 2021.
+16(12): p. 5616-5633.
+16. Reichelt, A.C., M.J. Morris, and R.F. Westbrook, Daily access to sucrose impairs aspects
+of spatial memory tasks reliant on pattern separation and neural proliferation in rats.
+Learn Mem, 2016. 23(7): p. 386-90.
+17. Charan, J. and N.D. Kantharia, How to calculate sample size in animal studies? J
+Pharmacol Pharmacother, 2013. 4(4): p. 303-6.
+

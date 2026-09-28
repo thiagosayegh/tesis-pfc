@@ -1,0 +1,50 @@
+﻿								
+Compare cell means with others in its row and its column								
+								
+Number of families	5							
+Number of comparisons per row family	3							
+Number of comparisons per column family	1							
+Alpha	0.05							
+								
+Tukey's multiple comparisons test	Predicted (LS) Mean diff.	95.00% CI of diff.	Below threshold?	Summary	Adjusted P Value			
+								
+  Adulto								
+    CONTROL vs. SACAROSA	0.05440	-0.06550 to 0.1743	No	ns	0.5216			
+    CONTROL vs. STEVIA	0.05590	-0.06400 to 0.1758	No	ns	0.5033			
+    SACAROSA vs. STEVIA	0.001500	-0.1184 to 0.1214	No	ns	0.9995			
+								
+  Juvenil								
+    CONTROL vs. SACAROSA	0.1619	0.03551 to 0.2883	Yes	**	0.0089			
+    CONTROL vs. STEVIA	0.02570	-0.09748 to 0.1489	No	ns	0.8700			
+    SACAROSA vs. STEVIA	-0.1362	-0.2594 to -0.01301	Yes	*	0.0270			
+								
+  CONTROL								
+    Juvenil vs. Adulto	0.01210	-0.09035 to 0.1146	No	ns	0.8136			
+								
+  SACAROSA								
+    Juvenil vs. Adulto	-0.09539	-0.1978 to 0.007065	No	ns	0.0674			
+								
+  STEVIA								
+    Juvenil vs. Adulto	0.04230	-0.05742 to 0.1420	No	ns	0.3986			
+								
+								
+Test details	Predicted (LS) Mean 1	Predicted (LS) Mean 2	Predicted (LS) Mean diff.	SE of diff.	N1	N2	q	DF
+								
+  Adulto								
+    CONTROL vs. SACAROSA	0.6089	0.5545	0.05440	0.04970	10	10	1.548	52.00
+    CONTROL vs. STEVIA	0.6089	0.5530	0.05590	0.04970	10	10	1.591	52.00
+    SACAROSA vs. STEVIA	0.5545	0.5530	0.001500	0.04970	10	10	0.04269	52.00
+								
+  Juvenil								
+    CONTROL vs. SACAROSA	0.6210	0.4591	0.1619	0.05238	9	9	4.371	52.00
+    CONTROL vs. STEVIA	0.6210	0.5953	0.02570	0.05106	9	10	0.7119	52.00
+    SACAROSA vs. STEVIA	0.4591	0.5953	-0.1362	0.05106	9	10	3.772	52.00
+								
+  CONTROL								
+    Juvenil vs. Adulto	0.6210	0.6089	0.01210	0.05106	9	10	0.3352	52.00
+								
+  SACAROSA								
+    Juvenil vs. Adulto	0.4591	0.5545	-0.09539	0.05106	9	10	2.642	52.00
+								
+  STEVIA								
+    Juvenil vs. Adulto	0.5953	0.5530	0.04230	0.04970	10	10	1.204	52.00

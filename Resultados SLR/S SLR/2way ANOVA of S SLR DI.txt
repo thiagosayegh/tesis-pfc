@@ -1,0 +1,29 @@
+﻿							
+Table Analyzed	S SLR DI						
+							
+Two-way ANOVA	Ordinary						
+    Alpha	0.05						
+							
+Source of Variation	% of total variation	P value	P value summary	Significant?			
+    Interaction	1.573	0.5914	ns	No			
+    Row Factor	0.1177	0.7792	ns	No			
+    Column Factor	19.79	0.0026	**	Yes			
+							
+ANOVA table	SS (Type III)	DF	MS	F (DFn, DFd)	P value		
+    Interaction	0.08373	2	0.04186	F (2, 53) = 0.5304	P=0.5914		
+    Row Factor	0.006265	1	0.006265	F (1, 53) = 0.07938	P=0.7792		
+    Column Factor	1.053	2	0.5266	F (2, 53) = 6.672	P=0.0026		
+    Residual	4.183	53	0.07893				
+    Total	5.323	58					
+							
+Difference between row means							
+    Predicted (LS) mean of Juvenil	0.09289						
+    Predicted (LS) mean of Adulto	0.07227						
+    Difference between predicted means	0.02063						
+    SE of difference	0.07321						
+    95% CI of difference	-0.1262 to 0.1675						
+							
+Data summary							
+    Number of columns (Column Factor)	3						
+    Number of rows (Row Factor)	2						
+    Number of values	59						

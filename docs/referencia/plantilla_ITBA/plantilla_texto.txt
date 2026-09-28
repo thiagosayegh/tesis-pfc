@@ -1,0 +1,66 @@
+Título del proyecto
+Proyecto final de Carrera para la obtención del título de Bioingeniero
+Autor/es: Apellido, Nombre (Legajo)
+Tutor: Título Nombre y Apellido
+Co-tutor: Título Nombre y Apellido
+Asesor/es: Título Nombre y Apellido
+Fecha de entrega:
+
+Agradecimientos (opcional, media carilla)
+Resumen (media carilla)
+Síntesis breve del problema, los objetivos, la metodología y los resultados principales, acompañada de
+palabras clave
+Glosario de abreviaturas
+Índice general
+Índice de figuras (de existir)
+Índice de tablas (de existir)
+Introducción (máximo 3 carillas)
+Este es el primer capítulo de la tesis. Presenta el tema, el planteamiento del problema, la justificación y
+los objetivos de la investigación
+Estado del arte
+Este apartado es opcional, dependiendo de la base del trabajo. Se recomienda en aquellos trabajos que
+realicen innovaciones en el área de estudio. Consiste en agrupar qué investigaciones recientes se han
+hecho sobre un tema
+Marco teórico
+Este apartado debe constituir el sustento formal —matemático, físico y fisiológico— que valida de
+manera estricta las decisiones de diseño e ingeniería de su proyecto. No consiste en una recopilación
+temática ni en un glosario conceptual, sino en un hilo conductor que justifica analíticamente por qué se
+aborda el problema mediante una metodología específica y no otra. Evitar el efecto enciclopedia, se
+asumen evaluadores expertos de área. No redactar generalidades que puedan ser redundantes.
+1
+
+Nota: hasta aquí no debe superarse el 20% del escrito total.
+Materiales y métodos
+Responde al qué se hizo, cómo se hizo y con qué se hizo. Explica el tipo de estudio, el diseño, la
+población, la muestra y las herramientas o instrumentos usados para recolectar los datos.
+Resultados
+Este capítulo será un compendio de los resultados, producto del proceso de análisis de datos. Se
+recomienda implementar, dentro de lo posible, recursos gráficos tales como diagramas, cuadros, mapas
+o tablas, con la finalidad de facilitar la comprensión de la información.
+Discusión
+En este capítulo se analizan los resultados de la investigación, relacionándolos con la teoría y el estado
+de la cuestión. Esto se realiza mediante la comparación con resultados de estudios previos o desarrollos
+ya citados, contraste con la hipótesis y el análisis de las implicaciones y limitaciones de los resultados.
+Requiere un ejercicio de pensamiento crítico.
+Perspectivas futuras (max 1 carilla)
+Este capítulo es opcional. Puede incluir ideas a futuro que surgieron durante el desarrollo del trabajo
+pero que no formaban parte de la tesis en cuestión, así como objetivos de máxima que no fueron
+alcanzados.
+Conclusiones (max 2 carillas)
+Este capítulo de cierre es donde se manifiestan los hallazgos más destacados del trabajo y se explicara si
+se alcanzaron los objetivos planteados inicialmente o si la hipótesis fue comprobada o refutada.
+Asimismo, se pueden realizar recomendaciones útiles para aquellos estudiantes que deseen elaborar
+una tesis similar en el futuro. Se recomienda que la redacción sea clara y concisa, proponiendo
+conclusiones específicas por cada asunto que se considere fundamental.
+2
+
+Anexos
+Estos serán un recurso para incluir información que puede ser útil para el lector para comprender mejor
+ciertos apartados o grandes caudales de información. Ejemplos: Documentos de apoyo, encuestas
+vacías, tablas grandes o imágenes adicionales
+Referencias Bibliográficas
+Listado completo de todos los libros, revistas y sitios web citados a lo largo del texto. Citar acorde a
+normas IEEE.
+Nota: las tablas, imágenes y gráficos también deben referenciarse acorde a la normativa de IEEE.
+3
+

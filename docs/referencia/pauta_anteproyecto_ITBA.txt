@@ -1,0 +1,95 @@
+Propuesta de Anteproyecto
+1. Desarrollo de un Producto Biomédico o Sistema Biomédico
+La propuesta debe tener una extensión de hasta 5 páginas y debe contar con las siguientes
+secciones:
+1. Carátula
+- Logo Institucional,
+- código y nombre de la asignatura
+- Título (preliminar) (debe ser significativo y tener extensión adecuada),
+- nombre completo y legajos de/los auto/autores
+- nombres de los docentes de la cátedra
+- cuatrimestre y año
+2. Resumen del Proyecto: debe incluir: el tema del proyecto, su relevancia, los
+objetivos, y su valor, en un texto de extensión menor a 250 palabras)
+3. Justificación: Argumentación sobre los motivos que determinaron la elección del
+tema a tratar en el trabajo, pudiendo señalar la elección personal del tema y sus
+antecedentes, haciendo referencia a la pertinencia y relevancia del tema dentro del área de
+conocimiento que aborda la carrera.
+4. Objetivos
+Redacción del objetivo general y objetivos específicos y su distinción en:
+a. Objetivos de Mínima (Enunciar los objetivos que se deberán alcanzar
+obligatoriamente)
+b. Objetivos de Máxima (Enunciar los objetivos deseables a alcanzar, por
+encima de los de mínima)
+5. Metodología (preliminar): Enunciar las características del producto o sistema
+biomédico, que actuarán como guía para el desarrollo del proyecto.
+6. Planificación de Tareas : Presentar un Diagrama de Gantt
+7. Costo (preliminar) Presentar una estimación de costos de componentes y
+servicios, solo en proyectos que se realicen dentro del ITBA. Si la búsqueda de
+materiales es a través de Mercado Libre, discriminar el costo de envío a Los Patos 2802,
+Parque Patricios.
+8. Referencias bibliográficas. (preliminar) Listar las referencias bibliográficas que se
+utilizaron. Agregar un listado de la bibliografía preliminar, que será ampliada durante el
+
+desarrollo de la tesina. Utilizarlas normas IEEE en su edición más reciente;
+consultarwww.ieee.org/documents/ieeecitationref.pdf)
+9. Anexos (De ser necesario). Presentar en esta sección la información
+aclaratoria/complementaria del proyecto
+10. Lugar de Realización (Indicar el nombre del laboratorio, centro o espacio y el
+nombre de la Institución)
+11. Tutor: Indicar nombre y datos de contacto del Tutor (si no es ITBA, adjuntar su
+CV) De existir la figura de Co-Tutor, lo mismo.
+Importante: La entrega del anteproyecto debe realizarse vía
+campus
+
+2. Desarrollo de una Tesina de Investigación
+La propuesta debe tener una extensión de hasta 5 páginas y debe contar con las siguientes
+secciones:
+1. Carátula
+- Logo Institucional,
+- código y nombre de la asignatura
+- Título (preliminar) (debe ser significativo y tener extensión adecuada),
+- nombre completo y legajos de/los auto/autores
+- nombres de los docentes de la cátedra
+- cuatrimestre y año
+2. Resumen del Proyecto: debe incluir: el tema del proyecto, su relevancia, los
+objetivos, y su valor, en un texto de extensión menor a 250 palabras)
+3. Justificación: Argumentación sobre los motivos que determinaron la elección del
+tema a tratar en el trabajo, pudiendo señalar la elección personal del tema y sus
+antecedentes, haciendo referencia a la pertinencia y relevancia del tema dentro del área de
+conocimiento que aborda la carrera.
+4. Planteamiento del tema/problema: enunciando lo que se pretende investigar,
+buscando una buena formulación para delimitar la investigación. Explicitar los aspectos,
+factores o elementos relevantes relacionados con el problema que se va a investigar.
+5. Objetivos
+Redacción del objetivo general y objetivos específicos y su distinción en:
+a. Objetivos de Mínima (Enunciar los objetivos que se deberán alcanzar
+obligatoriamente)
+b. Objetivos de Máxima (Enunciar los objetivos deseables a alcanzar, por
+encima de los de mínima)
+6. Hipótesis: Es un anticipo de respuesta al problema planteado. Las hipótesis
+pueden elaborarse para guiar el trabajo de investigación y/o para plantear su verificación.
+7. Marco teórico (preliminar) (Enunciar las referencias conceptuales que ayudan a
+comprender y focalizar el tema a estudiar, permitiendo fundamentar y contextualizar
+el tema/problema a investigar)
+8. Metodología y técnicas a utilizar: Enunciar las decisiones tomadas, las tareas
+planificadas para desarrollar el trabajo de investigación y el tipo de estudio previsto.
+
+9. Cronograma (preliminar) Presentar un Diagrama de Gantt
+7. Costo (preliminar) Presentar una estimación de costos de componentes y
+servicios, solo en proyectos que se realicen dentro del ITBA. Si la búsqueda de
+materiales es a través de Mercado Libre, discriminar el costo de envío a Los Patos 2802,
+Parque Patricios.
+10. Referencias bibliográficas: (preliminar) Listar las referencias bibliográficas que se
+utilizaron. Agregar un listado de la bibliografía preliminar, que será ampliada durante el
+desarrollo de la tesina. Utilizarlas normas IEEE en su edición más reciente;
+consultarwww.ieee.org/documents/ieeecitationref.pdf)
+11.Anexos (De ser necesario). Presentar en esta sección la información
+aclaratoria/complementaria del proyecto
+12. Lugar de Realización (Indicar el nombre del laboratorio, centro o espacio y el
+nombre de la Institución)
+13. Tutor: Indicar nombre y datos de contacto del Tutor (si no es ITBA, adjuntar su
+CV) De existir la figura de Co-Tutor, lo mismo.
+Importante: La entrega del anteproyecto debe realizarse vía
+campus
+

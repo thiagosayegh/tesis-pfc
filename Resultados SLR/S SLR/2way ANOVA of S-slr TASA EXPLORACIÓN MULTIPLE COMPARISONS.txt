@@ -1,0 +1,50 @@
+﻿								
+Compare cell means with others in its row and its column								
+								
+Number of families	5							
+Number of comparisons per row family	3							
+Number of comparisons per column family	1							
+Alpha	0.05							
+								
+Tukey's multiple comparisons test	Predicted (LS) Mean diff.	95.00% CI of diff.	Below threshold?	Summary	Adjusted P Value			
+								
+  Adulto								
+    Control vs. Sacarosa	0.1631	0.01165 to 0.3146	Yes	*	0.0321			
+    Control vs. Stevia	0.09500	-0.05645 to 0.2465	No	ns	0.2933			
+    Sacarosa vs. Stevia	-0.06810	-0.2196 to 0.08335	No	ns	0.5280			
+								
+  Juvenil								
+    Control vs. Sacarosa	0.1611	0.005507 to 0.3167	Yes	*	0.0409			
+    Control vs. Stevia	0.01460	-0.1369 to 0.1661	No	ns	0.9707			
+    Sacarosa vs. Stevia	-0.1465	-0.3021 to 0.009093	No	ns	0.0689			
+								
+  Control								
+    Juvenil vs. Adulto	-0.01720	-0.1432 to 0.1088	No	ns	0.7853			
+								
+  Sacarosa								
+    Juvenil vs. Adulto	-0.01521	-0.1446 to 0.1142	No	ns	0.8146			
+								
+  Stevia								
+    Juvenil vs. Adulto	0.06320	-0.06278 to 0.1892	No	ns	0.3189			
+								
+								
+Test details	Predicted (LS) Mean 1	Predicted (LS) Mean 2	Predicted (LS) Mean diff.	SE of diff.	N1	N2	q	DF
+								
+  Adulto								
+    Control vs. Sacarosa	0.6222	0.4591	0.1631	0.06281	10	10	3.672	53.00
+    Control vs. Stevia	0.6222	0.5272	0.09500	0.06281	10	10	2.139	53.00
+    Sacarosa vs. Stevia	0.4591	0.5272	-0.06810	0.06281	10	10	1.533	53.00
+								
+  Juvenil								
+    Control vs. Sacarosa	0.6050	0.4439	0.1611	0.06453	10	9	3.531	53.00
+    Control vs. Stevia	0.6050	0.5904	0.01460	0.06281	10	10	0.3287	53.00
+    Sacarosa vs. Stevia	0.4439	0.5904	-0.1465	0.06453	9	10	3.211	53.00
+								
+  Control								
+    Juvenil vs. Adulto	0.6050	0.6222	-0.01720	0.06281	10	10	0.3873	53.00
+								
+  Sacarosa								
+    Juvenil vs. Adulto	0.4439	0.4591	-0.01521	0.06453	9	10	0.3333	53.00
+								
+  Stevia								
+    Juvenil vs. Adulto	0.5904	0.5272	0.06320	0.06281	10	10	1.423	53.00

@@ -1,0 +1,71 @@
+Impacto de la Nutrición Temprana
+sobre el Desarrollo Neurobiológico
+y la Conducta: Efectos de Stevia rebaudiana
+Bertoni
+Thiago Sayegh
+
+EL PROYECTO
+C O N T E X T O
+• El consumo de edulcorantes no 
+calóricos como la stevia crece a nivel 
+global, pero su impacto en etapas 
+críticas del desarrollo neurológico es 
+poco estudiado. 
+• Estudios recientes del laboratorio
+demostraron que el consumo temprano
+de stevia afecta la fertilidad y el
+comportamiento de ratas hembras 
+adultas
+M O D E L O E X P E R I M E N T A L
+• Ratas Sprague-Dawley (machos) 
+expuestas a soluciones de stevia o 
+sacarosa durante la etapa juvenil 
+(PD25) y adulta (PD75), seguidas por un 
+período de solamente agua.
+• Se miden consumo diario, peso 
+corporal semanal y respuesta 
+conductual y molecular al final del 
+tratamiento.
+V A R I A B L E S D E S A L I D A
+• Pruebas conductuales (ansiedad, 
+memoria de reconocimiento, 
+separación de patrones espaciales)
+• Cambios en marcadores
+neurobiológicos de neurogénesis
+hipocampal (NeuN, DCX, PCNA)
+
+OBJETIVOS DE MÍNIMA
+O B J E T I V O G E N E R A L
+Evaluar los efectos neurobiológicos a largo plazo del consumo temprano de Stevia rebaudiana en ratas Sprague-Dawley.
+O B J E T I V O S E S P E C Í F I C O S
+01
+Registrar el consumo diario de stevia/sacarosa y el peso corporal 
+semanal en los dos grupos etarios (PD25 y PD75) durante el
+tratamiento.
+02
+Evaluar la conducta tipo ansiosa mediante Open Field al finalizar 
+el tratamiento, comparando grupos juvenil vs. adulto y stevia vs. 
+sacarosa.
+03
+Cuantificar la memoria de reconocimiento de objetos a corto y 
+largo plazo (NOR: T2, T3 y T4) mediante el índice de exploración 
+de objeto novedoso.
+04
+Evaluar la separación de patrones espaciales hipocampales con la 
+prueba SLR (configuraciones d-SLR y s-SLR) 24 h después de la 
+fase de muestreo.
+05
+Cuantificar por inmunocitoquímica confocal los marcadores de 
+neurogénesis hipocampal NeuN, DCX y PCNA en secciones de 50 
+µm al sacrificio.
+
+OBJETIVOS DE MÁXIMA
+M1
+Aplicar análisis de componentes principales (PCA) y clustering jerárquico sobre el conjunto de métricas conductuales extraídas 
+con AnyMaze© (distancia recorrida, velocidad media, tiempo en zonas, frecuencia de entradas) para identificar perfiles 
+conductuales diferenciados entre grupos sin asumir separación a priori.
+M2
+Desarrollar un modelo de clasificación supervisada (Random Forest) entrenado con las variables conductuales de AnyMaze© 
+como predictores, con el objetivo de determinar la capacidad de dichas métricas para predecir el grupo de exposición de cada 
+animal (stevia juvenil, stevia adulto, sacarosa, control) y cuantificar la importancia relativa de cada variable conductual.
+

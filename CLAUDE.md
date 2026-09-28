@@ -8,6 +8,15 @@ Diseño: ratas macho Sprague-Dawley; 2 ventanas etarias (juvenil desde PD25, adu
 
 Este repositorio es la **fuente única** de la tesis. La versión en Google Docs quedó congelada.
 
+## Leer primero (según la tarea)
+Este archivo tiene las reglas resumidas. El detalle está en `docs/`:
+- `docs/guia_plantilla_ITBA.md` — qué exige la plantilla oficial por capítulo y sus límites. **Leer antes de escribir o revisar cualquier capítulo.**
+- `docs/estilo_y_redaccion.md` — tono, reglas de fondo y cómo comunicarte con Thiago (voseo en el chat; español académico formal en el texto de la tesis).
+- `docs/analisis_y_datos.md` — reglas de manejo de datos, estadística vigente, diseño de cohortes y limitaciones que debe declarar la Discusión.
+- `docs/referencia/` — documento del laboratorio (fuente de protocolos), plantilla original, guía IEEE. `docs/referencia/papers/` es para PDF de artículos clave: si está vacía, no atribuir hallazgos específicos a un paper que no se pueda verificar.
+- `datos/` y `analisis/` — planillas y scripts (vacías hasta que Thiago las copie).
+Si una regla de este archivo contradice a `docs/`, avisar a Thiago en lugar de elegir una.
+
 ## Compilar
 ```
 latexmk          # pdflatex + biber → build/main.pdf
@@ -58,11 +67,11 @@ Texto:
 - Resumen en tiempo futuro (formato anteproyecto) y sin palabras clave.
 - Nota de la Tabla 4.1 mezcla regiones del brazo agudo con neurogénesis.
 - Encuadre metodológico de §3.2 (sec:bases) abierto.
+- Erratas: "isóceles" → "isósceles"; falta punto en "nivel de azar 0 En ambos casos" (4_materiales_y_metodos.tex).
 - Carátula: fecha de entrega; docentes de cátedra comentados.
 
 Datos/figuras:
-- Figuras faltantes: `Fig5_exploracion_SLR.pdf` (exploración total día 1 vs. día 2 por grupo, §5.4.1).
-- Sin auditar: tests de normalidad/homogeneidad (Shapiro-Wilk, Brown-Forsythe) y Mann-Whitney de s-SLR citados en §5.4.3 — no se subió el output de Prism correspondiente.
+- Figuras faltantes: `Fig4_esquema_SLR.png`, `Fig4_objetos_SLR.jpg`, `Fig5_exploracion_SLR.pdf`, `Fig5_DI_SLR.pdf`, `Fig5_estimacion_Tukey_SLR.png`; logo `logos/logo_itba.png`.
 - Falta la planilla SLR2 JUV CTROL STEV 250606: al subirla, re-correr el análisis y actualizar tablas del SLR.
 - Por redactar: Resultados de consumo/peso, OF, NOR, neurogénesis, ML; Discusión; Conclusiones.
 - Cronograma: redacción en octubre, entrega en noviembre de 2026.

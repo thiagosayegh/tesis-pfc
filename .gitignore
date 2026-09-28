@@ -13,3 +13,4 @@ build/
 *.synctex.gz
 *.toc
 .DS_Store
+docs/referencia/papers/*.pdf

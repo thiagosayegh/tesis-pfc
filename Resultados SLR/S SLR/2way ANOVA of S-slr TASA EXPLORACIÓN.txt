@@ -1,0 +1,29 @@
+﻿							
+Table Analyzed	S-slr TASA EXPLORACIÓN						
+							
+Two-way ANOVA	Ordinary						
+    Alpha	0.05						
+							
+Source of Variation	% of total variation	P value	P value summary	Significant?			
+    Interaction	1.567	0.5925	ns	No			
+    Row Factor	0.1166	0.7802	ns	No			
+    Column Factor	19.79	0.0026	**	Yes			
+							
+ANOVA table	SS (Type III)	DF	MS	F (DFn, DFd)	P value		
+    Interaction	0.02085	2	0.01043	F (2, 53) = 0.5286	P=0.5925		
+    Row Factor	0.001551	1	0.001551	F (1, 53) = 0.07864	P=0.7802		
+    Column Factor	0.2633	2	0.1317	F (2, 53) = 6.675	P=0.0026		
+    Residual	1.045	53	0.01973				
+    Total	1.330	58					
+							
+Difference between row means							
+    Predicted (LS) mean of Juvenil	0.5464						
+    Predicted (LS) mean of Adulto	0.5362						
+    Difference between predicted means	0.01026						
+    SE of difference	0.03660						
+    95% CI of difference	-0.06314 to 0.08367						
+							
+Data summary							
+    Number of columns (Column Factor)	3						
+    Number of rows (Row Factor)	2						
+    Number of values	59						
