@@ -61,7 +61,7 @@ Texto:
 - Carátula: fecha de entrega; docentes de cátedra comentados.
 
 Datos/figuras:
-- Figuras faltantes: `Fig4_esquema_SLR.png`, `Fig4_objetos_SLR.jpg`, `Fig5_exploracion_SLR.pdf`, `Fig5_DI_SLR.pdf`, `Fig5_estimacion_Tukey_SLR.png`; logo `logos/logo_itba.png`.
+- Figuras faltantes: `Fig5_exploracion_SLR.pdf`, `Fig5_DI_SLR.pdf`.
 - Falta la planilla SLR2 JUV CTROL STEV 250606: al subirla, re-correr el análisis y actualizar tablas del SLR.
 - Por redactar: Resultados de consumo/peso, OF, NOR, neurogénesis, ML; Discusión; Conclusiones.
 - Cronograma: redacción en octubre, entrega en noviembre de 2026.
