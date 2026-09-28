@@ -11,6 +11,50 @@
 
 \textbf{Línea temporal de un animal (estudio de largo plazo).} La secuencia experimental para cada animal fue la siguiente: tras el destete, en el día de inicio correspondiente a su ventana etaria (PD25 para el grupo juvenil, PD75 para el adulto) comenzó la exposición, con acceso libre a dos botellas ---una con agua y otra con la solución endulzada, o dos de agua en los controles--- durante 25 días. Concluida la exposición, siguió un período de lavado con acceso exclusivo a agua, cuyo propósito ---aislar la programación persistente de los efectos agudos del consumo--- se fundamentó en \S\ref{sec:ventanas}. Recién superado el lavado se administró la batería conductual, en el orden campo abierto $\rightarrow$ reconocimiento de objeto novedoso $\rightarrow$ reconocimiento espontáneo de posición $\rightarrow$ prueba de preferencia, de menor a mayor demanda cognitiva y dejando para el final la prueba consumatoria para no interferir con las de memoria. Finalmente, los animales fueron sacrificados para el procesamiento histológico. Durante todo el período se registró el consumo y el peso corporal (\S\ref{sec:registro}).
 
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[
+    font=\small,
+    >=stealth,
+    line/.style={draw, black, thick},
+    dayline/.style={draw, black!55, thin},
+  ]
+  % ---- fila juvenil ----
+  \node[anchor=east] at (-0.15,2.7) {\textbf{Juvenil}};
+  \fill[black!78] (0,2.4) rectangle (3,3.0);
+  \fill[black!12] (3,2.4) rectangle (6,3.0);
+  \draw[line] (0,2.4) rectangle (6,3.0);
+  \draw[line] (3,2.4) -- (3,3.0);
+  \foreach \x/\lbl in {0/PD25, 3/PD50, 6/PD75}
+    \draw[dayline] (\x,2.4) -- (\x,3.35) node[above, black] {\lbl};
+
+  % ---- fila adulta ----
+  \node[anchor=east] at (-0.15,0.3) {\textbf{Adulto}};
+  \fill[black!78] (0,0.0) rectangle (3,0.6);
+  \fill[black!12] (3,0.0) rectangle (6,0.6);
+  \draw[line] (0,0.0) rectangle (6,0.6);
+  \draw[line] (3,0.0) -- (3,0.6);
+  \foreach \x/\lbl in {0/PD75, 3/PD100, 6/PD125}
+    \draw[dayline] (\x,-0.35) -- (\x,0.0) node[below, black] {\lbl};
+
+  % ---- convergencia hacia el desenlace común ----
+  \draw[black, thick] (6,2.7) -- (7.1,2.7) -- (7.1,0.3) -- (6,0.3);
+  \draw[black, thick, ->] (7.1,1.5) -- (7.9,1.5);
+  \node[draw=black, align=center, fill=white, text width=3.5cm, inner sep=6pt] at (10.0,1.5)
+    {Batería conductual\\ \footnotesize OF $\to$ NOR $\to$ SLR $\to$ preferencia\\[2pt] + histología\\ \footnotesize (NeuN, DCX, PCNA)};
+
+  % ---- leyenda (apilada) ----
+  \fill[black!78] (0,-1.05) rectangle (0.5,-0.7);
+  \draw[line] (0,-1.05) rectangle (0.5,-0.7);
+  \node[anchor=west] at (0.65,-0.875) {Exposición (25 d): stevia, sacarosa o agua};
+  \fill[black!12] (0,-1.65) rectangle (0.5,-1.3);
+  \draw[line] (0,-1.65) rectangle (0.5,-1.3);
+  \node[anchor=west] at (0.65,-1.475) {Lavado (25 d): agua exclusiva};
+\end{tikzpicture}
+\caption[Línea temporal del diseño experimental]{Línea temporal del diseño experimental para un animal de cada ventana etaria. Ambos grupos siguen la misma estructura relativa ---25 días de exposición seguidos de 25 días de lavado--- desplazada 50 días entre sí; solo al finalizar el lavado se administra la batería conductual y, luego, el procesamiento histológico. Días expresados como día postnatal (PD).}
+\label{fig:linea-temporal}
+\end{figure}
+
 \textbf{Brazo de tiempos agudos.} Una cohorte independiente se destinó a evaluar los efectos agudos sobre el sistema dopaminérgico. Estos animales recibieron stevia al 4\,\% p/v o agua entre PD25 y PD60 y, al sacrificio, se microdiseccionaron regiones de interés (corteza prefrontal medial, estriado dorsal, núcleo accumbens y sustancia negra/área tegmental ventral) para el análisis molecular de marcadores del sistema dopaminérgico, sin realizar en ellos la batería conductual completa \confirmar{participación del grupo adulto en este brazo}.
 
 \textbf{Integración de cohortes.} El estudio reúne datos conductuales (OF, NOR y SLR) obtenidos en cohortes independientes corridas en años sucesivos (2024--2026) bajo idéntico diseño, protocolo e instrumental. Esta integración ---una práctica habitual en la experimentación animal para alcanzar la potencia estadística preservando el principio de reducción del número de animales--- es válida precisamente por la constancia del protocolo, y se explicita en el análisis (\S\ref{sec:estadistico}). Los tamaños muestrales se estimaron a partir de estudios previos del laboratorio (95\,\% de confianza, 10\,\% de error, 80\,\% de potencia) \cite{charan2013sample}. La Tabla~\ref{tab:cohortes} detalla el estado de consolidación de las cohortes conductuales.
@@ -93,6 +137,13 @@ La prueba de campo abierto persigue dos objetivos. El primero es caracterizar la
 % candidatos probables: kruse2019sucrose o rey2024metformin (confirmar con Sol).
 El dispositivo es un cajón de base y paredes oscuras ($75 \times 55 \times 30$\,cm) \cite{pian2009milk}\revisar{verificar cita del aparato}, que mediante \anymaze{} se dividió digitalmente en tres zonas concéntricas. En una única sesión, el animal se colocó en la arena y se lo dejó explorar libremente durante un tiempo fijo \confirmar{duración de la sesión}. A diferencia del NOR y el SLR, el OF no requiere marcación manual: todas sus variables son automáticas. Se registraron la distancia total y la velocidad media como índices de locomoción, y el tiempo y la distancia recorridos en la zona central frente a la periferia como índices de conducta tipo ansiosa; una menor permanencia en el centro indica un mayor nivel de ansiedad. Los parámetros locomotores obtenidos aquí sirven, además, como referencia para interpretar la exploración en las pruebas de memoria subsiguientes.
 
+\begin{figure}[htbp]
+  \centering
+  \incluirfigura[width=0.6\linewidth]{Fig4_esquema_OF.png}
+  \caption[Aparato de campo abierto (OF) y zonas de registro]{Aparato de campo abierto (OF) y zonas de registro. \pendiente{Insertar foto: captura cenital de \anymaze{} del cajón de OF ($75\times55\times30$\,cm) con las tres zonas concéntricas delimitadas digitalmente (periferia, intermedia y centro), idealmente con un animal en la arena para dar escala ---mismo estilo que las capturas cenitales ya disponibles de la prueba NOR en \texttt{figuras/}.}}
+  \label{fig:of-esquema}
+\end{figure}
+
 \subsection{Reconocimiento de objeto novedoso (NOR)}\label{sec:nor}
 
 El NOR evalúa la memoria de reconocimiento de objetos ---el componente \enquote{qué} de la memoria episódica---, con participación de la corteza perirrinal y, en las demoras más largas, del hipocampo \cite{leger2013nor}. Lo que se busca determinar es si el animal recuerda un objeto visto previamente y, mediante la evaluación a demoras crecientes, si esa memoria persiste en el tiempo.
@@ -153,6 +204,13 @@ La inmunocitoquímica permite visualizar y cuantificar proteínas específicas d
 Tras el sacrificio se obtuvieron secciones de \SI{50}{\micro\metre} mediante vibrátomo. La inmunocitoquímica se realizó según lo descrito previamente \cite{kruse2012lxr}: las secciones se bloquearon en PBS con 0,1\,\% Tween~20 y 10\,\% de suero de cabra durante 1\,h a temperatura ambiente y se incubaron durante toda la noche a \SI{4}{\celsius} con los anticuerpos primarios anti-NeuN (MAB377, Sigma-Aldrich), anti-PCNA (MAB424, Sigma-Aldrich) y anti-DCX (sc-8066, Santa Cruz Biotechnology). Luego de los lavados, se incubaron 2\,h a temperatura ambiente con los anticuerpos secundarios conjugados (cabra anti-conejo AlexaFluor~488 y cabra anti-ratón AlexaFluor~546; 1:200) y se montaron con Vectashield.
 
 La señal se adquirió en el microscopio confocal Nikon C1 del IByME. La microscopía confocal es la técnica adecuada para esta cuantificación porque, mediante un diafragma (\textit{pinhole}) que rechaza la luz fuera de foco, genera secciones ópticas delgadas dentro del corte de \SI{50}{\micro\metre}; esto evita la superposición de señal de planos vecinos y permite un recuento celular preciso en una estructura densa como el giro dentado. Los parámetros de adquisición se mantuvieron constantes dentro de cada experimento para hacer comparables las intensidades entre muestras procesadas el mismo día, y se incluyeron controles de omisión del anticuerpo primario para definir la señal de fondo y verificar la especificidad. Se cuantificó el número de células NeuN$^{+}$, DCX$^{+}$ y PCNA$^{+}$ en el giro dentado.
+
+\begin{figure}[htbp]
+  \centering
+  \incluirfigura[width=0.85\linewidth]{Fig4_confocal_giro_dentado.png}
+  \caption[Fotomicrografías confocales del giro dentado (NeuN, DCX, PCNA)]{Fotomicrografías confocales representativas del giro dentado. \pendiente{Insertar foto: panel con una imagen por marcador (NeuN, DCX, PCNA) de un mismo animal control, más idealmente una imagen \textit{merge}; barra de escala y aumento del objetivo indicados. Si se dispone de secciones de un animal tratado (stevia o sacarosa) comparable, agregar una segunda fila para contraste visual con el control.}}
+  \label{fig:confocal-giro-dentado}
+\end{figure}
 
 % ---------------------------------------------------------------------
 \section{Análisis de datos}\label{sec:analisis}
