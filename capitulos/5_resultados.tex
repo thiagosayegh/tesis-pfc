@@ -178,7 +178,7 @@ En conjunto, estos resultados señalan que el efecto de la sacarosa sobre la mem
 % ---------------------------------------------------------------------
 \section{Separación de patrones espaciales (SLR)}\label{sec:res-slr}
 
-La memoria espacial y la capacidad de separación de patrones se evaluaron mediante la prueba SLR en sus dos configuraciones, d-SLR y s-SLR (Figura~\ref{fig:esquema-slr}), que se analizaron por separado. Los resultados se expresan como índice de discriminación (DI), cuyo nivel de azar es 0; los valores equivalentes de la tasa de exploración se presentan en el \ref{anx:tasa}. La Tabla~\ref{tab:slr-di} resume el DI de cada grupo y su comparación con el nivel de azar, la Tabla~\ref{tab:slr-anova} resume los análisis de varianza y la Figura~\ref{fig:slr-di} muestra la distribución individual de los datos.
+La memoria espacial y la capacidad de separación de patrones se evaluaron mediante la prueba SLR en sus dos configuraciones, d-SLR y s-SLR (Figura~\ref{fig:esquema-slr}), que se analizaron por separado. El desempeño se cuantificó con los dos índices definidos en \S\ref{sec:nor} a partir de los mismos tiempos de exploración activa: el índice de discriminación (DI, nivel de azar 0) y la tasa de exploración (nivel de azar 0,5), relacionados por la transformación lineal $\mathrm{DI} = 2\cdot\text{tasa} - 1$. Por tratarse de una transformación lineal, ambos índices producen resultados estadísticos idénticos (mismos $F$, $t$ y $p$); se presentan los dos a continuación porque difieren en su escala e interpretación. La Tabla~\ref{tab:slr-di} y la Figura~\ref{fig:slr-di} resumen el DI de cada grupo y su comparación con el nivel de azar, la Tabla~\ref{tab:slr-tasa} y la Figura~\ref{fig:slr-tasa} presentan la tasa de exploración equivalente, y la Tabla~\ref{tab:slr-anova} resume los análisis de varianza.
 
 \subsection{Exploración durante las fases de muestreo y de prueba}\label{sec:res-slr-exploracion}
 
@@ -258,6 +258,42 @@ Interacción & 2,04 (2, 52) & 0,140 & 0,073 & 0,53 (2, 53) & 0,591 & 0,020 \\
   \end{subfigure}
   \caption[Índice de discriminación (DI) en la prueba SLR]{Índice de discriminación (DI) en la prueba SLR. (A)~Configuración d-SLR. (B)~Configuración s-SLR. Las barras indican media $\pm$ SEM. Azul: control; rojo: sacarosa; verde: stevia (paleta común a todas las figuras de esta tesis). Se indican los resultados de las comparaciones de Tukey entre grupos (ns: no significativo; $^{*}\,p < 0{,}05$; $^{**}\,p < 0{,}01$). $n = 9$--$10$ animales por grupo.}
   \label{fig:slr-di}
+\end{figure}
+
+\begin{table}[htbp]
+\centering
+\caption[Tasa de exploración en la prueba SLR]{Tasa de exploración en la prueba SLR, equivalente al DI de la Tabla~\ref{tab:slr-di} ($\mathrm{DI} = 2\cdot\text{tasa} - 1$). Valores expresados como media $\pm$ SEM; entre paréntesis, número de animales.}
+\label{tab:slr-tasa}
+\small
+\begin{tabular}{@{}lcc@{}}
+\toprule
+\textbf{Grupo} & \textbf{d-SLR} & \textbf{s-SLR} \\
+\midrule
+Juvenil -- Control  & $0{,}621 \pm 0{,}025$ (9)  & $0{,}605 \pm 0{,}020$ (10) \\
+Juvenil -- Sacarosa & $0{,}459 \pm 0{,}024$ (9)  & $0{,}444 \pm 0{,}038$ (9) \\
+Juvenil -- Stevia   & $0{,}595 \pm 0{,}050$ (10) & $0{,}590 \pm 0{,}054$ (10) \\
+Adulto -- Control   & $0{,}609 \pm 0{,}027$ (10) & $0{,}622 \pm 0{,}035$ (10) \\
+Adulto -- Sacarosa  & $0{,}554 \pm 0{,}037$ (10) & $0{,}459 \pm 0{,}055$ (10) \\
+Adulto -- Stevia    & $0{,}553 \pm 0{,}039$ (10) & $0{,}527 \pm 0{,}053$ (10) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[htbp]
+  \centering
+  \begin{subfigure}[b]{0.48\linewidth}
+    \centering
+    \incluirfigura[width=\linewidth]{Fig5_tasa_SLR_d.pdf}
+    \caption{d-SLR}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[b]{0.48\linewidth}
+    \centering
+    \incluirfigura[width=\linewidth]{Fig5_tasa_SLR_s.pdf}
+    \caption{s-SLR}
+  \end{subfigure}
+  \caption[Tasa de exploración en la prueba SLR]{Tasa de exploración en la prueba SLR. (A)~Configuración d-SLR. (B)~Configuración s-SLR. Las barras indican media $\pm$ SEM. Azul: control; rojo: sacarosa; verde: stevia (paleta común a todas las figuras de esta tesis). Se indican los resultados de las comparaciones de Tukey entre grupos (ns: no significativo; $^{*}\,p < 0{,}05$; $^{**}\,p < 0{,}01$), estadísticamente idénticos a los del DI (Figura~\ref{fig:slr-di}) por tratarse de una transformación lineal. $n = 9$--$10$ animales por grupo.}
+  \label{fig:slr-tasa}
 \end{figure}
 
 \subsection{Síntesis}\label{sec:res-slr-sintesis}

@@ -56,7 +56,7 @@ Nota técnica: `preambulo.tex` mapea `\DeclareLanguageMapping{english}{american}
 - Software estadístico: GraphPad Prism 11.1.0 (todos los resultados). ML: Python + scikit-learn (todavía no corrido).
 
 ## Decisiones de análisis estadístico vigentes
-- **SLR**: ANOVA de dos vías edad × tratamiento, cada configuración por separado (d-SLR, s-SLR); Tukey comparando cada media con su fila y columna; se reporta DI (tasa equivalente en Anexo A); t de una muestra contra DI = 0; Mann-Whitney cuando los residuos no son normales. Los DI negativos son válidos y no se corrigen. La exploración del día 1 del SLR no fue equivalente entre grupos: tratarla como covariable/control, no como resultado. Resultados de §5.4 organizados por hallazgo (validación / efecto sacarosa / efecto stevia), no por configuración, igual que el NOR.
+- **SLR**: ANOVA de dos vías edad × tratamiento, cada configuración por separado (d-SLR, s-SLR); Tukey comparando cada media con su fila y columna; se reportan **tanto el DI como la tasa de exploración equivalente**, ambos en el cuerpo de §5.4 (Tablas 5.4/5.6, Figuras 5.8/5.9), con una explicación explícita de que DI = 2·tasa − 1 y de que ambos dan resultados estadísticos idénticos; t de una muestra contra DI = 0; Mann-Whitney cuando los residuos no son normales. Los DI negativos son válidos y no se corrigen. La exploración del día 1 del SLR no fue equivalente entre grupos: tratarla como covariable/control, no como resultado. Resultados de §5.4 organizados por hallazgo (validación / efecto sacarosa / efecto stevia), no por configuración, igual que el NOR.
 - **NOR**: mismo esquema que SLR — ANOVA de dos vías edad × tratamiento, cada demora (T2, T3, T4) por separado; Tukey comparando cada media con su fila y columna; se reporta tasa de exploración (azar 0,5), con t de una muestra contra el azar para cada grupo y demora (agregada en la Fase 5 de la revisión de jurado, calculada a partir de los datos crudos por animal en `Resultados NOR/RESULTADOS NOR T2 T3 T4.xlsx`). Resultados de §5.3 organizados por hallazgo (validación / efecto sacarosa / efecto stevia / síntesis), no por demora.
 - **Consumo de líquidos/alimento**: normalizado al peso corporal (mL o g por g de peso/día); la **caja**, no el animal, es la unidad experimental. Analizado con ANOVA de medidas repetidas multifactorial (edad × tratamiento × fluido × tiempo durante el tratamiento; edad × tratamiento × tiempo durante el lavado; edad × tratamiento sobre el promedio del período para alimento), corrección de Geisser-Greenhouse, post hoc de **Šídák** (no Tukey).
 - **Fuente de los resultados de consumo**: `Resultado consumos/Resultados consumos.pdf` tiene 12 páginas, pero **solo las primeras 5 están validadas** (consumo combinado durante el tratamiento, consumo de agua durante el lavado, consumo de alimento). Las páginas 6–12 (ANOVA separados por edad, AUC, prueba de preferencia de sacarosa) son análisis exploratorios descartados: no usarlos sin confirmar antes.
@@ -78,7 +78,7 @@ Nota técnica: `preambulo.tex` mapea `\DeclareLanguageMapping{english}{american}
 | 5.5 Neurogénesis | `\pendiente{}`. Hay un PDF en `Resultados inmucitoquimica/` pero es insuficiente (pocos datos, falta el grupo stevia); hace falta el archivo de Prism de Sol para completarlo. |
 | 5.6 ML/multivariado | `\pendiente{}`. No corrido todavía (`datos/` y `analisis/` vacíos). |
 | 6. Discusión, 7. Perspectivas, 8. Conclusiones, Agradecimientos | `\pendiente{}` en su totalidad. |
-| Anexos | Anexo A (tasa de exploración SLR) completo. Anexo B (inventario de cohortes) nuevo, con varios `\confirmar{}` de n y de la fecha de una cohorte. |
+| Anexos | Un solo anexo: Anexo A (inventario de cohortes), con varios `\confirmar{}` de n y de la fecha de una cohorte. El DI y la tasa de exploración del SLR se muestran juntos en el cuerpo de §5.4 (ya no hay anexo de tasa; a pedido de Thiago, ambos índices se presentan y discuten en el texto, no solo el DI). |
 
 ## Material de referencia adicional (`docs/referencia/papers/`)
 No son citas verificadas para `referencias.bib` salvo que ya estén incorporadas (ver `INDICE.md`):
@@ -95,9 +95,9 @@ Capítulos: cap:introduccion, cap:estado-arte, cap:marco-teorico, cap:metodos, c
 Marco teórico: sec:ventanas (3.1), sec:bases (3.2), sec:cascada (3.3), sec:multivariado (3.4).
 Métodos: sec:diseno, sec:soluciones, sec:registro, sec:conductual, sec:principio, sec:of, sec:nor, sec:slr, sec:rigor, sec:histologia, sec:analisis, sec:estadistico, sec:ml.
 Resultados: sec:res-consumo (sec:res-consumo-tratamiento, sec:res-consumo-lavado, sec:res-consumo-chow, sec:res-consumo-peso), sec:res-of, sec:res-nor (sec:res-nor-validacion, sec:res-nor-sacarosa, sec:res-nor-stevia, sec:res-nor-sintesis), sec:res-slr (sec:res-slr-exploracion, sec:res-slr-validacion, sec:res-slr-sacarosa, sec:res-slr-stevia, sec:res-slr-sintesis), sec:res-neurogenesis, sec:res-ml.
-Tablas: tab:diseno, tab:cohortes (ahora en Anexo B), tab:consumo-liquidos, tab:nor-tasa, tab:nor-anova, tab:slr-di, tab:slr-anova, tab:anx-tasa.
-Figuras: fig:esquema-slr, fig:objetos-slr, fig:cascada-neurogenica, fig:slr-carga, fig:linea-temporal, fig:of-esquema, fig:confocal-giro-dentado, fig:consumo-liquidos, fig:consumo-liquidos-promedio, fig:agua-lavado, fig:chow-juvenil, fig:nor-tasa, fig:nor-tukey, fig:slr-exploracion, fig:slr-di, fig:slr-tukey, fig:anx-tasa.
-Ecuaciones: eq:fwer, eq:pca, eq:tasa, eq:di. Anexos: anx:tasa (A), anx:cohortes (B).
+Tablas: tab:diseno, tab:cohortes (Anexo A), tab:consumo-liquidos, tab:nor-tasa, tab:nor-anova, tab:slr-di, tab:slr-tasa, tab:slr-anova.
+Figuras: fig:esquema-slr, fig:objetos-slr, fig:cascada-neurogenica, fig:slr-carga, fig:linea-temporal, fig:of-esquema, fig:confocal-giro-dentado, fig:consumo-liquidos, fig:consumo-liquidos-promedio, fig:agua-lavado, fig:chow-juvenil, fig:nor-tasa, fig:nor-tukey, fig:slr-exploracion, fig:slr-di, fig:slr-tasa, fig:slr-tukey.
+Ecuaciones: eq:fwer, eq:pca, eq:tasa, eq:di. Anexo: anx:cohortes (A, único anexo).
 
 ## Pendientes a confirmar con Sol
 - Comité de ética y número de protocolo (CICUAL).
