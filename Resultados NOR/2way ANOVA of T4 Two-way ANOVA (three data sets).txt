@@ -1,0 +1,34 @@
+﻿Data analyzed: T4 Two-way ANOVA (three data sets)
+
+Source of Variation	Degrees of Freedom	Sum of Squares	Mean square
+Treatment	2	0.05547	0.02773
+Age	1	0.08093	0.08093
+Interaction	2	0.1396	0.06979
+Residual (error)	49	0.4371	0.008920
+Total	54	0.7092
+
+
+Does Treatment have the same effect at all values of Age?
+Interaction accounts for 19.68% of the total variance.
+F = 7.82. DFn = 2, DFd = 49
+The P value = 0.0011
+If there is no interaction overall, there is a 0.11% chance of randomly observing so much
+interaction in an experiment of this size.  The interaction is considered very significant.
+
+Since the interaction is statistically significant, the P values that
+follow for the row and column effects are difficult to interpret.
+
+Does Treatment affect the result?
+Treatment accounts for 7.821% of the total variance.
+F = 3.11. DFn = 2, DFd = 49
+The P value = 0.0536
+If Treatment has no effect overall, there is a 5.4% chance of randomly observing an
+effect this big (or bigger) in an experiment of this size.  The effect is considered 
+not quite significant.
+
+Does Age affect the result?
+Age accounts for 11.41% of the total variance.
+F = 9.07. DFn = 1, DFd = 49
+The P value = 0.0041
+If Age has no effect overall, there is a 0.41% chance of randomly observing an
+effect this big (or bigger) in an experiment of this size.  The effect is considered very significant
