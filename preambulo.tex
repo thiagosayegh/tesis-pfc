@@ -71,6 +71,9 @@
 \usepackage[backend=biber,style=ieee,sorting=none,dashed=false,urldate=long,language=english,autolang=other]{biblatex}
 \addbibresource{referencias.bib}
 \DeclareSourcemap{\maps[datatype=bibtex]{\map[overwrite=false]{\step[fieldset=langid, fieldvalue=english]}}}
+% english.lbx no activa \uspunctuation (coma dentro de las comillas de
+% titulo, convencion IEEE); mapear a american.lbx, que si lo hace.
+\DeclareLanguageMapping{english}{american}
 % @online sin fecha: evitar el "()" vacío
 \usepackage{xpatch}
 \xpatchbibdriver{online}{\printtext[parens]{\usebibmacro{date}}}{\iffieldundef{year}{}{\printtext[parens]{\usebibmacro{date}}}}{}{}
