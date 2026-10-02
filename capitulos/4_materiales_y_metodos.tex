@@ -190,7 +190,7 @@ La señal se adquirió en el microscopio confocal Nikon C1 del IByME. Los parám
 
 \subsection{Análisis estadístico}\label{sec:estadistico}
 
-Los análisis se resumen en la Tabla~\ref{tab:estadistica}; todos se realizaron con GraphPad Prism 11.1.0.
+Los análisis se resumen en la Tabla~\ref{tab:estadistica}; se realizaron con GraphPad Prism 11.1.0, salvo el análisis de la exploración total del SLR (Figura~\ref{fig:slr-exploracion}), calculado en Python (statsmodels y SciPy).
 
 \begin{table}[htbp]
 \centering
@@ -210,6 +210,7 @@ Curso temporal del consumo de alimento (por edad) & Caja & ANOVA de MR de dos v�
 Exploración en T1 y actividad locomotora T1--T4 & Animal & ANOVA de dos vías & Edad $\times$ tratamiento & Tukey & --- \\
 NOR: tasa de exploración (T2, T3 y T4 por separado) & Animal & ANOVA de dos vías & Edad $\times$ tratamiento & Tukey & $t$ de una muestra vs.\ 0,5 \\
 SLR: DI (d-SLR y s-SLR por separado) & Animal & ANOVA de dos vías & Edad $\times$ tratamiento & Tukey & $t$ de una muestra vs.\ 0 \\
+SLR: exploración total en el día 1 y en el día 2 & Sesión & ANOVA de dos vías sobre el logaritmo & Edad $\times$ tratamiento & Tukey & --- \\
 OF & Animal & ANOVA de dos vías & Edad $\times$ tratamiento & Tukey & --- \\
 Marcadores histológicos (NeuN, DCX, PCNA) & Animal & ANOVA de una vía & Grupo experimental & Tukey & --- \\
 Correlaciones entre variables & Animal & Coeficiente de Pearson; regresión lineal si es significativo ($r^2$ y ecuación de la recta) & --- & --- & --- \\
