@@ -83,7 +83,109 @@ El consumo de alimento balanceado, normalizado al peso corporal y promediado a l
 
 \FloatBarrier
 \section{Conducta tipo ansiosa (OF)}\label{sec:res-of}
-\pendiente{redactar.}
+
+El OF se analizó con las variables registradas por \anymaze{} (\S\ref{sec:of}): la distancia total recorrida, la distancia recorrida y el número de entradas en las zonas centrales (zona 1 y zonas 1+2) y la conducta de rearing. Cada variable se analizó mediante un ANOVA de dos vías (edad $\times$ tratamiento) seguido del post hoc de Tukey, que en este caso compara los tres tratamientos dentro de cada edad. La Tabla~\ref{tab:of-grupos} presenta las medias y el número de animales por grupo, la Tabla~\ref{tab:of-anova} resume los ANOVA y la Figura~\ref{fig:of} muestra los resultados. El número de animales difiere entre variables y entre grupos, y los grupos expuestos a stevia (6 o 7 animales) son los de menor tamaño frente a los grupos control y sacarosa (10 a 18 animales). \confirmar{por qué el número de animales difiere entre variables registradas en una misma sesión (p.\,ej., adulto-control: 11 animales en la distancia total, 17 en la distancia en la zona 1 y 10 en las entradas a las zonas 1+2)}.
+
+\begin{table}[htbp]
+\centering
+\caption[Variables del OF por grupo experimental]{Variables del OF por grupo experimental. Valores expresados como media $\pm$ SEM; entre paréntesis, número de animales. J: juvenil; A: adulto.}
+\label{tab:of-grupos}
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\begin{tabularx}{\linewidth}{@{}l C C C C C C@{}}
+\toprule
+& \multicolumn{3}{c}{\textbf{Juvenil}} & \multicolumn{3}{c}{\textbf{Adulto}} \\
+\cmidrule(lr){2-4}\cmidrule(l){5-7}
+\textbf{Variable} & \textbf{Control} & \textbf{Sacarosa} & \textbf{Stevia} & \textbf{Control} & \textbf{Sacarosa} & \textbf{Stevia} \\
+\midrule
+Distancia total (m) & $16{,}9 \pm 1{,}2$ (17) & $18{,}3 \pm 1{,}2$ (15) & $17{,}1 \pm 1{,}0$ (6) & $17{,}0 \pm 1{,}9$ (11) & $19{,}1 \pm 1{,}5$ (16) & $18{,}2 \pm 0{,}7$ (7) \\
+Distancia en zona 1 (m) & $0{,}31 \pm 0{,}07$ (18) & $0{,}28 \pm 0{,}05$ (15) & $0{,}39 \pm 0{,}16$ (6) & $0{,}09 \pm 0{,}03$ (17) & $0{,}17 \pm 0{,}05$ (17) & $0{,}37 \pm 0{,}09$ (7) \\
+Entradas a zonas 1+2 & $13{,}9 \pm 1{,}0$ (15) & $7{,}1 \pm 0{,}8$ (14) & $33{,}5 \pm 3{,}2$ (6) & $13{,}3 \pm 2{,}6$ (10) & $12{,}6 \pm 1{,}6$ (11) & $37{,}0 \pm 2{,}6$ (7) \\
+Rearing (n.º de eventos) & $21{,}9 \pm 1{,}4$ (18) & $11{,}8 \pm 1{,}3$ (15) & $8{,}5 \pm 1{,}2$ (6) & $18{,}8 \pm 1{,}5$ (17) & $19{,}9 \pm 2{,}2$ (16) & $12{,}3 \pm 1{,}2$ (7) \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption[Resumen del ANOVA de dos vías para las variables del OF]{Resumen del ANOVA de dos vías (edad $\times$ tratamiento) para las variables del OF. En negrita, los efectos significativos ($p < 0{,}05$).}
+\label{tab:of-anova}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabularx}{\linewidth}{@{}l c c c c c c@{}}
+\toprule
+& \multicolumn{2}{c}{\textbf{Tratamiento}} & \multicolumn{2}{c}{\textbf{Edad}} & \multicolumn{2}{c}{\textbf{Interacción}} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(l){6-7}
+\textbf{Variable} & \textbf{$F$ (gl)} & \textbf{$p$} & \textbf{$F$ (gl)} & \textbf{$p$} & \textbf{$F$ (gl)} & \textbf{$p$} \\
+\midrule
+Distancia total & 0,90 (2,66) & 0,41 & 0,31 (1,66) & 0,58 & 0,06 (2,66) & 0,94 \\
+Distancia en zona 1 & 2,80 (2,74) & 0,067 & 3,85 (1,74) & 0,053 & 0,94 (2,74) & 0,39 \\
+Entradas a zonas 1+2 & 91,79 (2,57) & \textbf{$<$0,0001} & 3,51 (1,57) & 0,066 & 1,88 (2,57) & 0,16 \\
+Rearing (n.º de eventos) & 12,69 (2,73) & \textbf{$<$0,0001} & 3,54 (1,73) & 0,064 & 6,67 (2,73) & \textbf{0,0022} \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\begin{figure}[htbp]
+  \centering
+  \begin{subfigure}[b]{0.32\linewidth}
+    \centering
+    \incluirfigura[width=\linewidth]{Fig5_OF_distancia_total.png}
+    \caption{}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[b]{0.32\linewidth}
+    \centering
+    \incluirfigura[width=\linewidth]{Fig5_OF_distancia_zona1.png}
+    \caption{}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[b]{0.32\linewidth}
+    \centering
+    \incluirfigura[width=\linewidth]{Fig5_OF_entradas_zona12.png}
+    \caption{}
+  \end{subfigure}
+
+  \vspace{0.8em}
+  \begin{subfigure}[b]{0.32\linewidth}
+    \centering
+    \incluirfigura[width=\linewidth]{Fig5_OF_rearing_numero.png}
+    \caption{}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[b]{0.32\linewidth}
+    \centering
+    \incluirfigura[width=\linewidth]{Fig5_OF_rearing_tiempo.png}
+    \caption{}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[b]{0.32\linewidth}
+    \centering
+    \incluirfigura[width=0.8\linewidth]{Fig5_OF_leyenda.png}
+  \end{subfigure}
+  \caption[Variables del campo abierto (OF)]{Variables del campo abierto (OF) en ratas expuestas a agua (control), sacarosa o stevia durante la ventana juvenil o adulta. (A)~Distancia total recorrida. (B)~Distancia recorrida en la zona central (zona 1). (C)~Entradas a las zonas centrales (zonas 1+2). (D)~Número de eventos de rearing. (E)~Tiempo de rearing. Las barras indican la media $\pm$ SEM. Azul: control; rojo: sacarosa; verde: stevia. $^{*}$~$p < 0{,}05$ respecto del control y $^{\#}$~$p < 0{,}05$ respecto de sacarosa dentro de cada edad (Tukey).}
+  \label{fig:of}
+\end{figure}
+
+\subsection{Actividad locomotora}\label{sec:res-of-locomocion}
+
+La distancia total recorrida no difirió entre grupos: no hubo efecto del tratamiento ($F_{2,66} = 0{,}90$; $p = 0{,}41$) ni de la edad ($F_{1,66} = 0{,}31$; $p = 0{,}58$), ni interacción ($F_{2,66} = 0{,}06$; $p = 0{,}94$), y ninguna comparación de Tukey resultó significativa (Figura~\ref{fig:of}A). Las medias de los seis grupos se ubicaron entre $16{,}9$ y $19{,}1$\,m en los 5\,min de la sesión. No se detectaron, por lo tanto, diferencias en la actividad locomotora general, aunque el menor tamaño de los grupos expuestos a stevia limita la capacidad de detectar diferencias pequeñas en ellos.
+
+\subsection{Exploración de la zona central}\label{sec:res-of-centro}
+
+La distancia recorrida en la zona central (zona 1) no mostró interacción edad $\times$ tratamiento ($F_{2,74} = 0{,}94$; $p = 0{,}39$), y los efectos principales del tratamiento ($F_{2,74} = 2{,}80$; $p = 0{,}067$) y de la edad ($F_{1,74} = 3{,}85$; $p = 0{,}053$) no alcanzaron la significancia estadística. En el post hoc, la única diferencia significativa se observó en los adultos, donde los animales expuestos a stevia recorrieron más distancia en la zona 1 que los controles (diferencia control $-$ stevia $= -0{,}28$\,m; IC~95\,\%: $-0{,}54$ a $-0{,}02$; $p < 0{,}05$; Figura~\ref{fig:of}B); en los juveniles no hubo diferencias entre tratamientos.
+
+El número de entradas a las zonas centrales (zonas 1+2), en cambio, dependió claramente del tratamiento ($F_{2,57} = 91{,}79$; $p < 0{,}0001$), sin interacción ($F_{2,57} = 1{,}88$; $p = 0{,}16$) ni efecto de la edad ($F_{1,57} = 3{,}51$; $p = 0{,}066$). En ambas edades, los animales expuestos a stevia ingresaron más veces a las zonas centrales que los controles y que los expuestos a sacarosa (Figura~\ref{fig:of}C). En los juveniles, la diferencia control $-$ stevia fue de $-19{,}6$ entradas (IC~95\,\%: $-26{,}1$ a $-13{,}0$; $p < 0{,}0001$) y la diferencia sacarosa $-$ stevia, de $-26{,}4$ (IC~95\,\%: $-33{,}1$ a $-19{,}8$; $p < 0{,}0001$); en los adultos, de $-23{,}7$ (IC~95\,\%: $-30{,}4$ a $-17{,}0$; $p < 0{,}0001$) y de $-24{,}4$ (IC~95\,\%: $-30{,}9$ a $-17{,}8$; $p < 0{,}0001$), respectivamente. Los animales expuestos a sacarosa presentaron menos entradas que los controles solo en los juveniles (diferencia control $-$ sacarosa $= 6{,}9$; IC~95\,\%: $1{,}8$ a $11{,}9$; $p < 0{,}01$), sin diferencia respecto del control en los adultos ($0{,}7$; IC~95\,\%: $-5{,}3$ a $6{,}6$).
+
+\subsection{Conducta de rearing}\label{sec:res-of-rearing}
+
+El número de eventos de rearing mostró una interacción edad $\times$ tratamiento significativa ($F_{2,73} = 6{,}67$; $p = 0{,}0022$) y un efecto principal del tratamiento ($F_{2,73} = 12{,}69$; $p < 0{,}0001$), sin efecto principal de la edad ($F_{1,73} = 3{,}54$; $p = 0{,}064$). En los juveniles, tanto los animales expuestos a sacarosa como los expuestos a stevia presentaron menos eventos de rearing que los controles (diferencia control $-$ sacarosa $= 10{,}1$; IC~95\,\%: $4{,}9$ a $15{,}4$; $p < 0{,}0001$; diferencia control $-$ stevia $= 13{,}4$; IC~95\,\%: $6{,}4$ a $20{,}5$; $p < 0{,}0001$), sin diferencias entre ambos tratamientos (Figura~\ref{fig:of}D). En los adultos, el rearing con sacarosa no difirió del control (diferencia control $-$ sacarosa $= -1{,}1$; IC~95\,\%: $-6{,}4$ a $4{,}1$) y fue menor con stevia que con sacarosa (diferencia sacarosa $-$ stevia $= 7{,}7$; IC~95\,\%: $0{,}8$ a $14{,}5$; $p < 0{,}05$), sin alcanzar la significancia respecto del control (diferencia control $-$ stevia $= 6{,}5$; IC~95\,\%: $-0{,}2$ a $13{,}3$).
+
+El tiempo de rearing (Figura~\ref{fig:of}E) mostró un patrón semejante al del número de eventos: en los juveniles, fue menor con sacarosa y con stevia que con el control, y en los adultos, menor con stevia que con el control y que con la sacarosa, según las marcas de significancia del gráfico. \confirmar{F y p del ANOVA del tiempo de rearing y de las comparaciones post hoc: solo se dispone del gráfico}.
+
+\subsection{Síntesis}\label{sec:res-of-sintesis}
+
+En conjunto, la locomoción general no difirió entre grupos. Los animales expuestos a stevia presentaron más entradas a las zonas centrales que los controles en ambas edades, y los expuestos a sacarosa, menos entradas y menos rearing que los controles solo en la ventana juvenil. El rearing fue menor en los animales expuestos a stevia que en los controles en los juveniles y que en los expuestos a sacarosa en los adultos.
 
 \FloatBarrier
 \section{Memoria de reconocimiento de objetos (NOR)}\label{sec:res-nor}
@@ -186,7 +288,7 @@ La memoria espacial y la capacidad de separación de patrones se evaluaron media
 
 \subsection{Exploración durante las fases de muestreo y de prueba}\label{sec:res-slr-exploracion}
 
-La exploración total (tiempo de exploración activa de los objetos, puntuado manualmente) del día 1 y del día 2 se muestra en la Figura~\ref{fig:slr-exploracion}; funciona como control de la codificación y no como desenlace (\S\ref{sec:slr}). La exploración disminuyó del día 1 al día 2 en todos los grupos (entre $44\,\%$ y $59\,\%$). En el día 1 no fue equivalente entre grupos: fue mayor en los juveniles expuestos a sacarosa ($54{,}5 \pm 3{,}6$\,s) y en los adultos expuestos a stevia ($55{,}8 \pm 5{,}5$\,s) que en el resto ($30{,}6$ a $41{,}7$\,s), con una interacción edad $\times$ tratamiento significativa ($F_{2,111} = 6{,}72$; $p = 0{,}002$; ANOVA de dos vías sobre el logaritmo del tiempo). Dado que cada observación es una sesión y que algunos animales realizaron ambas configuraciones (Anexo~\ref{anx:muestra}), este análisis es exploratorio, y la diferencia se tiene presente al interpretar los índices de discriminación de las secciones siguientes.
+La exploración total (tiempo de exploración activa de los objetos, puntuado manualmente) del día 1 y del día 2 se muestra en la Figura~\ref{fig:slr-exploracion}; funciona como control de la codificación y no como desenlace (\S\ref{sec:slr}). La exploración disminuyó del día 1 al día 2 en todos los grupos (entre 44\,\% y 59\,\%). En el día 1 no fue equivalente entre grupos: fue mayor en los juveniles expuestos a sacarosa ($54{,}5 \pm 3{,}6$\,s) y en los adultos expuestos a stevia ($55{,}8 \pm 5{,}5$\,s) que en el resto ($30{,}6$ a $41{,}7$\,s), con una interacción edad $\times$ tratamiento significativa ($F_{2,111} = 6{,}72$; $p = 0{,}002$; ANOVA de dos vías sobre el logaritmo del tiempo). Dado que cada observación es una sesión y que algunos animales realizaron ambas configuraciones (Anexo~\ref{anx:muestra}), este análisis es exploratorio, y la diferencia se tiene presente al interpretar los índices de discriminación de las secciones siguientes.
 
 \begin{figure}[htbp]
   \centering
