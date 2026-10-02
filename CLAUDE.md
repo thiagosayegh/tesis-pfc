@@ -4,7 +4,7 @@
 Tesina (PFC) de Bioingeniería, ITBA. Autor: Thiago Sayegh (legajo 62260).
 Título: *Impacto de la nutrición temprana sobre el desarrollo neurobiológico y la conducta: efectos de Stevia rebaudiana Bertoni*.
 Lugar: IByME-CONICET. Tutora: Dra. María Sol Kruse.
-Diseño: ratas macho Sprague-Dawley; 2 ventanas etarias (juvenil desde PD25, adulta desde PD75) × 3 condiciones (stevia 4 % p/v, sacarosa 10 % p/v, agua). 25 días de exposición + 25 días de lavado. Batería: consumo/peso, OF, NOR (T1–T4), SLR (d-SLR y s-SLR), prueba de preferencia. Histología: NeuN, DCX, PCNA (confocal). Aporte de bioingeniería: PCA + clustering jerárquico (Ward) y Random Forest sobre métricas de AnyMaze©.
+Diseño: ratas macho Sprague-Dawley; 2 ventanas etarias (juvenil desde PD25, adulta desde PD75) × 3 condiciones (stevia 4 % p/v, sacarosa 10 % p/v, agua). 25 días de exposición + 25 días de lavado. Batería: consumo/peso, OF, NOR (T1–T4), SLR (d-SLR y s-SLR). Histología: NeuN, DCX, PCNA (confocal). Aporte de bioingeniería: PCA + clustering jerárquico (Ward) y Random Forest sobre métricas de AnyMaze©.
 
 Este repositorio es la **fuente única** de la tesis. La versión en Google Docs quedó congelada.
 
@@ -59,8 +59,8 @@ Nota técnica: `preambulo.tex` mapea `\DeclareLanguageMapping{english}{american}
 - **SLR**: ANOVA de dos vías edad × tratamiento, cada configuración por separado (d-SLR, s-SLR); Tukey comparando cada media con su fila y columna; se reportan **tanto el DI como la tasa de exploración equivalente**, ambos en el cuerpo de §5.4 (Tablas 5.4/5.6, Figuras 5.8/5.9), con una explicación explícita de que DI = 2·tasa − 1 y de que ambos dan resultados estadísticos idénticos; t de una muestra contra DI = 0; Mann-Whitney cuando los residuos no son normales. Los DI negativos son válidos y no se corrigen. La exploración del día 1 del SLR no fue equivalente entre grupos: tratarla como covariable/control, no como resultado. Resultados de §5.4 organizados por hallazgo (validación / efecto sacarosa / efecto stevia), no por configuración, igual que el NOR.
 - **NOR**: mismo esquema que SLR — ANOVA de dos vías edad × tratamiento, cada demora (T2, T3, T4) por separado; Tukey comparando cada media con su fila y columna; se reporta tasa de exploración (azar 0,5), con t de una muestra contra el azar para cada grupo y demora (agregada en la Fase 5 de la revisión de jurado, calculada a partir de los datos crudos por animal en `Resultados NOR/RESULTADOS NOR T2 T3 T4.xlsx`). Resultados de §5.3 organizados por hallazgo (validación / efecto sacarosa / efecto stevia / síntesis), no por demora.
 - **Consumo de líquidos/alimento**: normalizado al peso corporal (mL o g por g de peso/día); la **caja**, no el animal, es la unidad experimental. Analizado con ANOVA de medidas repetidas multifactorial (edad × tratamiento × fluido × tiempo durante el tratamiento; edad × tratamiento × tiempo durante el lavado; edad × tratamiento sobre el promedio del período para alimento), corrección de Geisser-Greenhouse, post hoc de **Šídák** (no Tukey).
-- **Fuente de los resultados de consumo**: `Resultado consumos/Resultados consumos.pdf` tiene 12 páginas, pero **solo las primeras 5 están validadas** (consumo combinado durante el tratamiento, consumo de agua durante el lavado, consumo de alimento). Las páginas 6–12 (ANOVA separados por edad, AUC, prueba de preferencia de sacarosa) son análisis exploratorios descartados: no usarlos sin confirmar antes.
-- **OF**: aparato cuadrado de 75×75×30 cm (no 75×55×30, que son las dimensiones del NOR — error ya corregido). Cita del aparato: `pian2009milk` (confirmada correcta contra la propuesta original del laboratorio).
+- **Fuente de los resultados de consumo**: `Resultado consumos/Resultados consumos.pdf` tiene 12 páginas, pero **solo las primeras 5 están validadas** (consumo combinado durante el tratamiento, consumo de agua durante el lavado, consumo de alimento). Las páginas 6–12 (ANOVA separados por edad, AUC, prueba de preferencia de sacarosa) son análisis exploratorios descartados; la prueba de preferencia de dos botellas no se incluye en la tesis (solo el índice de preferencia calculado desde el consumo del tratamiento): no usarlos sin confirmar antes.
+- **OF**: aparato cuadrado de 75×75×30 cm (no 75×55×30, que son las dimensiones del NOR — error ya corregido). Sesión de 5 min. Cita del aparato: `pian2009milk` (confirmada correcta contra la propuesta original del laboratorio).
 - **Protocolo de extracto de stevia**: decocción 10 min, reposo 20 min, filtrado, re-hervido 45–50 min hasta 300 mL, dilución a 4 % (40 mL/L). Esta es la versión correcta (ya reflejada en el texto).
 
 ## Estado de la tesis por sección
@@ -78,7 +78,7 @@ Nota técnica: `preambulo.tex` mapea `\DeclareLanguageMapping{english}{american}
 | 5.5 Neurogénesis | `\pendiente{}`. Hay un PDF en `Resultados inmucitoquimica/` pero es insuficiente (pocos datos, falta el grupo stevia); hace falta el archivo de Prism de Sol para completarlo. |
 | 5.6 ML/multivariado | `\pendiente{}`. No corrido todavía (`datos/` y `analisis/` vacíos). |
 | 6. Discusión, 7. Perspectivas, 8. Conclusiones, Agradecimientos | `\pendiente{}` en su totalidad. |
-| Anexos | Un solo anexo: Anexo A (inventario de cohortes), con varios `\confirmar{}` de n y de la fecha de una cohorte. El DI y la tasa de exploración del SLR se muestran juntos en el cuerpo de §5.4 (ya no hay anexo de tasa; a pedido de Thiago, ambos índices se presentan y discuten en el texto, no solo el DI). |
+| Anexos | Un solo anexo: Anexo A (n por grupo experimental en la SLR, sin desglose por año ni cohorte). El DI y la tasa de exploración del SLR se muestran juntos en el cuerpo de §5.4 (a pedido de Thiago, ambos índices se presentan y discuten en el texto, no solo el DI). |
 
 ## Material de referencia adicional (`docs/referencia/papers/`)
 No son citas verificadas para `referencias.bib` salvo que ya estén incorporadas (ver `INDICE.md`):
@@ -95,14 +95,12 @@ Capítulos: cap:introduccion, cap:estado-arte, cap:marco-teorico, cap:metodos, c
 Marco teórico: sec:ventanas (3.1), sec:bases (3.2), sec:cascada (3.3), sec:multivariado (3.4).
 Métodos: sec:diseno, sec:soluciones, sec:registro, sec:conductual, sec:principio, sec:of, sec:nor, sec:slr, sec:rigor, sec:histologia, sec:analisis, sec:estadistico, sec:ml.
 Resultados: sec:res-consumo (sec:res-consumo-tratamiento, sec:res-consumo-lavado, sec:res-consumo-chow, sec:res-consumo-peso), sec:res-of, sec:res-nor (sec:res-nor-validacion, sec:res-nor-sacarosa, sec:res-nor-stevia, sec:res-nor-sintesis), sec:res-slr (sec:res-slr-exploracion, sec:res-slr-validacion, sec:res-slr-sacarosa, sec:res-slr-stevia, sec:res-slr-sintesis), sec:res-neurogenesis, sec:res-ml.
-Tablas: tab:diseno, tab:cohortes (Anexo A), tab:consumo-liquidos, tab:nor-tasa, tab:nor-anova, tab:slr-di, tab:slr-tasa, tab:slr-anova.
+Tablas: tab:diseno, tab:n-slr (Anexo A), tab:consumo-liquidos, tab:nor-tasa, tab:nor-anova, tab:slr-di, tab:slr-tasa, tab:slr-anova.
 Figuras: fig:esquema-slr, fig:objetos-slr, fig:cascada-neurogenica, fig:slr-carga, fig:linea-temporal, fig:of-esquema, fig:confocal-giro-dentado, fig:consumo-liquidos, fig:consumo-liquidos-promedio, fig:agua-lavado, fig:chow-juvenil, fig:nor-tasa, fig:nor-tukey, fig:slr-exploracion, fig:slr-di, fig:slr-tasa, fig:slr-tukey.
-Ecuaciones: eq:fwer, eq:pca, eq:tasa, eq:di. Anexo: anx:cohortes (A, único anexo).
+Ecuaciones: eq:fwer, eq:pca, eq:tasa, eq:di. Anexo: anx:muestra (A, único anexo).
 
 ## Pendientes a confirmar con Sol
-- Comité de ética y número de protocolo (CICUAL).
-- Duración de la sesión de Open Field y de la prueba de preferencia.
-- n por configuración de varias filas del Anexo B (inventario de cohortes) y el año de la cohorte de stevia adulto (¿2024 o 2025?, fecha ambigua en el registro del laboratorio: "250424").
+- Comité de ética: qué CICUAL aprobó el protocolo (IByME y/o Facultad de Ciencias Veterinarias, UBA) y su número (no figura en fuentes públicas; solo lo sabe Sol).
 - Participación del grupo adulto en el brazo de tiempos agudos.
 - Archivo de Prism completo de inmunocitoquímica (falta grupo stevia).
 - Histología (§4.5): método de fijación/perfusión, n por grupo, secciones por animal/región del giro dentado, y método de conteo (¿manual/ImageJ/estereología?, ¿ciego al tratamiento?).
