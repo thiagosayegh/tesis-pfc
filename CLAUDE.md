@@ -29,7 +29,7 @@ Nota técnica: `preambulo.tex` mapea `\DeclareLanguageMapping{english}{american}
 - `main.tex` — orden de secciones (plantilla oficial ITBA). No poner contenido acá.
 - `preambulo.tex` — paquetes, formato, macros (incluye `tikz` y `subcaption`).
 - `capitulos/` — un archivo por capítulo/sección preliminar (`00_caratula.tex` … `9_anexos.tex`).
-- `referencias.bib` — bibliografía (biblatex-ieee), 37 entradas. Cada una tiene comentado su número en la versión de Google Docs.
+- `referencias.bib` — bibliografía (biblatex-ieee), 38 entradas. Cada una tiene comentado su número en la versión de Google Docs.
 - `figuras/`, `logos/` — imágenes ya procesadas y listas para `\incluirfigura`. Convención de nombre: `Fig<capítulo>_<tema>[_<subgrupo>].ext` (p. ej. `Fig5_consumo_liquidos_adulto.pdf`). Preferir PDF vectorial (exportado de GraphPad Prism) sobre PNG/JPG.
 - `FIGURAS_PENDIENTES.md` — checklist de correcciones a hacer en GraphPad Prism (ejes/leyendas en inglés, paleta de colores, etc.) para las figuras que no se pueden editar desde el `.tex`.
 - `docs/referencia/papers/` — PDF de los artículos citados, bajados de fuentes legales (nunca sitios piratas). `INDICE.md` documenta de dónde salió cada uno.
@@ -69,7 +69,7 @@ Nota técnica: `preambulo.tex` mapea `\DeclareLanguageMapping{english}{american}
 | Carátula, Resumen, Glosario | Completos. Resumen en pasado con resultado real de SLR; falta solo fecha de entrega/co-tutor. |
 | 1. Introducción | Completa. |
 | 2. Estado del arte | Completo. |
-| 3. Marco teórico | Completo. Figura del gradiente de carga cognitiva del SLR (`fig:slr-carga`) regenerada con matplotlib en español (ya no es la versión BioRender adaptada del blog); placeholder de la cascada neurogénica (`fig:cascada-neurogenica`, falta el esquema). |
+| 3. Marco teórico | Completo. Figura del gradiente de carga cognitiva del SLR (`fig:slr-carga`) regenerada con matplotlib en español (ya no es la versión BioRender adaptada del blog); esquema de la cascada neurogénica (`fig:cascada-neurogenica`) generado con matplotlib (propio, PCNA → DCX → NeuN; cita conceptual `kempermann2015neurogenesis`; script no versionado). |
 | 4. Materiales y métodos | Completo. Placeholder de foto pendiente: aparato de OF (`fig:of-esquema`) y fotomicrografías confocales (`fig:confocal-giro-dentado`). Inventario de cohortes movido a Anexo B (antes Tabla 4.2 en §4.1). Sec. 4.5 (inmunocitoquímica) con varios `\pendiente{}` puntuales nuevos (fijación/perfusión, n por grupo, secciones por animal/región, método de conteo). |
 | 5.1 Consumo y peso corporal | Líquidos (tratamiento y lavado) y alimento redactados y verificados contra datos crudos, con índice de preferencia y estimación calórica de la sacarosa agregados. Falta: gráfico de chow del grupo adulto, y toda la subsección de peso corporal (sin datos todavía). |
 | 5.2 Campo abierto (OF) | `\pendiente{}`. Hay datos sin subir a `Resultados Open Field/` más que dos PDF de presentación/resumen sin analizar. |
@@ -107,7 +107,7 @@ Ecuaciones: eq:fwer, eq:pca, eq:tasa, eq:di. Anexo: anx:muestra (A, único anexo
 - Histología (§4.5): PD al sacrificio, nivel rostro-caudal (bregma) y hemisferio analizado; método de fijación/perfusión, n por grupo, secciones por animal/región del giro dentado, y método de conteo (¿manual/ImageJ/estereología?, ¿ciego al tratamiento?).
 - Cita que respalde la equivalencia de dulzor entre la stevia al 4\,% p/v y la sacarosa al 10\,% p/v (§3.2).
 - kcal/g del alimento balanceado, para completar la estimación calórica de §5.1.
-- Bibliografía: `pichonriviere2023` y `rey2024metformin` no se citan en el texto; `ennys2019` quedó sin URL (la que tenía era de otro documento) y hay que conseguir la oficial de la ENNyS 2; falta volumen y páginas de `bhatt2025prenatal`; decidir si se borra `ghoshswaby2021slr` (ya no se cita, ver más arriba). 30 de las 37 entradas de `referencias.bib` siguen sin intentar bajar (ver `docs/referencia/papers/INDICE.md`).
+- Bibliografía: `pichonriviere2023` y `rey2024metformin` no se citan en el texto; `ennys2019` quedó sin URL (la que tenía era de otro documento) y hay que conseguir la oficial de la ENNyS 2; falta volumen y páginas de `bhatt2025prenatal`; decidir si se borra `ghoshswaby2021slr` (ya no se cita, ver más arriba). 30 de las 38 entradas de `referencias.bib` siguen sin intentar bajar (ver `docs/referencia/papers/INDICE.md`).
 - Figuras GraphPad: ver el checklist completo en `FIGURAS_PENDIENTES.md` (traducciones, typo "Sacaosa", paleta de colores, corchetes de Tukey).
 
 ## Cronograma
