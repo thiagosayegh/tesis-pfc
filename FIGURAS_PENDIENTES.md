@@ -9,8 +9,8 @@ adelante.
 ## Paleta única (aplicar a todas las figuras de grupos)
 
 Las figuras de consumo (5.1, 5.2, 5.4) ya usan una paleta por color: **azul = control,
-rojo = sacarosa, verde = stevia**. Las figuras de NOR y SLR por barras (5.5, 5.8, A.1) usan
-en cambio una escala de grises (negro/gris claro/gris oscuro). Unificar todo a la paleta de
+rojo = sacarosa, verde = stevia**. Las figuras de NOR (5.6) ya están en color (actualizadas en Prism). Las de SLR por barras (5.9 y 5.10) usan
+en cambio una escala de grises (negro/gris claro/gris oscuro), con su propia leyenda gris. Unificar todo a la paleta de
 color ya establecida en 5.1/5.2/5.4 (azul/rojo/verde), de modo que el color de un grupo
 sea el mismo en toda la tesis. Los captions del `.tex` ya se actualizaron para describir
 esta paleta (Fig. 5.5, 5.8 y A.1); una vez corregidas las figuras en Prism, van a coincidir.
@@ -38,20 +38,20 @@ esta paleta (Fig. 5.5, 5.8 y A.1); una vez corregidas las figuras en Prism, van 
 - [ ] Leyenda: "Control", "SUC", "Stevia" → "Control", "Sacarosa", "Stevia".
 - [ ] Falta también el gráfico equivalente del grupo adulto (`Fig5_chow_adulto.pdf` o similar), pendiente en el texto (§5.1.3).
 
-## Fig. 5.5 — Tasa de exploración, prueba NOR (`Fig5_NOR_T2.pdf`, `Fig5_NOR_T3.pdf`, `Fig5_NOR_T4.pdf`)
-- [ ] Título "T2/T3/T4 Two-way ANOVA" → traducir o, mejor, quitarlo (el panel ya se identifica en el caption del `.tex`).
-- [ ] Eje Y "Exploration ratio (%)" → "Tasa de exploración", **sin "(%)"** (la escala es 0–1, no un porcentaje).
-- [ ] Eje X "Juvenile" / "Adult" → "Juvenil" / "Adulto".
-- [ ] Agregar leyenda de colores (hoy no tiene ninguna): Control / Sacarosa / Stevia.
-- [ ] Pasar de escala de grises a la paleta azul/rojo/verde (ver arriba).
+## Fig. 5.6 — Tasa de exploración, prueba NOR (`Fig5_NOR_T2.pdf`, `Fig5_NOR_T3.pdf`, `Fig5_NOR_T4.pdf`)
+- [x] Título "T2/T3/T4 Two-way ANOVA" eliminado.
+- [x] Eje Y "Tasa de exploración" (sin "(%)").
+- [x] Paleta azul/rojo/verde.
+- [x] Leyenda de colores: se usa la imagen común `figuras/Fig5_leyenda_grupos.png` (Control / 10% Sacarosa / 4% Stevia, tomada de la presentación de OF), insertada bajo los tres paneles en el `.tex`.
+- [ ] Eje X "Juvenile" / "Adult" (T3 y T4) → "Juvenil" / "Adulto" (T2 ya está: "Juvenil" / "Adultos"). Decisión de Thiago: se deja por ahora.
 
-## Fig. 5.8 — Índice de discriminación (DI), prueba SLR (`Fig5_DI_SLR_d.pdf`, `Fig5_DI_SLR_s.pdf`)
+## Fig. 5.9 — Índice de discriminación (DI), prueba SLR (`Fig5_DI_SLR_d.pdf`, `Fig5_DI_SLR_s.pdf`)
 - [ ] Título "D SLR DI" / "S SLR DI" → quitar o traducir a "d-SLR" / "s-SLR" (minúscula-mayúscula, igual que en el resto de la tesis).
 - [ ] **Typo en `Fig5_DI_SLR_s.pdf`: la leyenda dice "Sacaosa" → corregir a "Sacarosa".**
 - [ ] Pasar de escala de grises a la paleta azul/rojo/verde (ver arriba).
 - [ ] Dejar solo los corchetes de comparaciones **significativas**; hoy se muestran también las 7 comparaciones "ns" por panel, lo que satura la figura (de las 9 comparaciones por configuración, en d-SLR solo 2 son significativas y en s-SLR solo 2).
 
-## Fig. A.1 — Tasa de exploración, prueba SLR (`Fig5_tasa_SLR_d.pdf`, `Fig5_tasa_SLR_s.pdf`)
+## Fig. 5.10 — Tasa de exploración, prueba SLR (`Fig5_tasa_SLR_d.pdf`, `Fig5_tasa_SLR_s.pdf`)
 - [ ] Título inconsistente: "D SLR TASA EXPLORACION" (sin tilde, mayúsculas) vs. "S-slr TASA EXPLORACIÓN" (mayúscula/minúscula mezclada, con tilde) → unificar a "d-SLR" / "s-SLR" o quitar el título.
 - [ ] Pasar de escala de grises a la paleta azul/rojo/verde (ver arriba).
 - [ ] Igual que en Fig. 5.8: dejar solo los corchetes de comparaciones significativas.
