@@ -9,8 +9,7 @@ adelante.
 ## Paleta única (aplicar a todas las figuras de grupos)
 
 Las figuras de consumo (5.1, 5.2, 5.4) ya usan una paleta por color: **azul = control,
-rojo = sacarosa, verde = stevia**. Las figuras de NOR (5.6) ya están en color (actualizadas en Prism). Las de SLR por barras (5.9 y 5.10) usan
-en cambio una escala de grises (negro/gris claro/gris oscuro), con su propia leyenda gris. Unificar todo a la paleta de
+rojo = sacarosa, verde = stevia**. Las figuras de NOR (5.6) ya están en color (actualizadas en Prism). Las de SLR por barras (5.9 y 5.10) ya están en color para s-SLR (actualizadas en Prism); falta d-SLR (DI y tasa), que sigue en grises con su propia leyenda gris. Unificar todo a la paleta de
 color ya establecida en 5.1/5.2/5.4 (azul/rojo/verde), de modo que el color de un grupo
 sea el mismo en toda la tesis. Los captions del `.tex` ya se actualizaron para describir
 esta paleta (Fig. 5.5, 5.8 y A.1); una vez corregidas las figuras en Prism, van a coincidir.
@@ -46,15 +45,14 @@ esta paleta (Fig. 5.5, 5.8 y A.1); una vez corregidas las figuras en Prism, van 
 - [ ] Eje X "Juvenile" / "Adult" (T3 y T4) → "Juvenil" / "Adulto" (T2 ya está: "Juvenil" / "Adultos"). Decisión de Thiago: se deja por ahora.
 
 ## Fig. 5.9 — Índice de discriminación (DI), prueba SLR (`Fig5_DI_SLR_d.pdf`, `Fig5_DI_SLR_s.pdf`)
-- [ ] Título "D SLR DI" / "S SLR DI" → quitar o traducir a "d-SLR" / "s-SLR" (minúscula-mayúscula, igual que en el resto de la tesis).
-- [ ] **Typo en `Fig5_DI_SLR_s.pdf`: la leyenda dice "Sacaosa" → corregir a "Sacarosa".**
-- [ ] Pasar de escala de grises a la paleta azul/rojo/verde (ver arriba).
-- [ ] Dejar solo los corchetes de comparaciones **significativas**; hoy se muestran también las 7 comparaciones "ns" por panel, lo que satura la figura (de las 9 comparaciones por configuración, en d-SLR solo 2 son significativas y en s-SLR solo 2).
+- [x] s-SLR (`Fig5_DI_SLR_s.pdf`): actualizado en Prism (color, eje "Índice de discriminación", corchetes solo significativos, barras pegadas).
+- [ ] **d-SLR (`Fig5_DI_SLR_d.pdf`)**: pendiente. Hacer igual que s-SLR: agrupar por edad (Juvenil/Adulto, tres barras pegadas: Spacing "Between adjacent data" 0 %), colores azul/rojo/verde (0,0,255 / 255,0,0 / 0,192,0), eje Y "Índice de discriminación (DI)" (no "Tasa de discriminación"), sin título ni "XTitle", solo corchetes significativos (los de la Tabla 5.4).
+- [ ] Una vez recoloreadas las dos: agregar la leyenda común `Fig5_leyenda_grupos.png` bajo la figura en el `.tex` y borrar la leyenda propia de Prism.
 
 ## Fig. 5.10 — Tasa de exploración, prueba SLR (`Fig5_tasa_SLR_d.pdf`, `Fig5_tasa_SLR_s.pdf`)
-- [ ] Título inconsistente: "D SLR TASA EXPLORACION" (sin tilde, mayúsculas) vs. "S-slr TASA EXPLORACIÓN" (mayúscula/minúscula mezclada, con tilde) → unificar a "d-SLR" / "s-SLR" o quitar el título.
-- [ ] Pasar de escala de grises a la paleta azul/rojo/verde (ver arriba).
-- [ ] Igual que en Fig. 5.8: dejar solo los corchetes de comparaciones significativas.
+- [x] s-SLR (`Fig5_tasa_SLR_s.pdf`): actualizado en Prism.
+- [ ] **d-SLR (`Fig5_tasa_SLR_d.pdf`)**: pendiente, mismos puntos que el DI (eje Y "Tasa de exploración", azar 0,5).
+- [ ] Agregar la leyenda común bajo la figura una vez recoloreadas las dos.
 
 ## Fig. 3.2 — Gradiente de carga SLR
 - [x] Ya reemplazada por una versión propia (`figuras/Fig3_SLR_carga_cognitiva.png`, generada con matplotlib, en español, sin BioRender ni la configuración xs-SLR). Sin pendientes.
