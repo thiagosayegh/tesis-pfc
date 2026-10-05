@@ -45,14 +45,15 @@ esta paleta (Fig. 5.5, 5.8 y A.1); una vez corregidas las figuras en Prism, van 
 - [ ] Eje X "Juvenile" / "Adult" (T3 y T4) → "Juvenil" / "Adulto" (T2 ya está: "Juvenil" / "Adultos"). Decisión de Thiago: se deja por ahora.
 
 ## Fig. 5.9 — Índice de discriminación (DI), prueba SLR (`Fig5_DI_SLR_d.pdf`, `Fig5_DI_SLR_s.pdf`)
-- [x] s-SLR (`Fig5_DI_SLR_s.pdf`): actualizado en Prism (color, eje "Índice de discriminación", corchetes solo significativos, barras pegadas).
-- [ ] **d-SLR (`Fig5_DI_SLR_d.pdf`)**: pendiente. Hacer igual que s-SLR: agrupar por edad (Juvenil/Adulto, tres barras pegadas: Spacing "Between adjacent data" 0 %), colores azul/rojo/verde (0,0,255 / 255,0,0 / 0,192,0), eje Y "Índice de discriminación (DI)" (no "Tasa de discriminación"), sin título ni "XTitle", solo corchetes significativos (los de la Tabla 5.4).
-- [ ] Una vez recoloreadas las dos: agregar la leyenda común `Fig5_leyenda_grupos.png` bajo la figura en el `.tex` y borrar la leyenda propia de Prism.
+- [x] s-SLR y d-SLR actualizados en Prism (color, barras pegadas, corchetes solo significativos, leyenda de Prism).
+- [ ] d-SLR: el eje Y dice "D SLR Índice de discriminación"; sacar el prefijo "D SLR " (el s-SLR dice solo "Índice de discriminación"). La configuración ya se identifica en el pie de figura.
 
 ## Fig. 5.10 — Tasa de exploración, prueba SLR (`Fig5_tasa_SLR_d.pdf`, `Fig5_tasa_SLR_s.pdf`)
-- [x] s-SLR (`Fig5_tasa_SLR_s.pdf`): actualizado en Prism.
-- [ ] **d-SLR (`Fig5_tasa_SLR_d.pdf`)**: pendiente, mismos puntos que el DI (eje Y "Tasa de exploración", azar 0,5).
-- [ ] Agregar la leyenda común bajo la figura una vez recoloreadas las dos.
+- [x] s-SLR y d-SLR actualizados en Prism.
+- [ ] d-SLR: el eje Y dice "D SLR Tasa de exploración" (sacar el prefijo "D SLR ") y la leyenda está en mayúsculas (CONTROL/SACAROSA/STEVIA), mientras que la del s-SLR está en minúsculas con inicial mayúscula.
+
+## Fig. 5.5 — Campo abierto (OF)
+- [x] Los 8 paneles se generan desde `Resultados Open Field/resultados OF.xlsx` en matplotlib (PDF vectorial, en español); no dependen de Prism.
 
 ## Fig. 3.2 — Gradiente de carga SLR
 - [x] Ya reemplazada por una versión propia (`figuras/Fig3_SLR_carga_cognitiva.png`, generada con matplotlib, en español, sin BioRender ni la configuración xs-SLR). Sin pendientes.
