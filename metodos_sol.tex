@@ -1,0 +1,42 @@
+% =====================================================================
+%  Documento independiente: capitulo "Materiales y metodos" con sus
+%  referencias, para enviar a revision (Dra. Kruse).
+%  Compilar con:  latexmk metodos_sol.tex   (requiere haber compilado main.tex antes,
+%  porque toma de build/main.aux los numeros de las referencias cruzadas a otros capitulos).
+% =====================================================================
+\documentclass[12pt,a4paper,oneside]{report}
+\input{preambulo}
+\usepackage{xr}
+\externaldocument{build/main}
+
+\begin{document}
+\pagenumbering{arabic}
+
+\begin{center}
+  {\Large\textbf{Materiales y métodos}}\\[0.6em]
+  {\large Impacto de la nutrición temprana sobre el desarrollo neurobiológico y la conducta:\\ efectos de \stevia{}}\\[0.6em]
+  Thiago Sayegh --- IByME-CONICET\\[0.3em]
+  \textit{Versión para revisión de la Dra. M.\,S. Kruse --- octubre de 2026}
+\end{center}
+
+\vspace{0.8em}
+\noindent\textbf{Cómo leer este documento.} Es el capítulo 4 de la tesis, con su propia lista de referencias al final (solo las que se citan en este capítulo, numeradas por orden de aparición, por lo que los números difieren de los de la tesis completa). Las referencias a otros capítulos (por ejemplo, \S\ref{sec:ventanas}) conservan la numeración de la tesis. Los datos que faltan o que hay que verificar están marcados en color: \pendiente{falta redactar o conseguir un dato} y \confirmar{dato a confirmar con la tutora}. La lista consolidada de esos puntos está en la última página.
+
+\clearpage
+\setcounter{chapter}{3}
+\input{capitulos/4_materiales_y_metodos}
+
+\chapter*{Referencias bibliográficas}
+\printbibliography[heading=none]
+
+\chapter*{Puntos para revisar con la tutora}
+\begin{enumerate}
+  \item \textbf{Brazo de tiempos agudos (\S\ref{sec:diseno}):} ¿participó el grupo adulto?
+  \item \textbf{\textit{Open field} (\S\ref{sec:of}):} medidas exactas de las zonas 1 y 2 en \anymaze{} (hoy aproximadas, estimadas desde capturas de pantalla) y criterio con que se contó cada zona visitada.
+  \item \textbf{Procesamiento histológico (\S\ref{sec:histologia}):} día postnatal del sacrificio, método de fijación o perfusión, nivel rostro-caudal del giro dentado (bregma), hemisferio analizado, número de animales por grupo, número de secciones por animal y región (dorsal o ventral), y método de conteo (manual, ImageJ u otro, o estereología) y si fue ciego al tratamiento.
+  \item \textbf{Figuras:} foto de los objetos del NOR y fotomicrografías confocales de NeuN, DCX y PCNA.
+  \item \textbf{Comité de ética:} verificar que los protocolos 22/2020 y 18/2022 (tomados del manuscrito del laboratorio) cubran todas las cohortes de esta tesis.
+  \item \textbf{Aprendizaje automático (\S\ref{sec:ml}):} el apartado está escrito como análisis ya realizado, pero todavía no se corrió; se reescribirá como plan hasta tener resultados.
+\end{enumerate}
+
+\end{document}
