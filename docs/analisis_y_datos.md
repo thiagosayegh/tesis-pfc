@@ -3,7 +3,7 @@
 ## Reglas de manejo de datos
 - Un DI negativo es un resultado válido: nunca se corrige, ajusta ni se interpreta como error.
 - Los resultados se reportan tal como salen. Marco investigativo, no confirmatorio.
-- **Día 1 del SLR (muestreo de tres objetos):** solo control de equivalencia de codificación y criterio de inclusión; no es una variable de resultado. La exploración del día 1 **no fue equivalente entre grupos**: debe tratarse como control/covariable y discutirse.
+- **Día 1 del SLR (muestreo de tres objetos):** solo control de equivalencia de codificación (no se aplicó ningún criterio de inclusión por exploración mínima); no es una variable de resultado. La exploración del día 1 **no fue equivalente entre grupos**: debe tratarse como control/covariable y discutirse.
 - Las celdas "inv" son datos faltantes irrecuperables: se preservan como NaN, nunca se imputan.
 - Sesiones de duración distinta = cortes tempranos de grabación, no errores de datos.
 - Distancias > 1000 en exportaciones de AnyMaze: dividir por 1000 (problema de separador decimal por configuración regional).
