@@ -1,0 +1,56 @@
+% =====================================================================
+%  Version parcial de la tesis: caratula, resumen, glosario, indices,
+%  capitulos 1 a 4 (hasta Materiales y metodos), Anexo A y referencias.
+%  Para enviar a revision (Dra. Kruse).
+%  Compilar con:  latexmk hasta_metodos.tex
+%  Requiere haber compilado main.tex antes: las referencias cruzadas a los
+%  capitulos 5 en adelante se toman de build/main.aux (conservan la numeracion
+%  de la tesis completa).
+% =====================================================================
+\documentclass[12pt,a4paper,oneside]{report}
+\input{preambulo}
+\usepackage{xr}
+\externaldocument{build/main}
+
+\begin{document}
+
+% ---------------- Preliminares (numeración romana) ----------------
+\pagenumbering{roman}
+\input{capitulos/00_caratula}
+
+\clearpage
+\thispagestyle{empty}
+\vspace*{0.3\textheight}
+\begin{center}
+  {\large\textbf{Versión parcial para revisión}}\\[0.8em]
+  Incluye la carátula, el resumen, el glosario, los índices, los capítulos 1 a 4\\
+  (hasta Materiales y métodos), el Anexo A y las referencias bibliográficas.\\[0.8em]
+  Los capítulos de Resultados, Discusión, Perspectivas y Conclusiones\\
+  no forman parte de esta versión. Los datos que faltan o que hay que verificar\\
+  están marcados en color en el texto.
+\end{center}
+
+\input{capitulos/01_resumen}
+\input{capitulos/02_glosario}
+
+\tableofcontents
+\clearpage
+\listoffigures
+\listoftables
+
+% ---------------- Cuerpo (numeración arábiga) ----------------
+\clearpage
+\pagenumbering{arabic}
+\input{capitulos/1_introduccion}
+\input{capitulos/2_estado_del_arte}
+\input{capitulos/3_marco_teorico}
+\input{capitulos/4_materiales_y_metodos}
+
+% ---------------- Anexo y referencias ----------------
+\input{capitulos/9_anexos}
+
+\chapter*{Referencias bibliográficas}
+\addcontentsline{toc}{chapter}{Referencias bibliográficas}
+\printbibliography[heading=none]
+
+\end{document}
