@@ -51,6 +51,6 @@ Fuentes (PDF en `docs/referencia/`):
   - "Si a vos te aburre, probablemente a otro también. Si vos no lo entendés, otra persona tampoco." La revisión del tutor es fundamental.
 
 ## 4. Cómo se relaciona con esta tesis (a tener en cuenta al reescribir)
-- Sol (8 oct. 2026): Materiales y métodos está bastante mal y hay que reescribirlo; esperar sus indicaciones antes de hacerlo.
+- Sol (8 oct. 2026): Materiales y métodos se reescribió copiando textos ya escritos y revisados del laboratorio (borrador `mat meth draft` y Coirini et al. 2022), sin innovar; primero el comportamiento, AnyMaze al final, y toda la estadística en su sección. Ver la regla en `CLAUDE.md`.
 - Aplicar al reescribir: método como manual reproducible; sujetos con n, criterios de inclusión/exclusión (en este trabajo **no se aplicaron criterios de inclusión por exploración mínima**) y comité de ética; marca, modelo y versión de todo (AnyMaze 7.66, GraphPad Prism 11.1.0, etc.); imágenes solo si ayudan a reproducir; fotos propias cuando se pueda.
 - El Marco teórico debería contener solo lo que se usa en la metodología (hoy puede tener contenido que no se usa) y no repetir al Estado del arte.

@@ -1,6 +1,6 @@
 # PFC — Thiago Sayegh (ITBA · IByME-CONICET)
 
-Fuente LaTeX de la tesina *Impacto de la nutrición temprana sobre el desarrollo neurobiológico y la conducta: efectos de Stevia rebaudiana Bertoni*.
+Fuente LaTeX de la tesina *Efectos neurobiológicos a largo plazo de la exposición a Stevia rebaudiana durante la etapa juvenil y la adultez*.
 
 ## Opción A — Local (recomendada para trabajar con Claude Code)
 1. Instalar TeX: **MacTeX** (macOS) o **TeX Live** completo (Windows/Linux). Incluye latexmk y biber.
