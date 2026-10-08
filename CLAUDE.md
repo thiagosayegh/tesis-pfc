@@ -68,7 +68,7 @@ Nota técnica: `preambulo.tex` mapea `\DeclareLanguageMapping{english}{american}
 ## Estado de la tesis por sección
 | Sección | Estado |
 |---|---|
-| Carátula, Resumen, Glosario | Completos. Resumen en pasado con resultado real de SLR; falta solo fecha de entrega/co-tutor. |
+| Carátula, Resumen, Glosario | Carátula y glosario completos. **Resumen = versión de la Dra. Kruse del 6 oct. 2026 (`resumen 20261006.docx`), provisoria: ella pidió ponerla tal cual y retomarla cuando estén terminados los Resultados.** Se le aplicó solo formato y tipeo ("Para ellos"→"Para ello"; "antigénicos"→"ansiogénicos"; "memoria pattern"→"memoria de separación de patrones"; "biodecodificadas"→"cuantificadas"; PD en vez de DP; comas decimales; la frase "en curso" ya no nombra el OF ni el NOR, que sí tienen resultados) y se insertaron los resultados del NOR del resumen SAN (`resumen SAN_MS Kruse final.docx`). Quedan `\revisar{}` dentro del texto: (1) interacción de rearing: con Prism es significativa para el número (p = 0,002) pero no para el tiempo (p = 0,11); (2) T3 juvenil de stevia: el resumen SAN dice p = 0,0002 y Prism (Tukey) da 0,0005 (se usó 0,0005); (3) el último párrafo describe resultados de neurogénesis que no están en la tesis (parecen del estudio previo de sacarosa) y contradice "en curso"; la conclusión está vacía. Además el Resumen ocupa ~1,5 carillas (la plantilla pide media). El resumen del doc de Sol dice marcadores DCX y PCNA (la tesis marca también NeuN). |
 | 1. Introducción | Completa. |
 | 2. Estado del arte | Completo. |
 | 3. Marco teórico | Completo. Figura del gradiente de carga cognitiva del SLR (`fig:slr-carga`) regenerada con matplotlib en español (ya no es la versión BioRender adaptada del blog); esquema de la cascada neurogénica (`fig:cascada-neurogenica`, `Fig3_cascada_neurogenica.jpg`, PCNA → DCX → NeuN) generado con IA a partir de un prompt propio; el pie lo declara y cita conceptualmente `kempermann2015neurogenesis`; el borde inferior de los paneles quedó recortado en el original. |
@@ -118,6 +118,9 @@ Ecuaciones: eq:fwer, eq:pca, eq:tasa, eq:di. Anexo: anx:muestra (A, único anexo
 - kcal/g del alimento balanceado, para completar la estimación calórica de §5.1.
 - Bibliografía: `pichonriviere2023` y `rey2024metformin` no se citan en el texto; `ennys2019` quedó sin URL (la que tenía era de otro documento) y hay que conseguir la oficial de la ENNyS 2; falta volumen y páginas de `bhatt2025prenatal`; decidir si se borra `ghoshswaby2021slr` (ya no se cita, ver más arriba). 30 de las 38 entradas de `referencias.bib` siguen sin intentar bajar (ver `docs/referencia/papers/INDICE.md`).
 - Figuras GraphPad: ver el checklist completo en `FIGURAS_PENDIENTES.md` (traducciones, typo "Sacaosa", paleta de colores, corchetes de Tukey).
+
+## Versiones
+Sol pidió nombrar las versiones de trabajo con la fecha al revés ("tesina 20261006"). Los PDF van en `entregas/` (`tesina 20261006.pdf` = tesis completa con el resumen de Sol) y cada versión se etiqueta en git (`tesina-20261006`). Las versiones parciales para revisión son `entregas/Tesis_hasta_Materiales_y_metodos.pdf` y `entregas/Materiales_y_metodos_para_Sol.pdf`.
 
 ## Cronograma
 Redacción en octubre, entrega en noviembre de 2026.
