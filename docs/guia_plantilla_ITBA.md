@@ -30,5 +30,5 @@ Nota de la plantilla: **las tablas, imágenes y gráficos también deben referen
 - **Discusión:** es el capítulo más exigente. Debe (1) contrastar con la hipótesis, (2) compararse con los estudios ya citados en el Estado del arte, (3) dar implicancias, (4) declarar limitaciones. Las limitaciones del diseño ya conocidas están en `analisis_y_datos.md`.
 - **Conclusiones:** una conclusión específica por asunto (consumo/peso, OF, NOR, SLR, neurogénesis, ML) + estado de la hipótesis + estado de cada objetivo de mínima y de máxima.
 - **Perspectivas futuras:** acá van los objetivos de máxima que no se alcancen.
-- **Resumen:** en pasado, con resultados reales (hoy está en futuro, formato anteproyecto: reescribirlo cuando estén los resultados).
+- **Resumen:** en pasado, con resultados reales, media carilla (≈ 150–180 palabras; la pauta del anteproyecto fija < 250 palabras para el resumen del proyecto, no de la tesina). Hoy está condensado y es provisorio hasta terminar los Resultados (ver `docs/guia_escritura_PFC_ITBA.md`).
 - Verificar el 20 % (hasta Marco teórico) y las carillas máximas al compilar: cada carilla ≈ una página del PDF con la configuración actual (A4, 12 pt, interlineado 1,5).
