@@ -123,7 +123,7 @@ Ecuaciones: eq:fwer, eq:pca, eq:tasa, eq:di. Anexo: anx:muestra (A, único anexo
 - Figuras GraphPad: ver el checklist completo en `FIGURAS_PENDIENTES.md` (traducciones, typo "Sacaosa", paleta de colores, corchetes de Tukey).
 
 ## Versiones
-Sol pidió nombrar las versiones de trabajo con la fecha al revés ("tesina 20261006"). Los PDF van en `entregas/` (`tesina 20261006.pdf` = tesis completa con el resumen de Sol) y cada versión se etiqueta en git (`tesina-20261006`). La versión con el resumen condensado es `tesina 20261008.pdf` (etiqueta `tesina-20261008`). Las versiones parciales para revisión son `entregas/Tesis_hasta_Materiales_y_metodos.pdf` y `entregas/Materiales_y_metodos_para_Sol.pdf`. Desde el 12 oct. 2026 también `entregas/Metodos_y_resultados_para_Sol.pdf` (capítulos 4 y 5, Anexo A, referencias y una página final de puntos a revisar; fuente `metodos_resultados_sol.tex`, que como las otras requiere compilar `main.tex` antes).
+Sol pidió nombrar las versiones de trabajo con la fecha al revés ("tesina 20261006"). Los PDF van en `entregas/` (`tesina 20261006.pdf` = tesis completa con el resumen de Sol) y cada versión se etiqueta en git (`tesina-20261006`). La versión con el resumen condensado es `tesina 20261008.pdf` (etiqueta `tesina-20261008`). Las versiones parciales para revisión son `entregas/Tesis_hasta_Materiales_y_metodos.pdf` y `entregas/Materiales_y_metodos_para_Sol.pdf`. Desde el 12 oct. 2026 también `entregas/Metodos_y_resultados_para_Sol.pdf` (capítulos 4 y 5, Anexo A y referencias, sin página de puntos a revisar por pedido de Thiago; fuente `metodos_resultados_sol.tex`, que como las otras requiere compilar `main.tex` antes).
 
 ## Cronograma
 Redacción en octubre, entrega en noviembre de 2026.
