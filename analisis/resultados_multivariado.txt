@@ -1,0 +1,75 @@
+n = 117 animales; faltantes: {'t_A1_dia1_s': 0, 't_A2_dia1_s': 0, 't_A3_dia1_s': 0, 'distancia_dia1_m_min': 6, 'exploracion_total_dia2_s': 0, 'DI_dia2': 0}
+anio              2024  2025  2026
+grupo                             
+Adulto control       0    20     0
+Adulto sacarosa      0    10    10
+Adulto stevia       10     0    10
+Juvenil control      0    19     0
+Juvenil sacarosa     0     8    10
+Juvenil stevia       0    10    10
+
+== PCA (5 variables estandarizadas)
+varianza explicada (%): [49.7 19.6 12.8  9.3  8.6] acumulada: [ 49.7  69.3  82.1  91.4 100. ]
+                      PC1   PC2
+A1 (día 1)           0.46  0.31
+A2 (día 1)           0.48 -0.19
+A3 (día 1)           0.51  0.11
+Exploración (día 2)  0.51  0.17
+DI (día 2)          -0.21  0.91
+PC1: ANOVA de dos vías  edad: F(1, 111) = 0.06, p = 0.8127; tratamiento: F(2, 111) = 8.20, p = 0.0005; interacción: F(2, 111) = 10.34, p = 0.0001
+     cohorte 2026 vs. 2024-2025: t(115) = 0.90, p = 0.3684
+PC2: ANOVA de dos vías  edad: F(1, 111) = 0.38, p = 0.5387; tratamiento: F(2, 111) = 6.38, p = 0.0024; interacción: F(2, 111) = 0.62, p = 0.5403
+     cohorte 2026 vs. 2024-2025: t(115) = -1.00, p = 0.3187
+                   PC1         PC2      
+                  mean   sem  mean   sem
+grupo                                   
+Adulto control   -0.46  0.29  0.41  0.16
+Adulto sacarosa  -0.48  0.13 -0.34  0.27
+Adulto stevia     1.06  0.45  0.06  0.22
+Juvenil control  -1.00  0.22  0.15  0.11
+Juvenil sacarosa  1.09  0.30 -0.57  0.19
+Juvenil stevia   -0.16  0.40  0.23  0.29
+
+== Clustering jerárquico de Ward (distancia euclídea, variables estandarizadas)
+k = 2: silueta = 0.365; ARI con el grupo = 0.026; con el tratamiento = 0.013; con la edad = -0.004; con la cohorte = -0.003
+k = 3: silueta = 0.239; ARI con el grupo = 0.087; con el tratamiento = 0.115; con la edad = -0.007; con la cohorte = 0.063
+k = 4: silueta = 0.211; ARI con el grupo = 0.090; con el tratamiento = 0.101; con la edad = -0.007; con la cohorte = 0.073
+k = 5: silueta = 0.186; ARI con el grupo = 0.094; con el tratamiento = 0.100; con la edad = -0.010; con la cohorte = 0.076
+k = 6: silueta = 0.190; ARI con el grupo = 0.098; con el tratamiento = 0.100; con la edad = -0.004; con la cohorte = 0.077
+k con mayor silueta = 2
+cluster           1   2
+grupo                  
+Adulto control    3  17
+Adulto sacarosa   0  20
+Adulto stevia     8  12
+Juvenil control   0  19
+Juvenil sacarosa  8  10
+Juvenil stevia    4  16
+         t_A1_dia1_s  t_A2_dia1_s  t_A3_dia1_s  exploracion_total_dia2_s  DI_dia2
+cluster                                                                          
+1               28.1         18.6        22.30                      35.4     0.08
+2               12.6          9.9         9.85                      16.2     0.14
+
+== Random Forest (300 árboles; validación cruzada estratificada 5 × 10)
+6 grupos (5 variables): exactitud balanceada = 0.303 ± 0.084 (azar = 0.167); prueba de permutación (500): p = 0.0060
+matriz de confusión (proporción por fila, 10 × 5 particiones):
+                  Adulto control  Adulto sacarosa  Adulto stevia  Juvenil control  Juvenil sacarosa  Juvenil stevia
+Adulto control              0.19             0.20           0.13             0.30              0.08            0.10
+Adulto sacarosa             0.24             0.31           0.06             0.19              0.10            0.10
+Adulto stevia               0.12             0.20           0.22             0.08              0.30            0.07
+Juvenil control             0.18             0.15           0.09             0.50              0.01            0.07
+Juvenil sacarosa            0.08             0.14           0.11             0.02              0.54            0.11
+Juvenil stevia              0.20             0.22           0.18             0.22              0.14            0.06
+importancia por permutación en los conjuntos de prueba (media ± DE):
+A1 (día 1)             0.027 ± 0.059
+A2 (día 1)             0.035 ± 0.058
+A3 (día 1)             0.008 ± 0.063
+Exploración (día 2)    0.008 ± 0.048
+DI (día 2)             0.068 ± 0.063
+3 tratamientos (5 variables): exactitud balanceada = 0.456 ± 0.084 (azar = 0.333); prueba de permutación (500): p = 0.0798
+control vs. sacarosa (5 variables): exactitud balanceada = 0.674 ± 0.094 (azar = 0.500); prueba de permutación (500): p = 0.0100
+control vs. stevia (5 variables): exactitud balanceada = 0.669 ± 0.102 (azar = 0.500); prueba de permutación (500): p = 0.0020
+-- sensibilidad: con la distancia del día 1 (6 variables) y cohorte como variable a predecir
+6 grupos (6 variables): exactitud balanceada = 0.394 ± 0.101 (azar = 0.167); prueba de permutación (500): p = 0.0020
+cohorte 2026 vs. 2024-2025 (6 variables): exactitud balanceada = 0.831 ± 0.075 (azar = 0.500); prueba de permutación (500): p = 0.0020
+cohorte 2026 vs. 2024-2025 (5 variables): exactitud balanceada = 0.617 ± 0.094 (azar = 0.500); prueba de permutación (500): p = 0.0659
