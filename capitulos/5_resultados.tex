@@ -13,7 +13,14 @@ El curso temporal del consumo difirió según la edad y el edulcorante (ANOVA MR
 
 Promediado a lo largo del período de exposición, los animales juveniles consumieron, en relación con su peso corporal, más solución endulzada que los adultos, tanto de sacarosa (2,4 veces más) como de stevia (2,8 veces más) (ANOVA de dos vías, $F_{\text{Edad} \times \text{Tratamiento}}(1, 64) = 63{,}19$; $p < 0{,}0001$; Figura~\ref{fig:consumo-liquidos-promedio}). Es decir, la dosis de sacarosa o de stevia a la que estuvieron expuestos los animales juveniles fue más del doble que la de los adultos.
 
-El índice de preferencia (consumo de solución endulzada dividido por el consumo total de líquido) fue de 0,957 en el grupo sacarosa juvenil y de 0,950 en el adulto, y de 0,768 en el grupo stevia juvenil y de 0,782 en el adulto. \pendiente{ANOVA de dos vías (edad $\times$ tratamiento) del índice de preferencia por caja y su gráfico, pedido por la Dra. Kruse.}
+Los animales de ambas edades prefirieron la solución endulzada al agua, y la preferencia fue mayor por la sacarosa que por la stevia, sin diferencias entre edades (índice de preferencia: consumo de solución endulzada dividido por el consumo total de líquido; sacarosa: 0,96 en juveniles y 0,95 en adultos; stevia: 0,75 en juveniles y 0,79 en adultos; ANOVA de dos vías, $F_{\text{Tratamiento}}(1, 24) = 37{,}80$; $p < 0{,}0001$; $F_{\text{Edad}}(1, 24) = 0{,}33$; $p = 0{,}57$; $F_{\text{Interacción}}(1, 24) = 0{,}56$; $p = 0{,}46$; prueba \textit{post hoc} de Tukey, sacarosa vs.\ stevia: juvenil, $p = 0{,}0010$; adulto, $p = 0{,}0043$; Figura~\ref{fig:preferencia}). Dado que los residuos se apartaron de la normalidad (Shapiro-Wilk, $p = 0{,}024$), las diferencias se confirmaron con la prueba de Mann-Whitney (juvenil, $p = 0{,}002$; adulto, $p < 0{,}001$). Por lo tanto, la mayor dosis de los juveniles no se explica por una mayor preferencia por el sabor dulce.
+
+\begin{figure}[htbp]
+  \centering
+  \incluirfigura[width=0.45\linewidth]{Fig5_indice_preferencia.pdf}
+  \caption[Índice de preferencia por la solución endulzada]{Índice de preferencia por la solución endulzada (consumo de solución dividido por el consumo total de líquido, promediado durante el tratamiento) en los grupos expuestos a sacarosa y a stevia, por edad. Las barras indican la media $\pm$ SEM. Rojo: sacarosa; verde: stevia. Los corchetes indican la comparación de Tukey entre tratamientos dentro de cada edad ($^{**}$~$p < 0{,}01$). $n = 7$ cajas por grupo.}
+  \label{fig:preferencia}
+\end{figure}
 
 \begin{figure}[htbp]
   \centering
@@ -421,14 +428,14 @@ El clasificador Random Forest predijo el grupo experimental por encima del azar 
 \begin{figure}[htbp]
   \centering
   \incluirfigura[width=\linewidth]{Fig5_ML_pca.pdf}
-  \caption[Análisis de componentes principales de la prueba SLR]{Análisis de componentes principales (PCA) de cinco métricas de la prueba SLR por animal: tiempo de exploración de los objetos A1, A2 y A3 en la fase de muestreo (día 1), exploración total en la fase de prueba (día 2) y DI. (A)~Puntuaciones de cada animal en las dos primeras componentes (CP1 y CP2; círculos llenos: juveniles; triángulos vacíos: adultos) y media $\pm$ SEM de cada grupo (símbolos grandes). (B)~Cargas de cada variable en CP1 y CP2. Azul: control; rojo: sacarosa; verde: stevia. $n = 117$ animales (18--20 por grupo, d-SLR y s-SLR combinadas).}
+  \caption[Análisis de componentes principales de la prueba SLR]{Análisis de componentes principales (PCA) de cinco métricas de la prueba SLR por animal: tiempo de exploración de los objetos A1, A2 y A3 en la fase de muestreo (día 1), exploración total en la fase de prueba (día 2) y DI. (A)~Puntuaciones de cada animal en las dos primeras componentes (CP1 y CP2; círculos llenos: juveniles; triángulos vacíos: adultos) y media $\pm$ SEM de cada grupo (símbolos grandes). Cada punto es un animal; los animales con perfiles parecidos quedan cerca. Valores altos de CP1 indican más exploración de los objetos; valores altos de CP2, mayor DI. (B)~Cargas de cada variable en CP1 y CP2: cuánto contribuye cada variable a cada componente (las barras largas indican las variables que la definen; el signo, si aumenta o disminuye con ella). Azul: control; rojo: sacarosa; verde: stevia. $n = 117$ animales (18--20 por grupo, d-SLR y s-SLR combinadas).}
   \label{fig:ml-pca}
 \end{figure}
 
 \begin{figure}[htbp]
   \centering
   \incluirfigura[width=\linewidth]{Fig5_ML_rf.pdf}
-  \caption[Clasificación de los grupos experimentales con Random Forest]{Clasificación de los seis grupos experimentales con Random Forest a partir de las cinco métricas de la prueba SLR. (A)~Matriz de confusión: proporción de animales de cada grupo real asignados a cada grupo predicho en los conjuntos de prueba (validación cruzada estratificada de 5 particiones, repetida 10 veces); la diagonal corresponde a los aciertos. Juv.: juvenil; Ad.: adulto; C: control; S: sacarosa; St: stevia. (B)~Importancia de cada variable, estimada como la disminución de la exactitud balanceada al permutarla en los conjuntos de prueba (media $\pm$ DE de las 50 particiones). $n = 117$ animales.}
+  \caption[Clasificación de los grupos experimentales con Random Forest]{Clasificación de los seis grupos experimentales con Random Forest a partir de las cinco métricas de la prueba SLR. (A)~Matriz de confusión: proporción de animales de cada grupo real asignados a cada grupo predicho en los conjuntos de prueba (validación cruzada estratificada de 5 particiones, repetida 10 veces); la diagonal corresponde a los aciertos, y un clasificador que respondiera al azar acertaría en 0,17 de los casos (1 de 6). Juv.: juvenil; Ad.: adulto; C: control; S: sacarosa; St: stevia. (B)~Importancia de cada variable, estimada como la disminución de la exactitud balanceada al mezclar al azar sus valores en los conjuntos de prueba (media $\pm$ DE de las 50 particiones): cuanto mayor la caída, más depende el clasificador de esa variable. $n = 117$ animales.}
   \label{fig:ml-rf}
 \end{figure}
 
