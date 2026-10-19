@@ -1,0 +1,27 @@
+% =====================================================================
+%  Documento independiente: Resumen de la tesina para entregar a la catedra.
+%  Compilar con:  latexmk resumen_catedra.tex
+% =====================================================================
+\documentclass[12pt,a4paper,oneside]{report}
+\input{preambulo}
+
+\begin{document}
+\pagestyle{empty}
+
+\begin{center}
+  {\large\textbf{Efectos neurobiológicos a largo plazo de la exposición a \textit{Stevia rebaudiana} durante la etapa juvenil y la adultez}}\\[0.8em]
+  Proyecto final de Carrera para la obtención del título de Bioingeniero\\
+  Instituto Tecnológico de Buenos Aires (ITBA)\\[0.5em]
+  Autor: Sayegh, Thiago (62260) \quad --- \quad Tutora: Dra. María Sol Kruse (IByME-CONICET)
+\end{center}
+
+\vspace{0.5em}
+\begingroup
+\makeatletter
+\renewcommand{\chapter}{\@ifstar{\section*}{\section*}}%
+\makeatother
+\renewcommand{\addcontentsline}[3]{}%
+\input{capitulos/01_resumen}
+\endgroup
+
+\end{document}
