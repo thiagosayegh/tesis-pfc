@@ -101,7 +101,9 @@ No son citas verificadas para `referencias.bib` salvo que ya estén incorporadas
 - `ghoshswaby2021slr` — ya **no** se cita en el texto: `fig:slr-carga` se regeneró con matplotlib (Fase 6 de la revisión de jurado) y el caption ahora cita el protocolo `reichelt2021slr` como fuente conceptual. Queda en `referencias.bib` sin citar, marcada con un comentario; decidir si se borra.
 
 ## Scripts
-Ninguno todavía. `docs/analisis_y_datos.md` describe cómo sería un futuro pipeline en Python (`analisis/slr_pipeline.py`) para preparar datos de AnyMaze, pero es exploratorio: los números de la tesis salen siempre de Prism, no de ese pipeline.
+- `analisis/slr_multivariado.py`: análisis multivariado de la SLR (§4.6/§5.6).
+- `herramientas/word/`: generación de las entregas en Word (`tex2docx.py`, `retocar.py`, `tipos_png.py`, plantilla `reference.docx`, `resumen.md`, `multivariado.md`; instrucciones en su `LEEME.md`). Antes de mandar un Word, abrirlo con Word (COM) y revisarlo.
+- Antes no había scripts: `docs/analisis_y_datos.md` describe cómo sería un futuro pipeline en Python (`analisis/slr_pipeline.py`) para preparar datos de AnyMaze, pero es exploratorio: los números de la tesis salen siempre de Prism, no de ese pipeline.
 
 ## Etiquetas existentes
 Discusión: sec:disc-sintesis, sec:disc-validez, sec:disc-sacarosa, sec:disc-neurogenesis, sec:disc-stevia, sec:disc-of, sec:disc-edad, sec:disc-consumo, sec:disc-ml, sec:disc-limitaciones, sec:disc-integracion.
