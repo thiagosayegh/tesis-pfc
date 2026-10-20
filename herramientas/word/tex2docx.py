@@ -249,17 +249,11 @@ def capitulo(arch, cap):
     for p in LIMPIAR: s = re.sub(p, "", s)
     return s
 
-partes = [capitulo("capitulos/4_materiales_y_metodos.tex", 4), capitulo("capitulos/5_resultados.tex", 5),
+# Resumen (desde el 20 oct. 2026 Sol pidio el titulo y el Resumen al principio; el Anexo A se saco)
+res = capitulo("capitulos/01_resumen.tex", 0)
+res = re.sub(r"\\addcontentsline\{[^}]*\}\{[^}]*\}\{[^}]*\}", "", res)
+partes = [res, capitulo("capitulos/4_materiales_y_metodos.tex", 4), capitulo("capitulos/5_resultados.tex", 5),
           capitulo("capitulos/6_discusion.tex", 6)]
-# Anexo A
-anx = en_linea(open(R + "capitulos/9_anexos.tex", encoding="utf-8").read())
-anx = flotantes(anx)
-anx = re.sub(r"\\(renewcommand|setcounter|addcontentsline|addtocontents)(\*)?(\{[^{}]*(\{[^{}]*\})*[^{}]*\})+", "", anx)
-anx = re.sub(r"\\section\{([^}]*)\}", lambda m: r"\section*{" + labels["anx:muestra"] + ". " + m.group(1) + "}", anx)
-anx = re.sub(r"\\addtocontents\{toc\}\{[^\n]*\}", "", anx)
-for p in LIMPIAR: anx = re.sub(p, "", anx)
-anx = re.sub(r"(?m)^\s*[.}]+\s*$", "", anx)
-partes.append(anx)
 
 # ------------------------------------------------------------------ referencias (del PDF compilado)
 doc = pymupdf.open(BASE + ".pdf")
@@ -283,10 +277,10 @@ esc = lambda t: (t.replace("\\", r"\textbackslash{}").replace("&", r"\&").replac
                   .replace("#", r"\#").replace("$", r"\$").replace("{", r"\{").replace("}", r"\}"))
 bib = "\\chapter*{Referencias bibliográficas}\n\n" + "\n\n".join(esc(r) for r in refs) + "\n"
 
-cabecera = (r"\begin{center}\textbf{Materiales y métodos, Resultados y Discusión}\end{center}" + "\n\n"
-            r"\begin{center}Efectos neurobiológicos a largo plazo de la exposición a \textit{Stevia rebaudiana} durante la etapa juvenil y la adultez\end{center}" + "\n\n"
-            r"\begin{center}Thiago Sayegh --- IByME-CONICET. Versión para revisión de la Dra. M. S. Kruse, 19 de octubre de 2026\end{center}" + "\n\n"
-            r"\textbf{Cómo leer este documento.} Son las secciones 4, 5 y 6 de la tesis, seguidas del Anexo A y de su propia lista de referencias (solo las que se citan en estas secciones, numeradas por orden de aparición, por lo que los números difieren de los de la tesis completa). Las referencias a otras secciones conservan la numeración de la tesis. Lo que falta o hay que verificar está marcado entre corchetes: [PENDIENTE: …] y [CONFIRMAR: …]." + "\n\n")
+cabecera = (r"\begin{center}\textbf{Efectos neurobiológicos a largo plazo de la exposición a \textit{Stevia rebaudiana} durante la etapa juvenil y la adultez}\end{center}" + "\n\n"
+            r"\begin{center}Resumen, Materiales y métodos, Resultados y Discusión\end{center}" + "\n\n"
+            r"\begin{center}Thiago Sayegh --- IByME-CONICET. Versión para revisión de la Dra. M. S. Kruse, 21 de octubre de 2026\end{center}" + "\n\n"
+            r"\textbf{Cómo leer este documento.} Son el Resumen y las secciones 4, 5 y 6 de la tesis, seguidos de su propia lista de referencias (solo las que se citan en estas secciones, numeradas por orden de aparición, por lo que los números difieren de los de la tesis completa). Las referencias a otras secciones conservan la numeración de la tesis. Lo que falta o hay que verificar está marcado entre corchetes: [PENDIENTE: …] y [CONFIRMAR: …]." + "\n\n")
 fuente = "\\documentclass{report}\n\\usepackage{booktabs}\n\\usepackage{graphicx}\n\\begin{document}\n" + cabecera + "\n\n".join(partes) + "\n\n" + bib + "\\end{document}\n"
 open(W + "msr.tex", "w", encoding="utf-8").write(fuente)
 print("referencias:", len(refs), "| citas:", len(num_cita), "| imagenes:", len(os.listdir(IMG)))
