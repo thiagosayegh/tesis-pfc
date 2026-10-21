@@ -118,11 +118,12 @@ def en_linea(s):
 
 # ------------------------------------------------------------------ figuras y tablas
 def imagen(arch):
-    destino = IMG + os.path.splitext(arch)[0] + ".png"
-    if not os.path.exists(destino):
-        src = R + "figuras/" + arch
+    destino = IMG + os.path.splitext(os.path.basename(arch))[0] + ".png"
+    src = R + "figuras/" + arch
+    # se rehace la copia si la figura cambio despues de la ultima conversion
+    if not os.path.exists(destino) or os.path.getmtime(src) > os.path.getmtime(destino):
         if arch.lower().endswith(".pdf"):
-            pymupdf.open(src)[0].get_pixmap(dpi=200).save(destino)
+            pymupdf.open(src)[0].get_pixmap(dpi=300 if arch.startswith("compuestas/") else 200).save(destino)
         else:
             pymupdf.Pixmap(src).save(destino) if arch.lower().endswith((".jpg", ".jpeg")) else shutil.copy(src, destino)
     return "img/" + os.path.basename(destino)
@@ -254,7 +255,8 @@ def capitulo(arch, cap):
 res = capitulo("capitulos/01_resumen.tex", 0)
 res = re.sub(r"\\addcontentsline\{[^}]*\}\{[^}]*\}\{[^}]*\}", "", res)
 partes = [res, capitulo("capitulos/4_materiales_y_metodos.tex", 4), capitulo("capitulos/5_resultados.tex", 5),
-          capitulo("capitulos/6_discusion.tex", 6)]
+          capitulo("capitulos/6_discusion.tex", 6), capitulo("capitulos/7_perspectivas_futuras.tex", 7),
+          capitulo("capitulos/8_conclusiones.tex", 8)]
 
 # ------------------------------------------------------------------ referencias (del PDF compilado)
 doc = pymupdf.open(BASE + ".pdf")
@@ -279,9 +281,9 @@ esc = lambda t: (t.replace("\\", r"\textbackslash{}").replace("&", r"\&").replac
 bib = "\\chapter*{Referencias bibliográficas}\n\n" + "\n\n".join(esc(r) for r in refs) + "\n"
 
 cabecera = (r"\begin{center}\textbf{Efectos neurobiológicos a largo plazo de la exposición a \textit{Stevia rebaudiana} durante la etapa juvenil y la adultez}\end{center}" + "\n\n"
-            r"\begin{center}Resumen, Materiales y métodos, Resultados y Discusión\end{center}" + "\n\n"
+            r"\begin{center}Resumen, Materiales y métodos, Resultados, Discusión, Perspectivas futuras y Conclusiones\end{center}" + "\n\n"
             r"\begin{center}Thiago Sayegh --- IByME-CONICET. Versión para revisión de la Dra. M. S. Kruse, 21 de octubre de 2026\end{center}" + "\n\n"
-            r"\textbf{Cómo leer este documento.} Son el Resumen y las secciones 4, 5 y 6 de la tesis, seguidos de su propia lista de referencias (solo las que se citan en estas secciones, numeradas por orden de aparición, por lo que los números difieren de los de la tesis completa). Las referencias a otras secciones conservan la numeración de la tesis. Lo que falta o hay que verificar está marcado entre corchetes: [PENDIENTE: …] y [CONFIRMAR: …]." + "\n\n")
+            r"\textbf{Cómo leer este documento.} Son el Resumen y las secciones 4 a 8 de la tesis, seguidos de su propia lista de referencias (solo las que se citan en estas secciones, numeradas por orden de aparición, por lo que los números difieren de los de la tesis completa). Las referencias a otras secciones conservan la numeración de la tesis. Lo que falta o hay que verificar está marcado entre corchetes: [PENDIENTE: …] y [CONFIRMAR: …]." + "\n\n")
 fuente = "\\documentclass{report}\n\\usepackage{booktabs}\n\\usepackage{graphicx}\n\\begin{document}\n" + cabecera + "\n\n".join(partes) + "\n\n" + bib + "\\end{document}\n"
 open(W + "msr.tex", "w", encoding="utf-8").write(fuente)
 print("referencias:", len(refs), "| citas:", len(num_cita), "| imagenes:", len(os.listdir(IMG)))
