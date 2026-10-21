@@ -8,7 +8,9 @@ W = os.path.dirname(os.path.abspath(__file__)).replace(chr(92), "/") + "/"
 R = os.path.dirname(os.path.dirname(W.rstrip("/"))).replace(chr(92), "/") + "/"
 IMG = W + "img/"
 os.makedirs(IMG, exist_ok=True)
-BASE = R + "build/metodos_resultados_discusion_sol"
+# DOC=intro (variable de entorno): secciones 1, 2, 3, 7 y 8 (introduccion_conclusiones_sol.tex)
+INTRO = os.environ.get("DOC") == "intro"
+BASE = R + "build/" + ("introduccion_conclusiones_sol" if INTRO else "metodos_resultados_discusion_sol")
 SALIDA = sys.argv[1] if len(sys.argv) > 1 else R + "entregas/metodos resultados discusion 20261019.docx"
 ANCHO = 16.0  # cm de texto en A4 con margenes de 2,5 cm
 
@@ -254,9 +256,14 @@ def capitulo(arch, cap):
 # Resumen (desde el 20 oct. 2026 Sol pidio el titulo y el Resumen al principio; el Anexo A se saco)
 res = capitulo("capitulos/01_resumen.tex", 0)
 res = re.sub(r"\\addcontentsline\{[^}]*\}\{[^}]*\}\{[^}]*\}", "", res)
-partes = [res, capitulo("capitulos/4_materiales_y_metodos.tex", 4), capitulo("capitulos/5_resultados.tex", 5),
-          capitulo("capitulos/6_discusion.tex", 6), capitulo("capitulos/7_perspectivas_futuras.tex", 7),
-          capitulo("capitulos/8_conclusiones.tex", 8)]
+if INTRO:
+    partes = [capitulo("capitulos/1_introduccion.tex", 1), capitulo("capitulos/2_estado_del_arte.tex", 2),
+              capitulo("capitulos/3_marco_teorico.tex", 3), capitulo("capitulos/7_perspectivas_futuras.tex", 7),
+              capitulo("capitulos/8_conclusiones.tex", 8)]
+else:
+    partes = [res, capitulo("capitulos/4_materiales_y_metodos.tex", 4), capitulo("capitulos/5_resultados.tex", 5),
+              capitulo("capitulos/6_discusion.tex", 6), capitulo("capitulos/7_perspectivas_futuras.tex", 7),
+              capitulo("capitulos/8_conclusiones.tex", 8)]
 
 # ------------------------------------------------------------------ referencias (del PDF compilado)
 doc = pymupdf.open(BASE + ".pdf")
@@ -284,6 +291,10 @@ cabecera = (r"\begin{center}\textbf{Efectos neurobiológicos a largo plazo de la
             r"\begin{center}Resumen, Materiales y métodos, Resultados, Discusión, Perspectivas futuras y Conclusiones\end{center}" + "\n\n"
             r"\begin{center}Thiago Sayegh --- IByME-CONICET. Versión para revisión de la Dra. M. S. Kruse, 21 de octubre de 2026\end{center}" + "\n\n"
             r"\textbf{Cómo leer este documento.} Son el Resumen y las secciones 4 a 8 de la tesis, seguidos de su propia lista de referencias (solo las que se citan en estas secciones, numeradas por orden de aparición, por lo que los números difieren de los de la tesis completa). Las referencias a otras secciones conservan la numeración de la tesis. Lo que falta o hay que verificar está marcado entre corchetes: [PENDIENTE: …] y [CONFIRMAR: …]." + "\n\n")
+if INTRO:
+    cabecera = (cabecera.replace("Resumen, Materiales y métodos, Resultados, Discusión, Perspectivas futuras y Conclusiones",
+                                 "Introducción, Estado del arte, Marco teórico, Perspectivas futuras y Conclusiones")
+                .replace("Son el Resumen y las secciones 4 a 8 de la tesis", "Son las secciones 1, 2, 3, 7 y 8 de la tesis"))
 fuente = "\\documentclass{report}\n\\usepackage{booktabs}\n\\usepackage{graphicx}\n\\begin{document}\n" + cabecera + "\n\n".join(partes) + "\n\n" + bib + "\\end{document}\n"
 open(W + "msr.tex", "w", encoding="utf-8").write(fuente)
 print("referencias:", len(refs), "| citas:", len(num_cita), "| imagenes:", len(os.listdir(IMG)))

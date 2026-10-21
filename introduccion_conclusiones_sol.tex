@@ -1,0 +1,39 @@
+% =====================================================================
+%  Documento independiente para la Dra. Kruse (21 oct. 2026): las secciones
+%  que todavia no reviso (1 Introduccion, 2 Estado del arte, 3 Marco teorico)
+%  y las nuevas (7 Perspectivas futuras, 8 Conclusiones), con sus referencias.
+%  Compilar con:  latexmk introduccion_conclusiones_sol.tex
+%  (requiere haber compilado main.tex antes: toma de build/main.aux los numeros
+%  de las referencias cruzadas a otras secciones).
+% =====================================================================
+\documentclass[12pt,a4paper,oneside]{report}
+\input{preambulo}
+\usepackage{xr}
+\externaldocument{build/main}
+
+\begin{document}
+\pagenumbering{arabic}
+
+\begin{center}
+  {\Large\textbf{Efectos neurobiológicos a largo plazo de la exposición a \textit{Stevia rebaudiana} durante la etapa juvenil y la adultez}}\\[0.8em]
+  {\large Introducción, Estado del arte, Marco teórico, Perspectivas futuras y Conclusiones}\\[0.6em]
+  Thiago Sayegh --- IByME-CONICET\\[0.3em]
+  \textit{Versión para revisión de la Dra. M.\,S. Kruse --- 21 de octubre de 2026}
+\end{center}
+
+\vspace{0.8em}
+\noindent\textbf{Cómo leer este documento.} Son las secciones 1, 2, 3, 7 y 8 de la tesis, seguidas de su propia lista de referencias (numeradas por orden de aparición, por lo que los números difieren de los de la tesis completa). Las referencias a otras secciones conservan la numeración de la tesis.
+
+\clearpage
+\setcounter{chapter}{0}
+\input{capitulos/1_introduccion}
+\input{capitulos/2_estado_del_arte}
+\input{capitulos/3_marco_teorico}
+\setcounter{chapter}{6}
+\input{capitulos/7_perspectivas_futuras}
+\input{capitulos/8_conclusiones}
+
+\chapter*{Referencias bibliográficas}
+\printbibliography[heading=none]
+
+\end{document}
