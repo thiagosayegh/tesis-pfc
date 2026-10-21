@@ -111,6 +111,13 @@
 % Espacio extra en el índice para "Anexo A." (se llama desde 9_anexos.tex)
 \makeatletter
 \newcommand{\anexotocspacing}{\renewcommand*\l@section{\@dottedtocline{1}{1.5em}{5.2em}}}
+% Índices de figuras y de tablas: más ancho para los números de dos cifras
+% ("5.10.", "5.17."), que quedaban pegados al título (21 oct. 2026)
+\renewcommand*\l@figure{\@dottedtocline{1}{1.5em}{2.9em}}
+\renewcommand*\l@table{\@dottedtocline{1}{1.5em}{2.9em}}
+% Índice general: menos espacio antes de cada capítulo (1,0em -> 0,55em) para que
+% la última línea ("Referencias bibliográficas") no quede sola en una página
+\patchcmd{\l@chapter}{\vskip 1.0em}{\vskip 0.55em}{}{\PackageWarning{tesis}{no se pudo ajustar el indice general}}
 \makeatother
 
 % Abreviaturas de uso frecuente
