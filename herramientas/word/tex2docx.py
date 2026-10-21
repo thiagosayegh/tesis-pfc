@@ -165,7 +165,8 @@ def figura(cuerpo):
             if m.group(2) is not None:
                 f = float(m.group(1) or 1)
                 mm = re.search(r"\\incluirfigura(\[[^\]]*\])?\{([^}]+)\}", m.group(2))
-                items.append("(" + "ABCDEFGH"[letra] + ") " + r"\includegraphics[width=%scm]{%s}" % (ancho(mm.group(1), f), imagen(mm.group(2))))
+                # 0,88: deja lugar para las letras (A), (B)... y que los paneles de una fila entren en un renglon
+                items.append("(" + "ABCDEFGH"[letra] + ") " + r"\includegraphics[width=%scm]{%s}" % (ancho(mm.group(1), f * 0.88), imagen(mm.group(2))))
                 letra += 1
             else:
                 if "leyenda" in m.group(4).lower():
