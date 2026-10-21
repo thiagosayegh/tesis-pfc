@@ -82,16 +82,21 @@
 }
 
 % GDocs [7]
-% CONFIRMAR: la URL apuntaba a un documento de la UNRN (Alcaraz et al.,
-% "Azúcar Argentina: lo que nadie te dice"), que no es la ENNyS 2 oficial.
-% Se retiró hasta confirmar la URL oficial del informe (Ministerio de Salud).
+% 21 oct. 2026: la cifra de 127 L/año la publica el IECS ("Lo que nadie te dice
+% sobre las bebidas azucaradas en niñas, niños y adolescentes en Argentina")
+% citando como fuente la ENNyS 2 (2019). URL oficial: página de la encuesta en
+% el Portal de Datos Abiertos del Ministerio de Salud (base, documento
+% metodológico y cuestionarios). bancos.salud.gob.ar no respondía para verificar
+% la URL del resumen ejecutivo.
 @report{ennys2019,
-  author      = {{Ministerio de Salud de la Nación Argentina}},
-  title       = {2° Encuesta Nacional de Nutrición y Salud ({ENNyS} 2)},
-  type        = {Informe},
-  institution = {Ministerio de Salud de la Nación},
+  author      = {{Ministerio de Salud y Desarrollo Social de la Nación}},
+  title       = {2° Encuesta Nacional de Nutrición y Salud ({ENNyS} 2), 2018--2019},
+  type        = {Encuesta nacional},
+  institution = {Ministerio de Salud y Desarrollo Social de la Nación},
   location    = {Buenos Aires, Argentina},
-  year        = {2019}
+  year        = {2019},
+  url         = {https://datos.salud.gob.ar/dataset/ennys2},
+  urldate     = {2026-10-21}
 }
 
 % GDocs [9]
@@ -196,14 +201,19 @@
 }
 
 % GDocs [18]
-% COMPLETAR: falta volumen y páginas (no se pudieron confirmar).
-@article{bhatt2025prenatal,
-  author  = {Bhatt, C. G. and others},
-  title   = {Prenatal influences on postnatal neuroplasticity},
+% 21 oct. 2026: corregida contra PubMed (PMID 38449347). Figuraba como
+% "Bhatt, C. G. et al." y con otro PMC; el DOI corresponde a Margolis y
+% Gabard-Durnam. Antes la clave era bhatt2025prenatal.
+@article{margolis2025prenatal,
+  author  = {Margolis, E. T. and Gabard-Durnam, L. J.},
+  title   = {Prenatal influences on postnatal neuroplasticity: Integrating {DOHaD} and sensitive/critical period frameworks to understand biological embedding in early development},
   journal = {Infancy},
+  volume  = {30},
+  number  = {1},
+  eid     = {e12588},
   year    = {2025},
   doi     = {10.1111/infa.12588},
-  url     = {https://pmc.ncbi.nlm.nih.gov/articles/PMC11946632/}
+  url     = {https://pmc.ncbi.nlm.nih.gov/articles/PMC11647198/}
 }
 
 % GDocs [19]
@@ -615,6 +625,39 @@
   month   = jan,
   year    = {2022},
   doi     = {10.3389/fped.2021.746437}
+}
+
+% 21 oct. 2026: estudio agudo del laboratorio que pidio citar la Dra. Kruse.
+% Congreso: resumen 182 de la Reunion Conjunta SAIC SAB AAFE AACYTAL 2023
+% (Mar del Plata, 15-17 nov. 2023), Medicina (B. Aires) 83 (Supl. V), p. 148
+% (verificado en el PDF del suplemento). Manuscrito: titulo y primera autora del
+% PDF "extracto stevia.pdf" (Supplementary Materials); faltan coautores y revista.
+@article{coirini2023stevia,
+  author  = {Coirini, H. and Rey, M. and Marchena, A. and Lence, P. and Kruse, M. S.},
+  title   = {Stevia vs. sucrose consumption: influence on the behavior of juvenile rats},
+  journal = {Medicina (B. Aires)},
+  volume  = {83},
+  number  = {Supl. V},
+  pages   = {148},
+  year    = {2023},
+  note    = {Resumen 182, Reunión Conjunta SAIC SAB AAFE AACYTAL 2023, Mar del Plata, Argentina}
+}
+
+@unpublished{marchena2026stevia,
+  author  = {Marchena, A. and others},
+  title   = {Early-life stevia and sucrose consumption differentially affect metabolic homeostasis and neurobiological outcomes in rats},
+  note    = {Manuscrito enviado para publicación}
+}
+
+@article{efsa2010steviol,
+  author  = {{EFSA Panel on Food Additives and Nutrient Sources added to Food (ANS)}},
+  title   = {Scientific opinion on the safety of steviol glycosides for the proposed uses as a food additive},
+  journal = {EFSA J.},
+  volume  = {8},
+  number  = {4},
+  eid     = {1537},
+  year    = {2010},
+  doi     = {10.2903/j.efsa.2010.1537}
 }
 
 @article{rico2024stevia,
