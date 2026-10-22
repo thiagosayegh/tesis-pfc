@@ -289,8 +289,8 @@ bib = "\\chapter*{Referencias bibliográficas}\n\n" + "\n\n".join(esc(r) for r i
 
 cabecera = (r"\begin{center}\textbf{Efectos neurobiológicos a largo plazo de la exposición a \textit{Stevia rebaudiana} durante la etapa juvenil y la adultez}\end{center}" + "\n\n"
             r"\begin{center}Resumen, Materiales y métodos, Resultados, Discusión, Perspectivas futuras y Conclusiones\end{center}" + "\n\n"
-            r"\begin{center}Thiago Sayegh --- IByME-CONICET. Versión para revisión de la Dra. M. S. Kruse, 21 de octubre de 2026\end{center}" + "\n\n"
-            r"\textbf{Cómo leer este documento.} Son el Resumen y las secciones 4 a 8 de la tesis, seguidos de su propia lista de referencias (solo las que se citan en estas secciones, numeradas por orden de aparición, por lo que los números difieren de los de la tesis completa). Las referencias a otras secciones conservan la numeración de la tesis. Lo que falta o hay que verificar está marcado entre corchetes: [PENDIENTE: …] y [CONFIRMAR: …]." + "\n\n")
+            r"\begin{center}Thiago Sayegh --- IByME-CONICET. Versión para revisión de la Dra. M. S. Kruse, 22 de octubre de 2026\end{center}" + "\n\n"
+            r"\textbf{Cómo leer este documento.} Son el Resumen y las secciones 4 a 8 de la tesis, seguidos de su propia lista de referencias (solo las que se citan en estas secciones, numeradas por orden de aparición, por lo que los números difieren de los de la tesis completa). Las referencias a otras secciones conservan la numeración de la tesis." + "\n\n")
 if INTRO:
     cabecera = (cabecera.replace("Resumen, Materiales y métodos, Resultados, Discusión, Perspectivas futuras y Conclusiones",
                                  "Introducción, Estado del arte, Marco teórico, Perspectivas futuras y Conclusiones")
