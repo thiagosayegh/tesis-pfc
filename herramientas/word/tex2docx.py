@@ -1,4 +1,5 @@
-"""Convierte las secciones 4, 5 y 6 (y el Anexo A) de la tesis a un .docx editable con pandoc.
+"""Convierte las secciones 4 a 8 de la tesis (con DOC=intro, las 1, 2, 3, 7 y 8; con DOC=tesis, la tesis
+completa, con caratula, glosario e indices) a un .docx editable con pandoc.
 Usa los numeros de figuras, tablas, secciones y citas de la compilacion del documento para Sol
 (build/metodos_resultados_discusion_sol.aux / .bbl) y la lista de referencias de su PDF."""
 import os, re, shutil, subprocess, sys
@@ -10,7 +11,11 @@ IMG = W + "img/"
 os.makedirs(IMG, exist_ok=True)
 # DOC=intro (variable de entorno): secciones 1, 2, 3, 7 y 8 (introduccion_conclusiones_sol.tex)
 INTRO = os.environ.get("DOC") == "intro"
-BASE = R + "build/" + ("introduccion_conclusiones_sol" if INTRO else "metodos_resultados_discusion_sol")
+# DOC=tesis: tesis completa (main.tex); los indices y la paginacion los completa tesis_word.py
+TESIS = os.environ.get("DOC") == "tesis"
+BASE = R + "build/" + ("main" if TESIS else "introduccion_conclusiones_sol" if INTRO else "metodos_resultados_discusion_sol")
+# \resaltar{...} (cambios de la ultima ronda) -> marcas que resaltar.py convierte en resaltado amarillo
+HL_INI, HL_FIN = "⸢", "⸣"
 SALIDA = sys.argv[1] if len(sys.argv) > 1 else R + "entregas/metodos resultados discusion 20261019.docx"
 ANCHO = 16.0  # cm de texto en A4 con margenes de 2,5 cm
 
@@ -100,6 +105,7 @@ def matematica(m):
 
 def en_linea(s):
     s = re.sub(r"(?<!\\)%.*", "", s)
+    s = reemplazar_cmd(s, "resaltar", lambda a: HL_INI + a + HL_FIN)
     s = s.replace(r"\stevia{}", r"\textit{Stevia rebaudiana} Bertoni").replace(r"\stevia", r"\textit{Stevia rebaudiana} Bertoni")
     s = s.replace(r"\anymaze{}", "AnyMaze©").replace(r"\anymaze", "AnyMaze©")
     s = s.replace(r"\Srebaudiana", r"\textit{S. rebaudiana}")
@@ -119,6 +125,14 @@ def en_linea(s):
     return s
 
 # ------------------------------------------------------------------ figuras y tablas
+def marca_tc(tipo, num, titulo):
+    """Solo en la tesis completa: el pie corto en texto plano entre marcas, que tesis_word.py convierte en
+    un campo TC de Word (asi los indices de figuras y de tablas se arman y se actualizan en Word)."""
+    if not TESIS: return ""
+    t = re.sub(r"\\text(it|bf|subscript|superscript)\{([^{}]*)\}", r"\2", titulo)
+    t = re.sub(r"\\[A-Za-z]+\*?", "", t).replace("{", "").replace("}", "").replace('"', "'").strip().rstrip(".")
+    return " ⟦TC|" + tipo + "|" + num + ". " + t + "⟧"
+
 def imagen(arch):
     destino = IMG + os.path.splitext(os.path.basename(arch))[0] + ".png"
     src = R + "figuras/" + arch
@@ -141,7 +155,8 @@ def figura(cuerpo):
     sin_sub = re.sub(r"\\begin\{subfigure\}.*?\\end\{subfigure\}", "", cuerpo, flags=re.S)
     k = sin_sub.rfind(r"\caption")
     j = k + len(r"\caption")
-    if sin_sub[j] == "[": _, j = opcional(sin_sub, j)
+    corto = None
+    if sin_sub[j] == "[": corto, j = opcional(sin_sub, j)
     pie, _ = grupo(sin_sub, j)
     filas, letra, leyendas = [], 0, []
     if r"\begin{tikzpicture}" in cuerpo:
@@ -178,7 +193,7 @@ def figura(cuerpo):
                     items.append(r"\includegraphics[width=%scm]{%s}" % (ancho(m.group(3)), imagen(m.group(4))))
         if items: filas.append("  ".join(items))
     filas += leyendas
-    return "\n\n".join(filas) + "\n\n" + r"\textbf{Figura " + labels[lab] + ".} " + pie.strip() + "\n\n"
+    return "\n\n".join(filas) + "\n\n" + r"\textbf{Figura " + labels[lab] + ".} " + pie.strip() + marca_tc("F", labels[lab], corto or pie) + "\n\n"
 
 def celdas(fila):
     partes = re.split(r"(?<!\\)&", fila)
@@ -193,7 +208,8 @@ def celdas(fila):
 def tabla(cuerpo):
     lab = re.search(r"\\label\{([^}]+)\}", cuerpo).group(1)
     k = cuerpo.find(r"\caption"); j = k + len(r"\caption")
-    if cuerpo[j] == "[": _, j = opcional(cuerpo, j)
+    corto = None
+    if cuerpo[j] == "[": corto, j = opcional(cuerpo, j)
     pie, _ = grupo(cuerpo, j)
     m = re.search(r"\\begin\{(tabularx|tabular\*?)\}(.*?)\\end\{\1\}", cuerpo, re.S)
     interior = m.group(2)
@@ -217,7 +233,7 @@ def tabla(cuerpo):
     nota = ""
     mn = re.search(r"\\begin\{minipage\}\{[^}]*\}(.*?)\\end\{minipage\}", cuerpo, re.S)
     if mn: nota = "\n\n" + re.sub(r"\\footnotesize", "", mn.group(1)).strip()
-    return r"\textbf{Tabla " + labels[lab] + ".} " + pie.strip() + "\n\n" + "\n".join(cuerpo_tab) + nota + "\n\n"
+    return r"\textbf{Tabla " + labels[lab] + ".} " + pie.strip() + marca_tc("T", labels[lab], corto or pie) + "\n\n" + "\n".join(cuerpo_tab) + nota + "\n\n"
 
 def flotantes(s):
     s = re.sub(r"\\begin\{figure\}(\[[^\]]*\])?(.*?)\\end\{figure\}", lambda m: figura(m.group(2)), s, flags=re.S)
@@ -256,7 +272,21 @@ def capitulo(arch, cap):
 # Resumen (desde el 20 oct. 2026 Sol pidio el titulo y el Resumen al principio; el Anexo A se saco)
 res = capitulo("capitulos/01_resumen.tex", 0)
 res = re.sub(r"\\addcontentsline\{[^}]*\}\{[^}]*\}\{[^}]*\}", "", res)
-if INTRO:
+if TESIS:
+    glo = capitulo("capitulos/02_glosario.tex", 0)
+    glo = re.sub(r"\\addcontentsline\{[^}]*\}\{[^}]*\}\{[^}]*\}", "", glo)
+    glo = re.sub(r"\\begin\{description\}\[[^\]]*\]", r"\\begin{description}", glo)
+    caratula = "".join(r"\begin{center}" + x + r"\end{center}" + "\n\n" for x in (
+        r"\textbf{Efectos neurobiológicos a largo plazo de la exposición a \textit{Stevia rebaudiana} durante la etapa juvenil y la adultez}",
+        r"\includegraphics[width=8cm]{logo_itba.png}",
+        r"\textit{Proyecto final de Carrera para la obtención del título de Bioingeniero}",
+        "Autor: Sayegh, Thiago (62260)", "Tutora: Dra. María Sol Kruse", r"Fecha de entrega: \textbf{[CONFIRMAR: fecha]}"))
+    # marcas que tesis_word.py reemplaza por los campos de indice
+    indices = "Índice\n\nIDXGENERAL\n\nÍndice de figuras\n\nIDXFIGURAS\n\nÍndice de tablas\n\nIDXTABLAS\n\n"
+    partes = [caratula + res, glo, indices] + [capitulo("capitulos/%s.tex" % a, n) for n, a in enumerate(
+        ("1_introduccion", "2_estado_del_arte", "3_marco_teorico", "4_materiales_y_metodos", "5_resultados",
+         "6_discusion", "7_perspectivas_futuras", "8_conclusiones"), start=1)]
+elif INTRO:
     partes = [capitulo("capitulos/1_introduccion.tex", 1), capitulo("capitulos/2_estado_del_arte.tex", 2),
               capitulo("capitulos/3_marco_teorico.tex", 3), capitulo("capitulos/7_perspectivas_futuras.tex", 7),
               capitulo("capitulos/8_conclusiones.tex", 8)]
@@ -268,10 +298,12 @@ else:
 # ------------------------------------------------------------------ referencias (del PDF compilado)
 doc = pymupdf.open(BASE + ".pdf")
 texto = ""
-for pg in doc:
+# desde la pagina que empieza con el titulo "Referencias bibliográficas" (en la tesis completa
+# el titulo tambien aparece en el indice)
+inicio = max(i for i, pg in enumerate(doc) if "Referencias bibliográficas" in [l.strip() for l in pg.get_text().split("\n")[:3]])
+for pg in list(doc)[inicio:]:
     t = pg.get_text()
-    if "Referencias bibliográficas" in t or texto:
-        texto += t[t.find("Referencias bibliográficas") + len("Referencias bibliográficas"):] if not texto else t
+    texto += t[t.find("Referencias bibliográficas") + len("Referencias bibliográficas"):] if not texto else t
 lineas = [l.strip() for l in texto.split("\n") if l.strip() and not re.fullmatch(r"\d+", l.strip())]
 refs, actual = [], None
 for l in lineas:
@@ -295,6 +327,7 @@ if INTRO:
     cabecera = (cabecera.replace("Resumen, Materiales y métodos, Resultados, Discusión, Perspectivas futuras y Conclusiones",
                                  "Introducción, Estado del arte, Marco teórico, Perspectivas futuras y Conclusiones")
                 .replace("Son el Resumen y las secciones 4 a 8 de la tesis", "Son las secciones 1, 2, 3, 7 y 8 de la tesis"))
+if TESIS: cabecera = ""
 fuente = "\\documentclass{report}\n\\usepackage{booktabs}\n\\usepackage{graphicx}\n\\begin{document}\n" + cabecera + "\n\n".join(partes) + "\n\n" + bib + "\\end{document}\n"
 open(W + "msr.tex", "w", encoding="utf-8").write(fuente)
 print("referencias:", len(refs), "| citas:", len(num_cita), "| imagenes:", len(os.listdir(IMG)))
