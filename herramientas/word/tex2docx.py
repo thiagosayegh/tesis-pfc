@@ -16,6 +16,8 @@ TESIS = os.environ.get("DOC") == "tesis"
 BASE = R + "build/" + ("main" if TESIS else "introduccion_conclusiones_sol" if INTRO else "metodos_resultados_discusion_sol")
 # \resaltar{...} (cambios de la ultima ronda) -> marcas que resaltar.py convierte en resaltado amarillo
 HL_INI, HL_FIN = "⸢", "⸣"
+# \resaltarb{...} (ronda siguiente) -> resaltado celeste
+HLB_INI, HLB_FIN = "⸤", "⸥"
 SALIDA = sys.argv[1] if len(sys.argv) > 1 else R + "entregas/metodos resultados discusion 20261019.docx"
 ANCHO = 16.0  # cm de texto en A4 con margenes de 2,5 cm
 
@@ -105,6 +107,7 @@ def matematica(m):
 
 def en_linea(s):
     s = re.sub(r"(?<!\\)%.*", "", s)
+    s = reemplazar_cmd(s, "resaltarb", lambda a: HLB_INI + a + HLB_FIN)
     s = reemplazar_cmd(s, "resaltar", lambda a: HL_INI + a + HL_FIN)
     s = s.replace(r"\stevia{}", r"\textit{Stevia rebaudiana} Bertoni").replace(r"\stevia", r"\textit{Stevia rebaudiana} Bertoni")
     s = s.replace(r"\anymaze{}", "AnyMaze©").replace(r"\anymaze", "AnyMaze©")
@@ -131,6 +134,7 @@ def marca_tc(tipo, num, titulo):
     if not TESIS: return ""
     t = re.sub(r"\\text(it|bf|subscript|superscript)\{([^{}]*)\}", r"\2", titulo)
     t = re.sub(r"\\[A-Za-z]+\*?", "", t).replace("{", "").replace("}", "").replace('"', "'").strip().rstrip(".")
+    t = re.sub("[\u2e22-\u2e25]", "", t)  # sin las marcas de resaltado
     return " ⟦TC|" + tipo + "|" + num + ". " + t + "⟧"
 
 def imagen(arch):
