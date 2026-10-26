@@ -49,6 +49,20 @@ for k, p in enumerate(doc.paragraphs):
     if k == 0:
         for r in p.runs: r.font.size = Pt(18)
 
+# ---------------------------------------------------------------- listas (objetivos, Perspectivas): como el cuerpo
+# (Sol, 26 oct. 2026: texto justificado y con el mismo tamaño de letra)
+n_lista = 0
+for p in doc.paragraphs:
+    ppr = p._p.pPr
+    if ppr is None or ppr.find(qn("w:numPr")) is None or not p.text.strip():
+        continue
+    p.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
+    p.paragraph_format.space_after = Pt(3)
+    p.paragraph_format.line_spacing = 1.15
+    for r in p.runs:
+        r.font.size = Pt(11)
+    n_lista += 1
+
 # ---------------------------------------------------------------- glosario: sigla y definicion en un renglon
 from docx.shared import Cm
 from docx.enum.text import WD_TAB_ALIGNMENT

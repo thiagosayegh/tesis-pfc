@@ -284,7 +284,7 @@ if TESIS:
         r"\textbf{Efectos neurobiológicos a largo plazo de la exposición a \textit{Stevia rebaudiana} durante la etapa juvenil y la adultez}",
         r"\includegraphics[width=8cm]{logo_itba.png}",
         r"\textit{Proyecto final de Carrera para la obtención del título de Bioingeniero}",
-        "Autor: Sayegh, Thiago (62260)", "Tutora: Dra. María Sol Kruse", r"Fecha de entrega: \textbf{[CONFIRMAR: fecha]}"))
+        "Autor: Thiago Sayegh (62260)", "Tutora: Dra. María Sol Kruse", "Fecha de entrega: octubre de 2026"))
     # marcas que tesis_word.py reemplaza por los campos de indice
     indices = "Índice\n\nIDXGENERAL\n\nÍndice de figuras\n\nIDXFIGURAS\n\nÍndice de tablas\n\nIDXTABLAS\n\n"
     partes = [caratula + res, glo, indices] + [capitulo("capitulos/%s.tex" % a, n) for n, a in enumerate(
@@ -316,7 +316,9 @@ for l in lineas:
         actual = l
     elif actual is not None:
         if actual.endswith("-") and l[:1].islower(): actual = actual[:-1] + l
-        elif actual.endswith(("/", ".", "_")) and "doi" in actual[-40:].lower() or actual.endswith("/"): actual += l
+        # un DOI o una URL partidos en dos renglones se unen sin espacio, salvo que el renglón siguiente
+        # empiece una palabra nueva ("[Online]. Available: ...")
+        elif (actual.endswith(("/", ".", "_")) and "doi" in actual[-40:].lower() or actual.endswith("/")) and not re.match(r"[A-Z][a-z]", l): actual += l
         else: actual += " " + l
 if actual: refs.append(actual)
 esc = lambda t: (t.replace("\\", r"\textbackslash{}").replace("&", r"\&").replace("%", r"\%").replace("_", r"\_")
