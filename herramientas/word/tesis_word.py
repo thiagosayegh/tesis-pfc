@@ -29,7 +29,14 @@ def run_campo(p_el, instr, texto=""):
 # ---------------------------------------------------------------- cada seccion en pagina nueva
 # (doc.styles["Heading 1"] falla: pandoc escribe el nombre con mayuscula y python-docx busca "heading 1")
 h1 = next(s for s in doc.styles if s.name == "Heading 1")
-h1.paragraph_format.page_break_before = True
+# Sol (27 oct. 2026): las secciones 1 a 8 van seguidas; solo los preliminares (Resumen,
+# glosario, índices) y las Referencias empiezan en página nueva. La Introducción ya empieza
+# en página nueva por el salto de sección de la numeración (más abajo).
+h1.paragraph_format.page_break_before = False
+h1.paragraph_format.space_before = Pt(24)
+for p in doc.paragraphs:
+    if p.style.name == "Heading 1" and p.text.strip() in ("Resumen", "Glosario de abreviaturas", "Referencias bibliográficas"):
+        p.paragraph_format.page_break_before = True
 try:
     st = doc.styles["Titulo de indice"]
 except KeyError:

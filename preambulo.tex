@@ -46,6 +46,15 @@
 \renewcommand{\thesubfigure}{\Alph{subfigure}} % paneles (A), (B), ... igual que en los pies de figura
 \usepackage{placeins} % \FloatBarrier: evita que las figuras de una seccion floten a la siguiente
 \usepackage{float}    % [H]: figura exactamente donde esta en el texto (se usa en el cap. 4)
+% Con las secciones seguidas (27 oct. 2026): que una figura no quede sola en una página
+% casi vacía; si ocupa menos de 3/4 de página, va arriba de la página y sigue el texto.
+\renewcommand{\topfraction}{0.85}
+\renewcommand{\bottomfraction}{0.5}
+\renewcommand{\textfraction}{0.1}
+\renewcommand{\floatpagefraction}{0.75}
+% sin renglones sueltos al principio o al final de una página
+\widowpenalty=10000
+\clubpenalty=10000
 \usepackage{enumitem}
 \usepackage[dvipsnames]{xcolor}
 \newcolumntype{C}{>{\centering\arraybackslash}X}
@@ -53,8 +62,12 @@
 
 % ---------- Títulos: "1. Introducción", "1.1. ..." (sin "Capítulo") ----------
 \usepackage{titlesec}
+% Sol (27 oct. 2026): las secciones van seguidas, sin salto de página entre una y otra
+% (clase "straight": el título no corta la página). Los saltos que sí van ---carátula,
+% preliminares, comienzo de la Introducción y Referencias--- están puestos a mano en main.tex.
+\titleclass{\chapter}{straight}
 \titleformat{\chapter}[hang]{\normalfont\LARGE\bfseries}{\thechapter.}{0.5em}{}
-\titlespacing*{\chapter}{0pt}{0pt}{1.2em}
+\titlespacing*{\chapter}{0pt}{2.2em}{1.2em}
 \titleformat{\section}{\normalfont\Large\bfseries}{\thesection.}{0.5em}{}
 \titleformat{\subsection}{\normalfont\large\bfseries}{\thesubsection.}{0.5em}{}
 \setcounter{secnumdepth}{3}
