@@ -58,15 +58,19 @@ El consumo de agua y de solución endulzada (sacarosa o stevia) se registró dí
   \node[draw=black!70, rounded corners=6pt, align=center, fill=orange!12, text width=4cm, inner sep=6pt] at (10.1,1.5)
     {\textbf{Pruebas conductuales}\\ \footnotesize OF, NOR y SLR\\[3pt] \textbf{IHC}\\ \footnotesize PCNA y DCX};
 
-  % ---- leyenda ----
-  \begin{scope}[shift={(0,-1.25)}, font=\footnotesize]
-    \node[anchor=west, font=\footnotesize\bfseries] at (-0.1,0.125) {Exposición (25 d):};
-    \fill[gctrl] (3.1,0) rectangle (3.5,0.25);  \node[anchor=west] at (3.55,0.125) {agua (grupo control)};
-    \fill[gsac]  (7.2,0) rectangle (7.6,0.25);  \node[anchor=west] at (7.65,0.125) {sacarosa 10\,\%};
-    \fill[gstv]  (10.3,0) rectangle (10.7,0.25); \node[anchor=west] at (10.75,0.125) {stevia 4\,\%};
+  % ---- leyenda: las dos botellas de cada grupo (presentación del OF del laboratorio; 28 oct. 2026, Sol) ----
+  \begin{scope}[shift={(0,-0.85)}, font=\footnotesize]
+    \node[anchor=west, font=\footnotesize\bfseries] at (-2.3,-1.1) {Exposición (25 d):};
+    \foreach \x/\arch/\col/\nom/\bot in {2.2/control/gctrl/Grupo control/dos botellas de agua,
+                                        5.6/sacarosa/gsac/Grupo sacarosa/sacarosa 10\,\% y agua,
+                                        9.0/stevia/gstv/Grupo stevia/stevia 4\,\% y agua} {
+      \node[anchor=north, inner sep=0] (b\arch) at (\x,0) {\includegraphics[height=1.9cm]{Fig4_botellas_\arch.png}};
+      \node[anchor=north, align=center, inner sep=1pt] at (b\arch.south)
+        {\textcolor{\col}{\textbf{\nom}}\\ \bot};
+    }
   \end{scope}
 \end{tikzpicture}
-\caption[Línea temporal de los procedimientos experimentales]{Línea temporal de los procedimientos experimentales. Durante 25 días, ratas PD25 (grupo juvenil) y PD75 (grupo adulto) tuvieron acceso irrestricto a agua (grupo control) o la opción de beber entre agua y una solución de sacarosa al 10\,\% (grupo sacarosa) o agua y un extracto de stevia al 4\,\% (grupo stevia). Finalizado este período, se retiraron las botellas de endulzantes y todos los animales bebieron únicamente agua durante otros 25 días, tras lo cual se realizaron las pruebas conductuales y los estudios de IHC. Imagen de la rata generada con inteligencia artificial.}
+\caption[Línea temporal de los procedimientos experimentales]{Línea temporal de los procedimientos experimentales. Durante 25 días, ratas PD25 (grupo juvenil) y PD75 (grupo adulto) tuvieron acceso irrestricto a agua (grupo control) o la opción de beber entre agua y una solución de sacarosa al 10\,\% (grupo sacarosa) o agua y un extracto de stevia al 4\,\% (grupo stevia). Finalizado este período, se retiraron las botellas de endulzantes y todos los animales bebieron únicamente agua durante otros 25 días, tras lo cual se realizaron las pruebas conductuales y los estudios de IHC. Abajo, las dos botellas a las que tuvo acceso cada grupo.}
 \label{fig:linea-temporal}
 \end{figure}
 
@@ -114,7 +118,7 @@ El dispositivo consistió en una arena cuadrada de 75\,cm de lado con paredes op
   \centering
   % figura compuesta (herramientas/figuras/esquemas_ia.py y componer.py)
   \incluirfigura[width=0.8\linewidth]{compuestas/Fig4_OF_esquema.pdf}
-  \caption[Aparato de OF y zonas de registro]{Aparato de OF y zonas de registro. (A)~Vista cenital de la arena (75\,cm de lado), con la cuadrícula del piso (cuadrados de 15\,cm de lado) y las tres zonas definidas digitalmente: central (1), intermedia (2) y periférica (3). (B)~\textit{Rearing}. Imágenes generadas con inteligencia artificial.}
+  \caption[Aparato de OF y zonas de registro]{Aparato de OF y zonas de registro. (A)~Vista cenital de la arena (75\,cm de lado), con la cuadrícula del piso (cuadrados de 15\,cm de lado) y las tres zonas definidas digitalmente: central (1), intermedia (2) y periférica (3). (B)~\textit{Rearing}.}
   \label{fig:of-esquema}
 \end{figure}
 
@@ -125,7 +129,7 @@ El dispositivo consistió en una arena cuadrada de 75\,cm de lado con paredes op
   \centering
   % herramientas/figuras/esquemas_ia.py
   \incluirfigura[width=\linewidth]{Fig4_NOR_protocolo.png}
-  \caption[Esquema del protocolo de la prueba NOR]{Esquema del protocolo de la prueba NOR. Después de 3 días de habituación a la caja vacía, en la fase de muestreo (T1) el animal explora dos objetos idénticos; en los ensayos de elección, realizados 2\,h (T2), 24\,h (T3) y 7 días (T4) después de T1, uno de ellos se reemplaza por un objeto novedoso (N), distinto en cada ensayo, y el otro es una copia del objeto familiar (F). Imágenes generadas con inteligencia artificial; fotos de los objetos de \cite{coirini2022sucrose}.}
+  \caption[Esquema del protocolo de la prueba NOR]{Esquema del protocolo de la prueba NOR. Después de 3 días de habituación a la caja vacía, en la fase de muestreo (T1) el animal explora dos objetos idénticos; en los ensayos de elección, realizados 2\,h (T2), 24\,h (T3) y 7 días (T4) después de T1, uno de ellos se reemplaza por un objeto novedoso (N), distinto en cada ensayo, y el otro es una copia del objeto familiar (F). Fotos de los objetos de \cite{coirini2022sucrose}.}
   \label{fig:nor-esquema}
 \end{figure}
 
@@ -148,7 +152,7 @@ En el primer ensayo se expuso a las ratas a tres objetos idénticos, A1, A2 y A3
 \begin{figure}[htbp]
   \centering
   \incluirfigura[width=0.92\linewidth]{Fig4_SLR_protocolo.png}% herramientas/figuras/slr_esquema.py
-  \caption[Esquema de la prueba SLR]{Esquema de la prueba SLR. En la fase de muestreo (día 1, 10\,min) el animal explora tres objetos idénticos (A1, A2 y A3) en la configuración d-SLR (fila superior; objetos a 120°) o s-SLR (fila inferior; A2 y A3 a 50°). En la fase de prueba (día 2, 24\,h después, 5\,min) se presentan dos objetos: uno en la posición familiar de A1 y otro en una posición novedosa (N), ubicada entre las posiciones que antes ocupaban A2 y A3 (círculos punteados). La flecha indica la mayor demanda cognitiva de la configuración s-SLR. Adaptado de \cite{reichelt2021slr}. Imagen de la rata generada con inteligencia artificial.}
+  \caption[Esquema de la prueba SLR]{Esquema de la prueba SLR. En la fase de muestreo (día 1, 10\,min) el animal explora tres objetos idénticos (A1, A2 y A3) en la configuración d-SLR (fila superior; objetos a 120°) o s-SLR (fila inferior; A2 y A3 a 50°). En la fase de prueba (día 2, 24\,h después, 5\,min) se presentan dos objetos: uno en la posición familiar de A1 y otro en una posición novedosa (N), ubicada entre las posiciones que antes ocupaban A2 y A3 (círculos punteados). La flecha indica la mayor demanda cognitiva de la configuración s-SLR. Adaptado de \cite{reichelt2021slr}.}
   \label{fig:esquema-slr}
 \end{figure}
 
@@ -166,7 +170,6 @@ Los datos se informan como el DI, que es la diferencia entre el tiempo dedicado 
 \end{equation}
 Se informa también la tasa de exploración equivalente (Ecuación~\ref{eq:tasa}), de la cual el DI es una transformación lineal ($\mathrm{DI} = 2\cdot\text{tasa} - 1$). En la fase de muestreo se registraron, además, el tiempo de exploración de cada uno de los tres objetos y la distancia recorrida.
 
-\FloatBarrier
 \subsection{Registro con \anymaze}\label{sec:principio}
 
 El registro se realizó con el software de videoseguimiento \anymaze{} (Stoelting Co., EE.\,UU.; versión 7.66), que opera sobre el video cenital de cada sesión. El programa segmenta al animal del fondo por contraste y sigue su posición cuadro a cuadro, reconstruyendo la trayectoria del centroide. De esa trayectoria deriva de manera automática un conjunto de variables cinemáticas y de ocupación: la distancia total recorrida, los cruces de línea (\textit{line crossings}) sobre una grilla virtual y, mediante zonas definidas por el usuario ---regiones de interés trazadas alrededor de cada objeto o sector de la arena---, el número de entradas, el tiempo y la distancia recorrida en cada zona.
