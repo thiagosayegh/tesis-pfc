@@ -18,12 +18,17 @@ Cada script escribe sus resultados en `analisis/resultados_*.txt`. Los archivos 
 
 ## Datos
 
+Los datos **no se incluyen en este repositorio**: son del Laboratorio de Neurobiología del IByME-CONICET y en parte todavía no están publicados. Para correr los scripts hay que pedirlos al laboratorio y colocarlos en la carpeta `datos/` con estos nombres y columnas:
+
 - `datos/slr_por_animal.csv`: una fila por animal de la prueba SLR (n = 117). Se armó uniendo, por edad, tratamiento, configuración, número de animal y par de sesiones, los registros de la fase de muestreo (día 1) y de la fase de prueba (día 2) exportados de AnyMaze 7.66 y cargados en Prism.
   - `edad`, `trat`, `configuracion` (d-SLR o s-SLR), `anio` (cohorte), `lote`, sesiones y número de animal de cada día;
   - `t_A1_dia1_s`, `t_A2_dia1_s`, `t_A3_dia1_s`: tiempo de exploración de cada objeto en la fase de muestreo (s);
   - `distancia_dia1_m_min`: distancia recorrida por minuto en la fase de muestreo (sin registro en 6 animales);
   - `exploracion_total_dia2_s`, `tasa_exploracion_dia2`, `DI_dia2`: exploración total, tasa de exploración e índice de discriminación en la fase de prueba.
 - `datos/consumo_promedio_por_caja.csv`: consumo promedio de solución endulzada y de agua durante el tratamiento, por caja (mL por g de peso corporal por día; n = 7 cajas por grupo).
+  - `edad`, `tratamiento` (Sacarosa o Stevia), `caja`, `solucion_mL_g_dia`, `agua_mL_g_dia`.
+
+Los resultados de `analisis/resultados_*.txt` y las figuras de `figuras/` se obtuvieron con esos datos.
 
 ## Cómo correrlo
 
@@ -40,4 +45,3 @@ Los scripts se corren desde la raíz del repositorio. El multivariado tarda unos
 
 - En la prueba de Tukey, `psturng` de statsmodels informa 0,9 como valor máximo: un `p = 0.9000` significa *p* ≥ 0,9.
 - En el multivariado se excluye la distancia del día 1 del análisis principal, porque permite identificar la cohorte de 2026 (que no tuvo un grupo control contemporáneo). Se informa como análisis de sensibilidad (§4.6 y §5.6).
-- Los datos son del Laboratorio de Neurobiología del IByME-CONICET, en parte todavía no publicados, y se comparten solo para evaluar este trabajo.
