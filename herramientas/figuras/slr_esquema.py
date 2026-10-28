@@ -60,9 +60,7 @@ def arena():
     dr = ImageDraw.Draw(base)
     dr.ellipse((C - RW, C - RW, C + RW, C + RW), outline=(95, 95, 95), width=3)
     dr.ellipse((C - RP, C - RP, C + RP, C + RP), outline=(130, 130, 130), width=2)
-    # tres señales espaciales equidistantes (120°) sobre la pared
-    for ang, tipo in ((90, "rayas"), (210, "damero"), (330, "circulos")):
-        cartel(base, ang, tipo)
+    # la pared es lisa (Thiago, 28 oct. 2026): sin carteles; las señales espaciales están en la sala
     return base
 
 def cartel(base, ang, tipo):
