@@ -1,1 +1,1 @@
-Coloque aquí los archivos de datos descriptos en el README (no se incluyen en el repositorio).
+Carpeta de los archivos de datos descriptos en el README.

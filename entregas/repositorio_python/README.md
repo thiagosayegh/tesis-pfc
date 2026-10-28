@@ -18,7 +18,7 @@ Cada script escribe sus resultados en `analisis/resultados_*.txt`. Los archivos 
 
 ## Datos
 
-Los datos **no se incluyen en este repositorio**: son del Laboratorio de Neurobiología del IByME-CONICET y en parte todavía no están publicados. Para correr los scripts hay que pedirlos al laboratorio y colocarlos en la carpeta `datos/` con estos nombres y columnas:
+Los scripts leen dos archivos de la carpeta `datos/`, con estos nombres y columnas:
 
 - `datos/slr_por_animal.csv`: una fila por animal de la prueba SLR (n = 117). Se armó uniendo, por edad, tratamiento, configuración, número de animal y par de sesiones, los registros de la fase de muestreo (día 1) y de la fase de prueba (día 2) exportados de AnyMaze 7.66 y cargados en Prism.
   - `edad`, `trat`, `configuracion` (d-SLR o s-SLR), `anio` (cohorte), `lote`, sesiones y número de animal de cada día;
