@@ -1,0 +1,99 @@
+=== 1. Exploración de los tres objetos en la fase de muestreo
+
+-- d-SLR (n = 58)
+                    A1    A2    A3
+edad    trat                      
+adulto  control   16.6  13.4  12.9
+        sacarosa  13.6   9.8  13.8
+        stevia    17.8  18.3  20.0
+juvenil control    8.7  10.8  11.1
+        sacarosa  17.9  16.2  16.6
+        stevia    16.1  12.5  14.8
+   épsilon de Greenhouse-Geisser = 0.982
+   Edad x Tratamiento: F(2, 52) = 2.70; p = 0.0766
+   Tratamiento: F(2, 52) = 2.06; p = 0.1371
+   Edad: F(1, 52) = 0.52; p = 0.4746
+   Objeto: F(2, 104) = 1.14; p = 0.3222; p (Greenhouse-Geisser) = 0.3216
+   Objeto x Edad: F(2, 104) = 0.09; p = 0.9160; p (Greenhouse-Geisser) = 0.9131
+   Objeto x Tratamiento: F(4, 104) = 0.24; p = 0.9122; p (Greenhouse-Geisser) = 0.9096
+   Objeto x Edad x Tratamiento: F(4, 104) = 1.08; p = 0.3683; p (Greenhouse-Geisser) = 0.3680
+   Tukey sobre la exploración media de los tres objetos (tratamientos dentro de cada edad):
+      adulto control vs. adulto sacarosa: p = 0.7808
+      adulto control vs. adulto stevia: p = 0.3105
+      adulto sacarosa vs. adulto stevia: p = 0.0965
+      juvenil control vs. juvenil sacarosa: p = 0.0928
+      juvenil control vs. juvenil stevia: p = 0.3518
+      juvenil sacarosa vs. juvenil stevia: p = 0.6918
+
+-- s-SLR (n = 59)
+                    A1    A2    A3
+edad    trat                      
+adulto  control   13.9   8.2   8.5
+        sacarosa  18.4   9.8   9.6
+        stevia    20.0  18.3  17.2
+juvenil control   11.3   9.4  10.0
+        sacarosa  20.8  21.5  15.9
+        stevia    14.5  14.1  11.4
+   épsilon de Greenhouse-Geisser = 0.808
+   Edad x Tratamiento: F(2, 53) = 5.95; p = 0.0047
+   Tratamiento: F(2, 53) = 7.44; p = 0.0014
+   Edad: F(1, 53) = 0.16; p = 0.6942
+   Objeto: F(2, 106) = 8.07; p = 0.0005; p (Greenhouse-Geisser) = 0.0014
+   Objeto x Edad: F(2, 106) = 2.30; p = 0.1050; p (Greenhouse-Geisser) = 0.1166
+   Objeto x Tratamiento: F(4, 106) = 0.88; p = 0.4795; p (Greenhouse-Geisser) = 0.4620
+   Objeto x Edad x Tratamiento: F(4, 106) = 0.71; p = 0.5899; p (Greenhouse-Geisser) = 0.5613
+   Tukey sobre la exploración media de los tres objetos (tratamientos dentro de cada edad):
+      adulto control vs. adulto sacarosa: p = 0.5793
+      adulto control vs. adulto stevia: p = 0.0034
+      adulto sacarosa vs. adulto stevia: p = 0.0483
+      juvenil control vs. juvenil sacarosa: p = 0.0015
+      juvenil control vs. juvenil stevia: p = 0.4113
+      juvenil sacarosa vs. juvenil stevia: p = 0.0467
+
+=== 2. Distancia recorrida por minuto en la fase de muestreo
+
+-- d-SLR (n = 54; sin registro de distancia: 4)
+                  count  mean   sem
+edad    trat                       
+adulto  control       9  3.14  0.16
+        sacarosa     10  4.65  0.61
+        stevia       10  4.12  0.27
+juvenil control       6  3.87  0.47
+        sacarosa      9  5.22  0.45
+        stevia       10  4.68  0.32
+   Interacción: F(2, 48) = 0.02; p = 0.9759
+   Tratamiento: F(2, 48) = 5.62; p = 0.0064
+   Edad: F(1, 48) = 3.31; p = 0.0749
+   Tukey:
+      adulto control vs. adulto sacarosa: p = 0.0964
+      adulto control vs. adulto stevia: p = 0.5043
+      adulto control vs. juvenil control: p = 0.8544
+      adulto sacarosa vs. adulto stevia: p = 0.9000
+      adulto sacarosa vs. juvenil sacarosa: p = 0.9000
+      adulto stevia vs. juvenil stevia: p = 0.9000
+      juvenil control vs. juvenil sacarosa: p = 0.3095
+      juvenil control vs. juvenil stevia: p = 0.7632
+      juvenil sacarosa vs. juvenil stevia: p = 0.9000
+
+-- s-SLR (n = 57; sin registro de distancia: 2)
+                  count  mean   sem
+edad    trat                       
+adulto  control      10  2.62  0.20
+        sacarosa     10  4.48  0.52
+        stevia       10  4.45  0.26
+juvenil control       8  3.59  0.18
+        sacarosa      9  5.36  0.40
+        stevia       10  5.02  0.43
+   Interacción: F(2, 51) = 0.16; p = 0.8532
+   Tratamiento: F(2, 51) = 14.57; p = 0.0000
+   Edad: F(1, 51) = 7.37; p = 0.0090
+   Tukey:
+      adulto control vs. adulto sacarosa: p = 0.0064
+      adulto control vs. adulto stevia: p = 0.0079
+      adulto control vs. juvenil control: p = 0.4666
+      adulto sacarosa vs. adulto stevia: p = 0.9000
+      adulto sacarosa vs. juvenil sacarosa: p = 0.5242
+      adulto stevia vs. juvenil stevia: p = 0.8400
+      juvenil control vs. juvenil sacarosa: p = 0.0227
+      juvenil control vs. juvenil stevia: p = 0.0916
+      juvenil sacarosa vs. juvenil stevia: p = 0.9000

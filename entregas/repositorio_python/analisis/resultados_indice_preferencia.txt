@@ -1,0 +1,26 @@
+Índice de preferencia por grupo:
+                     count   mean    sem
+edad    tratamiento                     
+Adulto  Sacarosa         7  0.951  0.007
+        Stevia           7  0.791  0.041
+Juvenil Sacarosa         7  0.956  0.006
+        Stevia           7  0.752  0.041
+
+ANOVA de dos vías (edad x tratamiento):
+   Interacción: F(1, 24) = 0.56; p = 0.4624; eta2p = 0.023
+   Tratamiento: F(1, 24) = 37.80; p = 2.367e-06; eta2p = 0.612
+   Edad: F(1, 24) = 0.33; p = 0.5732; eta2p = 0.013
+
+Tukey:
+   Adulto Sacarosa vs. Adulto Stevia: p = 0.0043
+   Adulto Sacarosa vs. Juvenil Sacarosa: p = 0.9000
+   Adulto Stevia vs. Juvenil Stevia: p = 0.7672
+   Juvenil Sacarosa vs. Juvenil Stevia: p = 0.0010
+
+Supuestos:
+   Shapiro-Wilk (residuos): p = 0.0235
+   Brown-Forsythe: p = 0.0046
+
+Mann-Whitney, sacarosa vs. stevia dentro de cada edad:
+   Juvenil: p = 0.0021
+   Adulto: p = 0.0006
