@@ -80,6 +80,7 @@ L = lambda f: (LEY, f, None)   # leyenda de colores
 
 FIGURAS = {
     # Metodos
+    "Fig4_OF_esquema": [[("Fig4_OF_zonas_IA.png", 0.56, "(A)"), ("Fig4_OF_rearing_IA.png", 0.33, "(B)")]],
     "Fig4_NOR_fases": [[("Fig4_NOR_objetos_iguales_recortada.png", 0.38, "(A)"), ("Fig4_NOR_objetos_diferentes_recortada.png", 0.38, "(B)")]],
     # Resultados
     "Fig5_consumo_liquidos": [[("Fig5_consumo_liquidos_juvenil_es.pdf", 0.385, "(A) Juvenil"), ("Fig5_consumo_liquidos_adulto_es.pdf", 0.595, "(B) Adulto")]],
