@@ -40,4 +40,4 @@ Los scripts se corren desde la raíz del repositorio. El multivariado tarda unos
 
 - En la prueba de Tukey, `psturng` de statsmodels informa 0,9 como valor máximo: un `p = 0.9000` significa *p* ≥ 0,9.
 - En el multivariado se excluye la distancia del día 1 del análisis principal, porque permite identificar la cohorte de 2026 (que no tuvo un grupo control contemporáneo). Se informa como análisis de sensibilidad (§4.6 y §5.6).
-- Los datos son del laboratorio de la Dra. M. S. Kruse (IByME-CONICET), en parte todavía no publicados, y se comparten solo para evaluar este trabajo.
+- Los datos son del Laboratorio de Neurobiología del IByME-CONICET, en parte todavía no publicados, y se comparten solo para evaluar este trabajo.
