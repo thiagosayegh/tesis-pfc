@@ -38,39 +38,35 @@ El consumo de agua y de solución endulzada (sacarosa o stevia) se registró dí
       \node[font=\footnotesize\bfseries] at (4.5,0.3) {Solo agua (25 d)};
     },
   ]
-  % ---- fila juvenil ----
-  \node[anchor=east, inner sep=0] (rj) at (-0.35,2.7) {\includegraphics[width=1.25cm]{Fig4_rata_IA.png}};
-  \node[below, inner sep=2pt, font=\small\bfseries] at (rj.south) {Juvenil};
-  \pic at (0,2.4) {exposicion};
+  % ---- filas: Juvenil y Adulto, sin ratas; una sola rata con dos botellas entre las dos líneas,
+  %      al principio (Sol, 28 oct. 2026; dibujo de la presentación del OF del laboratorio) ----
+  \node[anchor=east, font=\small\bfseries] at (-0.15,3.3) {Juvenil};
+  \pic at (0,3.0) {exposicion};
   \foreach \x/\lbl in {0/PD25, 3/PD50, 6/PD75}
-    \draw[dayline] (\x,3.0) -- (\x,3.3) node[above, black] {\lbl};
+    \draw[dayline] (\x,3.6) -- (\x,3.9) node[above, black] {\lbl};
 
-  % ---- fila adulta ----
-  \node[anchor=east, inner sep=0] (ra) at (-0.2,0.3) {\includegraphics[width=1.7cm]{Fig4_rata_IA.png}};
-  \node[below, inner sep=2pt, font=\small\bfseries] at (ra.south) {Adulto};
+  \node[anchor=east, font=\small\bfseries] at (-0.15,0.3) {Adulto};
   \pic at (0,0) {exposicion};
   \foreach \x/\lbl in {0/PD75, 3/PD100, 6/PD125}
     \draw[dayline] (\x,0.0) -- (\x,-0.3) node[below, black] {\lbl};
 
+  \node[inner sep=0] at (1.5,1.8) {\includegraphics[height=2.05cm]{Fig4_botellas_control.png}};
+
   % ---- convergencia hacia el desenlace común ----
-  \draw[black!70, thick] (6,2.7) -- (7.1,2.7) -- (7.1,0.3) -- (6,0.3);
-  \draw[black!70, thick, ->] (7.1,1.5) -- (7.9,1.5);
-  \node[draw=black!70, rounded corners=6pt, align=center, fill=orange!12, text width=4cm, inner sep=6pt] at (10.1,1.5)
+  \draw[black!70, thick] (6,3.3) -- (7.1,3.3) -- (7.1,0.3) -- (6,0.3);
+  \draw[black!70, thick, ->] (7.1,1.8) -- (7.9,1.8);
+  \node[draw=black!70, rounded corners=6pt, align=center, fill=orange!12, text width=4cm, inner sep=6pt] at (10.1,1.8)
     {\textbf{Pruebas conductuales}\\ \footnotesize OF, NOR y SLR\\[3pt] \textbf{IHC}\\ \footnotesize PCNA y DCX};
 
-  % ---- leyenda: las dos botellas de cada grupo (presentación del OF del laboratorio; 28 oct. 2026, Sol) ----
-  \begin{scope}[shift={(0,-0.85)}, font=\footnotesize]
-    \node[anchor=west, font=\footnotesize\bfseries] at (-2.3,-1.1) {Exposición (25 d):};
-    \foreach \x/\arch/\col/\nom/\bot in {2.2/control/gctrl/Grupo control/dos botellas de agua,
-                                        5.6/sacarosa/gsac/Grupo sacarosa/sacarosa 10\% y agua,
-                                        9.0/stevia/gstv/Grupo stevia/stevia 4\% y agua} {
-      \node[anchor=north, inner sep=0] (b\arch) at (\x,0) {\includegraphics[height=1.9cm]{Fig4_botellas_\arch.png}};
-      \node[anchor=north, align=center, inner sep=1pt] at (b\arch.south)
-        {\textcolor{\col}{\textbf{\nom}}\\ \bot};
-    }
+  % ---- leyenda de colores de la exposición ----
+  \begin{scope}[shift={(0,-1.25)}, font=\footnotesize]
+    \node[anchor=west, font=\footnotesize\bfseries] at (-0.1,0.125) {Exposición (25 d):};
+    \fill[gctrl] (3.1,0) rectangle (3.5,0.25);  \node[anchor=west] at (3.55,0.125) {agua (control)};
+    \fill[gsac]  (6.2,0) rectangle (6.6,0.25);  \node[anchor=west] at (6.65,0.125) {sacarosa 10\% y agua};
+    \fill[gstv]  (10.2,0) rectangle (10.6,0.25); \node[anchor=west] at (10.65,0.125) {stevia 4\% y agua};
   \end{scope}
 \end{tikzpicture}
-\caption[Línea temporal de los procedimientos experimentales]{Línea temporal de los procedimientos experimentales. Durante 25 días, ratas PD25 (grupo juvenil) y PD75 (grupo adulto) tuvieron acceso irrestricto a agua (grupo control) o la opción de beber entre agua y una solución de sacarosa al 10\% (grupo sacarosa) o agua y un extracto de stevia al 4\% (grupo stevia). Finalizado este período, se retiraron las botellas de endulzantes y todos los animales bebieron únicamente agua durante otros 25 días, tras lo cual se realizaron las pruebas conductuales y los estudios de IHC. Abajo, las dos botellas a las que tuvo acceso cada grupo.}
+\caption[Línea temporal de los procedimientos experimentales]{Línea temporal de los procedimientos experimentales. Durante 25 días, ratas PD25 (grupo juvenil) y PD75 (grupo adulto) tuvieron acceso irrestricto a agua (grupo control) o la opción de beber entre agua y una solución de sacarosa al 10\% (grupo sacarosa) o agua y un extracto de stevia al 4\% (grupo stevia). Finalizado este período, se retiraron las botellas de endulzantes y todos los animales bebieron únicamente agua durante otros 25 días, tras lo cual se realizaron las pruebas conductuales y los estudios de IHC.}
 \label{fig:linea-temporal}
 \end{figure}
 
