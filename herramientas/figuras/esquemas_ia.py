@@ -149,3 +149,16 @@ for k, im in enumerate((t2, t3, t4)):
     lienzo.paste(im, (k * (pw + gap), y2))
 lienzo.save(FIG + "Fig4_NOR_protocolo.png", dpi=(300, 300))
 print("NOR:", lienzo.size)
+
+# ---------------------------------------------------------------- rata para la línea temporal (Fig. 4.1)
+# la rata caminando de la habituación de la Figura 7, con fondo transparente y mirando a la derecha
+r = np.asarray(f7.crop((110, 455, 390, 575))).astype(int)
+alfa = (r.mean(axis=2) > 100) & ((r[..., 0] - r[..., 2]) < 90)
+from scipy import ndimage                            # solo la rata: la mancha conexa más grande
+lab, n = ndimage.label(ndimage.binary_dilation(alfa, iterations=2))
+alfa &= lab == (np.bincount(lab.ravel())[1:].argmax() + 1)
+a = Image.fromarray((alfa * 255).astype("uint8")).filter(ImageFilter.MedianFilter(3)).filter(ImageFilter.GaussianBlur(0.8))
+rata = Image.fromarray(r.astype("uint8")).convert("RGBA"); rata.putalpha(a)
+rata = rata.crop(rata.getbbox()).transpose(Image.FLIP_LEFT_RIGHT)
+rata.save(FIG + "Fig4_rata_IA.png")
+print("rata:", rata.size)

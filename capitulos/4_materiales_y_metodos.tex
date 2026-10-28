@@ -20,45 +20,53 @@ El consumo de agua y de solución endulzada (sacarosa o stevia) se registró dí
 
 \begin{figure}[htbp]
 \centering
+% 28 oct. 2026: en color (colores de los grupos) y con la rata de la ilustracion (Fig4_rata_IA.png)
+\definecolor{gctrl}{RGB}{30,60,230}
+\definecolor{gsac}{RGB}{225,30,30}
+\definecolor{gstv}{RGB}{30,165,60}
 \begin{tikzpicture}[
     font=\small,
     >=stealth,
-    line/.style={draw, black, thick},
     dayline/.style={draw, black!55, thin},
+    exposicion/.pic={
+      \fill[gctrl] (0,0.4) rectangle (3,0.6);
+      \fill[gsac]  (0,0.2) rectangle (3,0.4);
+      \fill[gstv]  (0,0.0) rectangle (3,0.2);
+      \fill[gctrl!14] (3,0) rectangle (6,0.6);
+      \draw[black!70, rounded corners=1pt] (0,0) rectangle (6,0.6);
+      \draw[black!70] (3,0) -- (3,0.6);
+      \node[font=\footnotesize\bfseries] at (4.5,0.3) {Solo agua (25 d)};
+    },
   ]
   % ---- fila juvenil ----
-  \node[anchor=east] at (-0.15,2.7) {\textbf{Juvenil}};
-  \fill[black!78] (0,2.4) rectangle (3,3.0);
-  \fill[black!12] (3,2.4) rectangle (6,3.0);
-  \draw[line] (0,2.4) rectangle (6,3.0);
-  \draw[line] (3,2.4) -- (3,3.0);
+  \node[anchor=east, inner sep=0] (rj) at (-0.35,2.7) {\includegraphics[width=1.25cm]{Fig4_rata_IA.png}};
+  \node[below, inner sep=2pt, font=\small\bfseries] at (rj.south) {Juvenil};
+  \pic at (0,2.4) {exposicion};
   \foreach \x/\lbl in {0/PD25, 3/PD50, 6/PD75}
-    \draw[dayline] (\x,2.4) -- (\x,3.35) node[above, black] {\lbl};
+    \draw[dayline] (\x,3.0) -- (\x,3.3) node[above, black] {\lbl};
 
   % ---- fila adulta ----
-  \node[anchor=east] at (-0.15,0.3) {\textbf{Adulto}};
-  \fill[black!78] (0,0.0) rectangle (3,0.6);
-  \fill[black!12] (3,0.0) rectangle (6,0.6);
-  \draw[line] (0,0.0) rectangle (6,0.6);
-  \draw[line] (3,0.0) -- (3,0.6);
+  \node[anchor=east, inner sep=0] (ra) at (-0.2,0.3) {\includegraphics[width=1.7cm]{Fig4_rata_IA.png}};
+  \node[below, inner sep=2pt, font=\small\bfseries] at (ra.south) {Adulto};
+  \pic at (0,0) {exposicion};
   \foreach \x/\lbl in {0/PD75, 3/PD100, 6/PD125}
-    \draw[dayline] (\x,-0.35) -- (\x,0.0) node[below, black] {\lbl};
+    \draw[dayline] (\x,0.0) -- (\x,-0.3) node[below, black] {\lbl};
 
   % ---- convergencia hacia el desenlace común ----
-  \draw[black, thick] (6,2.7) -- (7.1,2.7) -- (7.1,0.3) -- (6,0.3);
-  \draw[black, thick, ->] (7.1,1.5) -- (7.9,1.5);
-  \node[draw=black, align=center, fill=white, text width=3.5cm, inner sep=6pt] at (10.0,1.5)
-    {Pruebas conductuales\\ \footnotesize OF, NOR y SLR\\[2pt] + IHC\\ \footnotesize (PCNA y DCX)};
+  \draw[black!70, thick] (6,2.7) -- (7.1,2.7) -- (7.1,0.3) -- (6,0.3);
+  \draw[black!70, thick, ->] (7.1,1.5) -- (7.9,1.5);
+  \node[draw=black!70, rounded corners=6pt, align=center, fill=orange!12, text width=4cm, inner sep=6pt] at (10.1,1.5)
+    {\textbf{Pruebas conductuales}\\ \footnotesize OF, NOR y SLR\\[3pt] \textbf{IHC}\\ \footnotesize PCNA y DCX};
 
-  % ---- leyenda (apilada) ----
-  \fill[black!78] (0,-1.05) rectangle (0.5,-0.7);
-  \draw[line] (0,-1.05) rectangle (0.5,-0.7);
-  \node[anchor=west] at (0.65,-0.875) {Exposición (25 d): agua, sacarosa o stevia};
-  \fill[black!12] (0,-1.65) rectangle (0.5,-1.3);
-  \draw[line] (0,-1.65) rectangle (0.5,-1.3);
-  \node[anchor=west] at (0.65,-1.475) {Solo agua (25 d)};
+  % ---- leyenda ----
+  \begin{scope}[shift={(0,-1.25)}, font=\footnotesize]
+    \node[anchor=west, font=\footnotesize\bfseries] at (-0.1,0.125) {Exposición (25 d):};
+    \fill[gctrl] (3.1,0) rectangle (3.5,0.25);  \node[anchor=west] at (3.55,0.125) {agua (grupo control)};
+    \fill[gsac]  (7.2,0) rectangle (7.6,0.25);  \node[anchor=west] at (7.65,0.125) {sacarosa 10\,\%};
+    \fill[gstv]  (10.3,0) rectangle (10.7,0.25); \node[anchor=west] at (10.75,0.125) {stevia 4\,\%};
+  \end{scope}
 \end{tikzpicture}
-\caption[Línea temporal de los procedimientos experimentales]{Línea temporal de los procedimientos experimentales. Durante 25 días, ratas PD25 (grupo juvenil) y PD75 (grupo adulto) tuvieron acceso irrestricto a agua (grupo control) o la opción de beber entre agua y una solución de sacarosa al 10\,\% (grupo sacarosa) o agua y un extracto de stevia al 4\,\% (grupo stevia). Finalizado este período, se retiraron las botellas de endulzantes y todos los animales bebieron únicamente agua durante otros 25 días, tras lo cual se realizaron las pruebas conductuales y los estudios de IHC.}
+\caption[Línea temporal de los procedimientos experimentales]{Línea temporal de los procedimientos experimentales. Durante 25 días, ratas PD25 (grupo juvenil) y PD75 (grupo adulto) tuvieron acceso irrestricto a agua (grupo control) o la opción de beber entre agua y una solución de sacarosa al 10\,\% (grupo sacarosa) o agua y un extracto de stevia al 4\,\% (grupo stevia). Finalizado este período, se retiraron las botellas de endulzantes y todos los animales bebieron únicamente agua durante otros 25 días, tras lo cual se realizaron las pruebas conductuales y los estudios de IHC. Imagen de la rata generada con inteligencia artificial.}
 \label{fig:linea-temporal}
 \end{figure}
 
@@ -139,14 +147,14 @@ En el primer ensayo se expuso a las ratas a tres objetos idénticos, A1, A2 y A3
 
 \begin{figure}[htbp]
   \centering
-  \incluirfigura[width=0.9\linewidth]{Fig4_esquema_SLR_demanda.png}
-  \caption[Esquema de la prueba SLR]{Esquema de la prueba SLR. En la fase de muestreo (día 1, 10\,min) el animal explora tres objetos idénticos (A1, A2 y A3) en la configuración d-SLR (fila superior) o s-SLR (fila inferior). En la fase de prueba (día 2, 24\,h después, 5\,min) se presentan dos objetos: uno en la posición familiar de A1 y otro en una posición novedosa (N), ubicada entre las posiciones que antes ocupaban A2 y A3 (círculos punteados). Los símbolos oscuros alrededor de la arena representan las señales espaciales, y la flecha indica la mayor demanda cognitiva de la configuración s-SLR. Adaptado de \cite{reichelt2021slr}.}
+  \incluirfigura[width=0.92\linewidth]{Fig4_SLR_protocolo.png}% herramientas/figuras/slr_esquema.py
+  \caption[Esquema de la prueba SLR]{Esquema de la prueba SLR. En la fase de muestreo (día 1, 10\,min) el animal explora tres objetos idénticos (A1, A2 y A3) en la configuración d-SLR (fila superior; objetos a 120°) o s-SLR (fila inferior; A2 y A3 a 50°). En la fase de prueba (día 2, 24\,h después, 5\,min) se presentan dos objetos: uno en la posición familiar de A1 y otro en una posición novedosa (N), ubicada entre las posiciones que antes ocupaban A2 y A3 (círculos punteados). Los carteles sobre la pared representan las señales espaciales, y la flecha indica la mayor demanda cognitiva de la configuración s-SLR. Adaptado de \cite{reichelt2021slr}. Imagen de la rata generada con inteligencia artificial.}
   \label{fig:esquema-slr}
 \end{figure}
 
 \begin{figure}[htbp]
   \centering
-  \incluirfigura[width=0.7\linewidth]{Fig4_objetos_SLR.jpg}
+  \incluirfigura[width=0.5\linewidth]{Fig4_objetos_SLR.jpg}
   \caption{Objetos utilizados en la prueba SLR: tazas con dibujos y ranas de juguete.}
   \label{fig:objetos-slr}
 \end{figure}

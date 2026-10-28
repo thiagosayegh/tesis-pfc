@@ -25,18 +25,29 @@ VSEP = 8                         # separacion vertical entre filas (pt)
 ARIAL = "C:/Windows/Fonts/arial.ttf"
 LEY = "Fig5_leyenda_grupos.png"
 
+def recorte(arch):
+    """"archivo.pdf|x" -> (archivo.pdf, rectangulo hasta x pt): deja afuera la leyenda propia de Prism,
+    a la derecha, cuando la figura lleva una sola leyenda comun (Sol, 14 oct. 2026)."""
+    if "|" not in arch:
+        return arch, None
+    arch, x = arch.split("|")
+    r = pymupdf.open(FIG + arch)[0].rect
+    return arch, pymupdf.Rect(0, 0, float(x), r.height)
+
 def tam(arch):
     """(ancho, alto) en unidades arbitrarias, para la relacion de aspecto."""
+    arch, clip = recorte(arch)
     if arch.lower().endswith(".pdf"):
-        r = pymupdf.open(FIG + arch)[0].rect
+        r = clip or pymupdf.open(FIG + arch)[0].rect
         return r.width, r.height
     with Image.open(FIG + arch) as im:
         return im.size
 
 def poner(pag, arch, rect):
+    arch, clip = recorte(arch)
     if arch.lower().endswith(".pdf"):
         src = pymupdf.open(FIG + arch)
-        pag.show_pdf_page(rect, src, 0)
+        pag.show_pdf_page(rect, src, 0, clip=clip)
     else:
         pag.insert_image(rect, filename=FIG + arch)
 
@@ -90,15 +101,14 @@ FIGURAS = {
         [L(0.2)]],
     "Fig5_OF_rearing_compuesta": [[("Fig5_OF_rearing_numero.pdf", 0.32, "(A)"), ("Fig5_OF_rearing_tiempo.pdf", 0.32, "(B)"), L(0.22)]],
     "Fig5_NOR_T1_compuesta": [[("Fig5_NOR_T1.pdf", 0.62, None)], [L(0.2)]],
+    # 28 oct. 2026: sin el panel D (esquema y objetos), que ahora es la Fig. 4.3 de Metodos
     "Fig5_NOR_tasa": [
         [("Fig5_NOR_T2_es.pdf", 0.31, "(A) T2 (2 h)"), ("Fig5_NOR_T3_es.pdf", 0.31, "(B) T3 (24 h)"), ("Fig5_NOR_T4_es.pdf", 0.31, "(C) T4 (7 días)")],
-        [L(0.2)],
-        [("Fig4_NOR_esquema.png", 0.95, None)],
-        [("Fig5_NOR_objetos_T1.png", 0.225, "T1"), ("Fig5_NOR_objetos_T2.png", 0.225, "T2"), ("Fig5_NOR_objetos_T3.png", 0.225, "T3"), ("Fig5_NOR_objetos_T4.png", 0.225, "T4")],
-        [("blanco", 0, "(D) Esquema y objetos de cada ensayo")]],
+        [L(0.2)]],
     "Fig5_SLR_dia1_compuesta": [[("Fig5_SLR_dia1_objetos.pdf", 0.95, "(A)")], [("Fig5_SLR_dia1_distancia.pdf", 0.8, "(B)")], [L(0.2)]],
-    "Fig5_SLR_DI": [[("Fig5_DI_SLR_d_es.pdf", 0.48, "(A) d-SLR"), ("Fig5_DI_SLR_s_es.pdf", 0.48, "(B) s-SLR")]],
-    "Fig5_SLR_tasa": [[("Fig5_tasa_SLR_d_es.pdf", 0.48, "(A) d-SLR"), ("Fig5_tasa_SLR_s_es.pdf", 0.48, "(B) s-SLR")]],
+    # 28 oct. 2026: una sola leyenda comun (se recortan las de Prism)
+    "Fig5_SLR_DI": [[("Fig5_DI_SLR_d_es.pdf|228", 0.40, "(A) d-SLR"), ("Fig5_DI_SLR_s_es.pdf|228", 0.40, "(B) s-SLR"), L(0.16)]],
+    "Fig5_SLR_tasa": [[("Fig5_tasa_SLR_d_es.pdf|224", 0.40, "(A) d-SLR"), ("Fig5_tasa_SLR_s_es.pdf|238", 0.40, "(B) s-SLR"), L(0.16)]],
     "Fig5_IHC_compuesta": [[("Fig5_IHC_pcna.pdf", 0.31, "(A)"), ("Fig5_IHC_dcx.pdf", 0.31, "(B)"), ("Fig5_IHC_pcna_dcx.pdf", 0.31, "(C)")], [("Fig5_IHC_leyenda.pdf", 0.22, None)]],
 }
 
